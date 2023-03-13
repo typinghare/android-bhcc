@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Button Clicking HW</string>
+    <string name="hello">Hello!</string>
+    <string name="click_me">Click Me!</string>
+    <string name="reset">reset</string>
+    <string name="_0">0</string>
+    <string name="string">-</string>
+    <string name="set_the_limit">Set the limit</string>
+    <string name="_4">4</string>
+    <string name="set">SET</string>
+    <string name="plus">+</string>
+    <string name="minus">-</string>
+</resources>
