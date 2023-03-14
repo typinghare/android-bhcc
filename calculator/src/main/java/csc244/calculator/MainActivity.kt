@@ -22,38 +22,38 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val buttonList: MutableList<Button> = mutableListOf()
-        buttonList.add(findViewById(R.id.btn_number_0))
-        buttonList.add(findViewById(R.id.btn_number_1))
-        buttonList.add(findViewById(R.id.btn_number_2))
-        buttonList.add(findViewById(R.id.btn_number_3))
-        buttonList.add(findViewById(R.id.btn_number_4))
-        buttonList.add(findViewById(R.id.btn_number_5))
-        buttonList.add(findViewById(R.id.btn_number_6))
-        buttonList.add(findViewById(R.id.btn_number_7))
-        buttonList.add(findViewById(R.id.btn_number_8))
-        buttonList.add(findViewById(R.id.btn_number_9))
-
-        for ((digit, button) in buttonList.withIndex()) {
-            button.setOnClickListener { appendDigit(digit) }
-        }
-
-        val btnDot: Button = findViewById(R.id.btn_dot)
-        btnDot.setOnClickListener { appendDot() }
-
-        val btnPlus: Button = findViewById(R.id.btn_plus)
-        val btnMinus: Button = findViewById(R.id.btn_minus)
-        val btnMultiply: Button = findViewById(R.id.btn_multiply)
-        val btnDivide: Button = findViewById(R.id.btn_divide)
-
-        btnPlus.setOnClickListener { setOperator(BinaryOperator.PLUS) }
-        btnMinus.setOnClickListener { setOperator(BinaryOperator.MINUS) }
-        btnMultiply.setOnClickListener { setOperator(BinaryOperator.MULTIPLY) }
-        btnDivide.setOnClickListener { setOperator(BinaryOperator.DIVIDE) }
+//        val buttonList: MutableList<Button> = mutableListOf()
+//        buttonList.add(findViewById(R.id.btn_number_0))
+//        buttonList.add(findViewById(R.id.btn_number_1))
+//        buttonList.add(findViewById(R.id.btn_number_2))
+//        buttonList.add(findViewById(R.id.btn_number_3))
+//        buttonList.add(findViewById(R.id.btn_number_4))
+//        buttonList.add(findViewById(R.id.btn_number_5))
+//        buttonList.add(findViewById(R.id.btn_number_6))
+//        buttonList.add(findViewById(R.id.btn_number_7))
+//        buttonList.add(findViewById(R.id.btn_number_8))
+//        buttonList.add(findViewById(R.id.btn_number_9))
+//
+//        for ((digit, button) in buttonList.withIndex()) {
+//            button.setOnClickListener { appendDigit(digit) }
+//        }
+//
+//        val btnDot: Button = findViewById(R.id.btn_dot)
+//        btnDot.setOnClickListener { appendDot() }
+//
+//        val btnPlus: Button = findViewById(R.id.btn_plus)
+//        val btnMinus: Button = findViewById(R.id.btn_minus)
+//        val btnMultiply: Button = findViewById(R.id.btn_multiply)
+//        val btnDivide: Button = findViewById(R.id.btn_divide)
+//
+//        btnPlus.setOnClickListener { setOperator(BinaryOperator.PLUS) }
+//        btnMinus.setOnClickListener { setOperator(BinaryOperator.MINUS) }
+//        btnMultiply.setOnClickListener { setOperator(BinaryOperator.MULTIPLY) }
+//        btnDivide.setOnClickListener { setOperator(BinaryOperator.DIVIDE) }
     }
 
     private fun display(text: String) {
-        val textDisplay = findViewById<TextView>(R.id.text_display)
+        val textDisplay = findViewById<TextView>(R.id.number_display)
 
         text.also { textDisplay.text = it }
     }

@@ -25,4 +25,6 @@
     <string name="divide">÷</string>
     <string name="multiply">*</string>
     <string name="plus_minus">+/-</string>
+    <string name="plus_or_minus">+/-</string>
+    <string name="n_power">x^n</string>
 </resources>
