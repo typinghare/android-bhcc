@@ -1,5 +1,8 @@
 package csc244.calculator.core
 
+import android.util.Log
+import kotlin.math.log
+
 class Calculator {
     private val statementList: MutableList<Statement> = mutableListOf();
 
@@ -7,8 +10,7 @@ class Calculator {
 
     private var operator: Operator? = null;
 
-    fun register(number: Number, type: NumType): Statement? {
-        val num = Num(number, type);
+    fun register(num: Num): Statement? {
         if (registerNum == null) {
             registerNum = num;
         } else {
@@ -44,7 +46,7 @@ class Calculator {
         return null;
     }
 
-    fun clear() {
+    private fun clear() {
         registerNum = null
         operator = null
     }

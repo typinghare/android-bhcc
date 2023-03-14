@@ -29,6 +29,10 @@ class Num(
     fun toDouble(): Double {
         return number.toDouble();
     }
+
+    override fun toString(): String {
+        return number.toString()
+    }
 }
 
 enum class NumType {
