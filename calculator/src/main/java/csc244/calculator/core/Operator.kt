@@ -1,17 +1,19 @@
 package csc244.calculator.core
 
 sealed class BinaryOperator : Operator() {
-    object PLUS : BinaryOperator()
-    object MINUS : BinaryOperator()
-    object MULTIPLY : BinaryOperator()
-    object DIVIDE : BinaryOperator()
-    object POWER : BinaryOperator()
+    object Plus : BinaryOperator()
+    object Minus : BinaryOperator()
+    object Multiply : BinaryOperator()
+    object Divide : BinaryOperator()
+    object NSquareRoot: BinaryOperator()
+    object NPower: BinaryOperator()
 }
 
 sealed class UnaryOperator : Operator() {
-    object SQUARE : UnaryOperator()
-    object LOG : UnaryOperator()
-    object LN : UnaryOperator()
+    object SquareRoot: UnaryOperator()
+    object Square : UnaryOperator()
+    object Log : UnaryOperator()
+    object Ln : UnaryOperator()
 }
 
 sealed class Operator {

@@ -28,6 +28,7 @@
             app:layout_constraintWidth_percent="0.7">
 
             <TextView
+                android:id="@+id/number_display"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="bottom|end"
@@ -195,7 +196,7 @@
             app:layout_constraintEnd_toStartOf="@+id/c24"
             app:layout_constraintStart_toEndOf="@+id/c22"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintWidth_percent="0.5">
+            app:layout_constraintWidth_percent="0.55">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/c211"
@@ -436,7 +437,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/c23"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintWidth_percent="0.2">
+            app:layout_constraintWidth_percent="0.15">
 
             <Button
                 android:id="@+id/btn_plus"
@@ -446,6 +447,7 @@
                 android:textSize="24sp"
                 app:layout_constraintBottom_toTopOf="@id/btn_minus"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_percent="0.3"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -457,6 +459,7 @@
                 android:textSize="34sp"
                 app:layout_constraintBottom_toTopOf="@id/btn_equal"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_percent="0.25"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/btn_plus" />
 
@@ -468,6 +471,7 @@
                 android:textSize="24sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_percent="0.45"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/btn_minus" />
 

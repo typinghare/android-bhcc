@@ -11,11 +11,20 @@ class UnaryExpression(
     override fun getOperator(): UnaryOperator {
         return operator
     }
+
+    override fun toString(): String {
+        return when (operator) {
+            UnaryOperator.SquareRoot -> "√$num"
+            UnaryOperator.Square -> "$num^2"
+            UnaryOperator.Log -> "log($num)"
+            UnaryOperator.Ln -> "ln($num)"
+        }
+    }
 }
 
 class BinaryExpression(
-    private val rightNum: Num,
     private val leftNum: Num,
+    private val rightNum: Num,
     private val operator: BinaryOperator
 ) : Expression(operator) {
     fun getRightNum(): Num {
@@ -31,7 +40,14 @@ class BinaryExpression(
     }
 
     override fun toString(): String {
-        return ""
+        return when (operator) {
+            BinaryOperator.Plus -> "$leftNum + $rightNum"
+            BinaryOperator.Minus -> "$leftNum - $rightNum"
+            BinaryOperator.Multiply -> "$leftNum * $rightNum"
+            BinaryOperator.Divide -> "$leftNum / $rightNum"
+            BinaryOperator.NPower -> "$leftNum ^ $rightNum"
+            BinaryOperator.NSquareRoot -> "$rightNum√$leftNum"
+        }
     }
 }
 

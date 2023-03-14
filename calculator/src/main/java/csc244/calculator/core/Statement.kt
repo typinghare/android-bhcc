@@ -1,6 +1,8 @@
 package csc244.calculator.core
 
+import kotlin.math.log
 import kotlin.math.pow
+import kotlin.math.sqrt
 
 class Statement(
     private val expression: Expression,
@@ -12,30 +14,35 @@ class Statement(
         when (expression) {
             is UnaryExpression -> {
                 result = when (expression.getOperator()) {
-                    UnaryOperator.SQUARE -> computeSquare(expression.getNum())
-                    UnaryOperator.LOG -> computeSquare(expression.getNum())
-                    UnaryOperator.LN -> computeSquare(expression.getNum())
+                    UnaryOperator.SquareRoot -> computeSquareRoot(expression.getNum())
+                    UnaryOperator.Square -> computeSquare(expression.getNum())
+                    UnaryOperator.Log -> computeLog(expression.getNum())
+                    UnaryOperator.Ln -> computeLn(expression.getNum())
                 }
             }
             is BinaryExpression -> {
                 result = when (expression.getOperator()) {
-                    BinaryOperator.PLUS -> computePlus(
+                    BinaryOperator.Plus -> computePlus(
                         expression.getLeftNum(),
                         expression.getRightNum()
                     )
-                    BinaryOperator.MINUS -> computeMinus(
+                    BinaryOperator.Minus -> computeMinus(
                         expression.getLeftNum(),
                         expression.getRightNum()
                     )
-                    BinaryOperator.MULTIPLY -> computeMultiply(
+                    BinaryOperator.Multiply -> computeMultiply(
                         expression.getLeftNum(),
                         expression.getRightNum()
                     )
-                    BinaryOperator.DIVIDE -> computeDivide(
+                    BinaryOperator.Divide -> computeDivide(
                         expression.getLeftNum(),
                         expression.getRightNum()
                     )
-                    BinaryOperator.POWER -> computePower(
+                    BinaryOperator.NPower -> computeNPower(
+                        expression.getLeftNum(),
+                        expression.getRightNum()
+                    )
+                    BinaryOperator.NSquareRoot -> computeNSquareRoot(
                         expression.getLeftNum(),
                         expression.getRightNum()
                     )
@@ -55,12 +62,24 @@ class Statement(
         return "$expression = $result"
     }
 
+    private fun computeSquareRoot(num: Num): Num {
+        return Num.double(sqrt(num.toDouble()))
+    }
+
     private fun computeSquare(num: Num): Num {
         return if (num.isLong()) {
             Num.long(num.toDouble().pow(2))
         } else {
             Num.double(num.toDouble().pow(2))
         }
+    }
+
+    private fun computeLog(num: Num): Num {
+        return Num.double(log(num.toDouble(), 10.toDouble()))
+    }
+
+    private fun computeLn(num: Num): Num {
+        return Num.double(log(num.toDouble(), Math.E))
     }
 
     private fun computePlus(left: Num, right: Num): Num {
@@ -88,14 +107,18 @@ class Statement(
     }
 
     private fun computeDivide(left: Num, right: Num): Num {
-        return Num.long(left.toDouble() / right.toDouble())
+        return Num.double(left.toDouble() / right.toDouble())
     }
 
-    private fun computePower(left: Num, right: Num): Num {
-        return if (left.isLong() and right.isLong()) {
+    private fun computeNPower(left: Num, right: Num): Num {
+        return if (left.isLong() and right.isLong() && right.toLong() >= 0) {
             Num.long(left.toDouble().pow(right.toDouble()))
         } else {
             Num.double(left.toDouble().pow(right.toDouble()))
         }
+    }
+
+    private fun computeNSquareRoot(left: Num, right: Num): Num {
+        return Num.double(left.toDouble().pow(1 / right.toDouble()))
     }
 }

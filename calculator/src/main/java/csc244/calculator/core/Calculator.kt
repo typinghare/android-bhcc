@@ -13,11 +13,11 @@ class Calculator {
     fun register(num: Num): Statement? {
         if (registerNum == null) {
             registerNum = num;
+            Log.d("registerNum", registerNum.toString())
+            return null
         } else {
             // register num != null
-            if (operator == null) {
-                throw IllegalArgumentException("Operator is null!")
-            }
+            if (operator == null) return null
 
             // operator != null
             val expression = BinaryExpression(registerNum!!, num, operator!! as BinaryOperator)
@@ -27,8 +27,6 @@ class Calculator {
 
             return statement;
         }
-
-        return null
     }
 
     fun setOperator(operator: Operator): Statement? {
@@ -46,7 +44,7 @@ class Calculator {
         return null;
     }
 
-    private fun clear() {
+    fun clear() {
         registerNum = null
         operator = null
     }
