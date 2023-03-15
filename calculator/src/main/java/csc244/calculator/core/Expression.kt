@@ -1,9 +1,18 @@
 package csc244.calculator.core
 
+import android.os.Parcel
+import android.os.Parcelable
+
+@Suppress("DEPRECATION")
 class UnaryExpression(
     private val num: Num,
     private val operator: UnaryOperator
 ) : Expression(operator) {
+    constructor(parcel: Parcel) : this(
+        parcel.readParcelable(Num::class.java.classLoader)!!,
+        parcel.readParcelable(UnaryOperator::class.java.classLoader)!!
+    )
+
     fun getNum(): Num {
         return num
     }
@@ -20,13 +29,40 @@ class UnaryExpression(
             UnaryOperator.Ln -> "ln($num)"
         }
     }
+
+    override fun writeToParcel(parcel: Parcel, flags: Int) {
+        parcel.writeParcelable(num, flags)
+        parcel.writeParcelable(operator, flags)
+    }
+
+    override fun describeContents(): Int {
+        return 0
+    }
+
+    companion object CREATOR : Parcelable.Creator<UnaryExpression> {
+        override fun createFromParcel(parcel: Parcel): UnaryExpression {
+            return UnaryExpression(parcel)
+        }
+
+        override fun newArray(size: Int): Array<UnaryExpression?> {
+            return arrayOfNulls(size)
+        }
+    }
 }
 
+@Suppress("DEPRECATION")
 class BinaryExpression(
     private val leftNum: Num,
     private val rightNum: Num,
     private val operator: BinaryOperator
 ) : Expression(operator) {
+
+    constructor(parcel: Parcel) : this(
+        parcel.readParcelable(Num::class.java.classLoader)!!,
+        parcel.readParcelable(Num::class.java.classLoader)!!,
+        parcel.readParcelable(BinaryOperator::class.java.classLoader)!!
+    )
+
     fun getRightNum(): Num {
         return rightNum
     }
@@ -49,10 +85,30 @@ class BinaryExpression(
             BinaryOperator.NSquareRoot -> "$rightNum√$leftNum"
         }
     }
+
+    override fun writeToParcel(parcel: Parcel, flags: Int) {
+        parcel.writeParcelable(leftNum, flags)
+        parcel.writeParcelable(rightNum, flags)
+        parcel.writeParcelable(operator, flags)
+    }
+
+    override fun describeContents(): Int {
+        return 0
+    }
+
+    companion object CREATOR : Parcelable.Creator<BinaryExpression> {
+        override fun createFromParcel(parcel: Parcel): BinaryExpression {
+            return BinaryExpression(parcel)
+        }
+
+        override fun newArray(size: Int): Array<BinaryExpression?> {
+            return arrayOfNulls(size)
+        }
+    }
 }
 
-abstract class Expression(private val operator: Operator) {
+abstract class Expression(private val operator: Operator) : Parcelable {
     open fun getOperator(): Operator {
-        return operator;
+        return operator
     }
 }

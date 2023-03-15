@@ -1,13 +1,16 @@
 package csc244.calculator.core
 
+import android.os.Parcel
+import android.os.Parcelable
 import kotlin.math.log
 import kotlin.math.pow
 import kotlin.math.sqrt
 
+@Suppress("DEPRECATION")
 class Statement(
     private val expression: Expression,
-) {
-    private val result: Num
+) : Parcelable {
+    private var result: Num
 
     init {
         // computes
@@ -120,5 +123,29 @@ class Statement(
 
     private fun computeNSquareRoot(left: Num, right: Num): Num {
         return Num.double(left.toDouble().pow(1 / right.toDouble()))
+    }
+
+    override fun describeContents(): Int {
+        return 0
+    }
+
+    override fun writeToParcel(dest: Parcel, flags: Int) {
+        dest.writeParcelable(expression, flags)
+        dest.writeParcelable(result, flags)
+    }
+
+    companion object CREATOR : Parcelable.Creator<Statement> {
+        override fun createFromParcel(parcel: Parcel): Statement {
+            val expression = parcel.readParcelable<Expression>(Expression::class.java.classLoader)
+            val statement = Statement(expression!!)
+
+            statement.result = parcel.readParcelable(Num::class.java.classLoader)!!
+
+            return statement
+        }
+
+        override fun newArray(size: Int): Array<Statement?> {
+            return arrayOfNulls(size)
+        }
     }
 }

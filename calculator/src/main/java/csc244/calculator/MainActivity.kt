@@ -1,22 +1,45 @@
 package csc244.calculator
 
+import android.app.Activity
+import android.content.Intent
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.TextView
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModelProvider
 import csc244.calculator.core.*
+import csc244.calculator.model.MainViewModel
 
+const val HISTORY_EXTRA = "csc244.calculator.MainActivity.HISTORY_EXTRA"
+
+const val REQUEST_HISTORY = 1
+
+@Suppress("DEPRECATION")
 class MainActivity : AppCompatActivity() {
-    private val calculator = Calculator()
+    private var mainViewModel: MainViewModel? = null
 
-    private var num: Num = Num.long(0)
+    private var calculator: MutableLiveData<Calculator> = MutableLiveData()
 
-    private var numRegistered: Boolean = true
+    private var num: MutableLiveData<Num> = MutableLiveData()
+
+    private var numRegistered: MutableLiveData<Boolean> = MutableLiveData()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        // restore the saved string value, if any
+        val savedNum = savedInstanceState?.getParcelable("num") as Num?
+        val savedCalculator = savedInstanceState?.getParcelable("calculator") as Calculator?
+
+        // create view model provider
+        mainViewModel = ViewModelProvider(this)[MainViewModel::class.java]
+        calculator = mainViewModel!!.getCalculatorData(savedCalculator)
+        setNum(mainViewModel!!.getNumData(savedNum).value!!)
+        numRegistered = mainViewModel!!.getNumRegisteredData(true)
 
         // numbers
         val btnNumberList: MutableList<Button> = mutableListOf()
@@ -32,6 +55,8 @@ class MainActivity : AppCompatActivity() {
         btnNumberList.add(findViewById(R.id.btn_number_9))
 
         for ((digit, button) in btnNumberList.withIndex()) {
+            button.setTextColor(Color.parseColor("#333333"))
+            button.setBackgroundColor(Color.parseColor("#cccccc"))
             button.setOnClickListener { appendDigit(digit) }
         }
 
@@ -68,10 +93,10 @@ class MainActivity : AppCompatActivity() {
         // shift
         val btnMinusOrPlus: Button = findViewById(R.id.btn_minus_or_plus)
         btnMinusOrPlus.setOnClickListener {
-            if (numRegistered) {
+            if (numRegistered.value!!) {
                 setOperator(BinaryOperator.Multiply)
-                numRegistered = false
-                num = Num.long(-1)
+                numRegistered.value = false
+                num.value = Num.long(-1)
                 findAndDisplay()
             }
         }
@@ -83,14 +108,41 @@ class MainActivity : AppCompatActivity() {
         // clear
         val btnClear: Button = findViewById(R.id.btn_clear)
         btnClear.setOnClickListener {
-            calculator.clear()
+            calculator.value!!.clear()
             setNum(Num.long(0))
-            numRegistered = true
+            numRegistered.value = true
         }
 
         // history
         val btnHistory: Button = findViewById(R.id.btn_history)
-        btnHistory.setOnClickListener { }
+        btnHistory.setOnClickListener {
+            // show history activity
+            val intent = Intent(this@MainActivity, HistoryActivity::class.java)
+            intent.putStringArrayListExtra(HISTORY_EXTRA, calculator.value!!.getHistory())
+            startActivity(intent)
+        }
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        outState.putParcelable("num", num.value!!)
+        outState.putParcelable("calculator", calculator.value!!)
+    }
+
+    @Deprecated("Deprecated in Java")
+    @SuppressWarnings("deprecation")
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        Log.d("onActivityResult", "onActivityResult")
+        if (requestCode == REQUEST_HISTORY && resultCode == Activity.RESULT_OK && data != null) {
+            val selectedId: Int = data.getIntExtra(HistoryActivity.SELECTED_ID, -1)
+            Log.d("id@onActivityResult", selectedId.toString())
+            if (selectedId >= 0) {
+                val statement = calculator.value!!.getStatement(selectedId)
+                calculator.value!!.clear()
+                calculator.value!!.register(statement.getResult())
+            }
+        }
     }
 
     private fun display(text: String) {
@@ -100,7 +152,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setNum(num: Num, toDisplay: Boolean = true) {
-        this.num = num
+        this.num.value = num
 
         if (toDisplay) {
             val text: String = num.toString()
@@ -109,26 +161,26 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun appendDigit(digit: Int) {
-        numRegistered = false
+        numRegistered.value = false
 
-        if (num.isLong() && num.toLong() == 0L) {
+        if (num.value!!.isLong() && num.value!!.toLong() == 0L) {
             // 0 => replace
-            num = Num.long(digit)
-        } else if (num.isLong()) {
+            num.value = Num.long(digit)
+        } else if (num.value!!.isLong()) {
             // long => directly appends
-            num = Num.long(num.toLong() * 10 + digit)
-        } else if (num.isDouble()) {
-            val numStr: String = num.toDoubleStr() + digit.toString()
-            num = Num.double(numStr.toDouble(), num.getPrecision() + 1)
+            num.value = Num.long(num.value!!.toLong() * 10 + digit)
+        } else if (num.value!!.isDouble()) {
+            val numStr: String = num.value!!.toDoubleStr() + digit.toString()
+            num.value = Num.double(numStr.toDouble(), num.value!!.getPrecision() + 1)
         }
 
-        setNum(num)
+        setNum(num.value!!)
     }
 
     private fun appendDot() {
-        if (num.isLong()) {
-            setNum(Num.double(num.toLong(), 0))
-            Log.d("precision", num.getPrecision().toString())
+        if (num.value!!.isLong()) {
+            setNum(Num.double(num.value!!.toLong(), 0))
+            Log.d("precision", num.value!!.getPrecision().toString())
         }
     }
 
@@ -136,33 +188,33 @@ class MainActivity : AppCompatActivity() {
      * Finds the result and display it.
      */
     private fun findAndDisplay() {
-        if (numRegistered) return
+        if (numRegistered.value!!) return
 
-        val statement = calculator.register(num)
+        val statement = calculator.value!!.register(num.value!!)
         Log.d("statement", statement.toString())
 
         if (statement != null) {
             setNum(statement.getResult())
-            calculator.register(num)
+            calculator.value!!.register(num.value!!)
         }
 
-        numRegistered = true
+        numRegistered.value = true
     }
 
     /**
      * Sets operator.
      */
     private fun setOperator(operator: Operator) {
-        if (!numRegistered) findAndDisplay()
+        if (!numRegistered.value!!) findAndDisplay()
 
-        val statement = calculator.setOperator(operator)
+        val statement = calculator.value!!.setOperator(operator)
         Log.d("statement", statement.toString())
 
         if (statement == null) {
             setNum(Num.long(0), toDisplay = false)
         } else {
             setNum(statement.getResult())
-            calculator.register(num)
+            calculator.value!!.register(num.value!!)
         }
     }
 }
