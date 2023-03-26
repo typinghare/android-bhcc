@@ -13,12 +13,14 @@ import androidx.lifecycle.ViewModelProvider
 import csc244.calculator.core.*
 import csc244.calculator.model.MainViewModel
 
-const val HISTORY_EXTRA = "csc244.calculator.MainActivity.HISTORY_EXTRA"
-
-const val REQUEST_HISTORY = 1
-
 @Suppress("DEPRECATION")
 class MainActivity : AppCompatActivity() {
+    companion object {
+        const val HISTORY_EXTRA = "csc244.calculator.MainActivity.HISTORY_EXTRA"
+
+        const val REQUEST_HISTORY = 1
+    }
+
     private var mainViewModel: MainViewModel? = null
 
     private var calculator: MutableLiveData<Calculator> = MutableLiveData()
@@ -31,15 +33,20 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // restore the saved string value, if any
-        val savedNum = savedInstanceState?.getParcelable("num") as Num?
-        val savedCalculator = savedInstanceState?.getParcelable("calculator") as Calculator?
-
         // create view model provider
         mainViewModel = ViewModelProvider(this)[MainViewModel::class.java]
-        calculator = mainViewModel!!.getCalculatorData(savedCalculator)
-        setNum(mainViewModel!!.getNumData(savedNum).value!!)
+        calculator = mainViewModel!!.getCalculatorData(Calculator())
+        setNum(mainViewModel!!.getNumData(Num.long(0)).value!!)
         numRegistered = mainViewModel!!.getNumRegisteredData(true)
+
+        // restore the saved string value, if any
+        // TODO: update API
+        val savedNum = savedInstanceState?.getParcelable("num") as Num?
+        val savedCalculator = savedInstanceState?.getParcelable("calculator") as Calculator?
+        val savedNumRegistered = savedInstanceState?.getBoolean("numRegistered")
+        if (savedNum != null) setNum(savedNum)
+        if (savedCalculator != null) calculator.value = savedCalculator
+        if (savedNumRegistered != null) numRegistered.value = savedNumRegistered
 
         // numbers
         val btnNumberList: MutableList<Button> = mutableListOf()
@@ -117,33 +124,39 @@ class MainActivity : AppCompatActivity() {
         val btnHistory: Button = findViewById(R.id.btn_history)
         btnHistory.setOnClickListener {
             // show history activity
-            val intent = Intent(this@MainActivity, HistoryActivity::class.java)
+            val intent = Intent(this, HistoryActivity::class.java)
             intent.putStringArrayListExtra(HISTORY_EXTRA, calculator.value!!.getHistory())
-            startActivity(intent)
+
+            startActivityForResult(intent, REQUEST_HISTORY)
         }
     }
 
     override fun onSaveInstanceState(outState: Bundle) {
+        Log.d("onSaveInstanceState", "onSaveInstanceState")
         super.onSaveInstanceState(outState)
+
         outState.putParcelable("num", num.value!!)
         outState.putParcelable("calculator", calculator.value!!)
+        outState.putBoolean("numRegistered", numRegistered.value!!)
     }
 
     @Deprecated("Deprecated in Java")
     @SuppressWarnings("deprecation")
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-        Log.d("onActivityResult", "onActivityResult")
         if (requestCode == REQUEST_HISTORY && resultCode == Activity.RESULT_OK && data != null) {
-            val selectedId: Int = data.getIntExtra(HistoryActivity.SELECTED_ID, -1)
-            Log.d("id@onActivityResult", selectedId.toString())
+            val selectedId = data.getIntExtra(HistoryActivity.SELECTED_ID, -1)
             if (selectedId >= 0) {
                 val statement = calculator.value!!.getStatement(selectedId)
                 calculator.value!!.clear()
-                calculator.value!!.register(statement.getResult())
+
+                val result = statement.getResult()
+                setNum(result)
+                calculator.value!!.register(result)
             }
         }
     }
+
 
     private fun display(text: String) {
         val textDisplay = findViewById<TextView>(R.id.number_display)
@@ -151,13 +164,21 @@ class MainActivity : AppCompatActivity() {
         text.also { textDisplay.text = it }
     }
 
-    private fun setNum(num: Num, toDisplay: Boolean = true) {
+    private fun setNum(num: Num?, toDisplay: Boolean = true) {
+        Log.d("num@SetNum", num.toString())
+
+        if (num == null) {
+            calculator.value!!.clear()
+            numRegistered.value = true
+            this.num.value = Num.long(0)
+
+            display("NaN")
+            return
+        }
+
         this.num.value = num
 
-        if (toDisplay) {
-            val text: String = num.toString()
-            display(text)
-        }
+        if (toDisplay) display(num.toString())
     }
 
     private fun appendDigit(digit: Int) {
@@ -208,13 +229,14 @@ class MainActivity : AppCompatActivity() {
         if (!numRegistered.value!!) findAndDisplay()
 
         val statement = calculator.value!!.setOperator(operator)
-        Log.d("statement", statement.toString())
+        Log.d("statement@setOperator", statement.toString())
 
         if (statement == null) {
             setNum(Num.long(0), toDisplay = false)
         } else {
-            setNum(statement.getResult())
-            calculator.value!!.register(num.value!!)
+            val result = statement.getResult()
+            setNum(result)
+            if (result != null) calculator.value!!.register(result)
         }
     }
 }

@@ -18,7 +18,7 @@ class HistoryActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_history)
 
-        val historyList = intent.getStringArrayListExtra(HISTORY_EXTRA)
+        val historyList = intent.getStringArrayListExtra(MainActivity.HISTORY_EXTRA)
         val listView: ListView = findViewById(R.id.list_view_history)
 
         if (!historyList.isNullOrEmpty()) {
@@ -27,13 +27,11 @@ class HistoryActivity : AppCompatActivity() {
             listView.adapter = adapter
 
             listView.setOnItemClickListener { _, _, _, id ->
-                val intent = Intent(this, MainActivity::class.java)
-                intent.putExtra(SELECTED_ID, id)
+                val intent = Intent()
+                intent.putExtra(SELECTED_ID, id.toInt())
 
                 // send the intent as a request
-                startActivityForResult(intent, REQUEST_HISTORY)
                 setResult(Activity.RESULT_OK, intent)
-                Log.d("id", id.toString())
 
                 // destroy this activity
                 finish()

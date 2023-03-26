@@ -10,59 +10,64 @@ import kotlin.math.sqrt
 class Statement(
     private val expression: Expression,
 ) : Parcelable {
-    private var result: Num
+    private var result: Num?
 
     init {
         // computes
-        when (expression) {
-            is UnaryExpression -> {
-                result = when (expression.getOperator()) {
-                    UnaryOperator.SquareRoot -> computeSquareRoot(expression.getNum())
-                    UnaryOperator.Square -> computeSquare(expression.getNum())
-                    UnaryOperator.Log -> computeLog(expression.getNum())
-                    UnaryOperator.Ln -> computeLn(expression.getNum())
+        try {
+            when (expression) {
+                is UnaryExpression -> {
+                    result = when (expression.getOperator()) {
+                        UnaryOperator.SquareRoot -> computeSquareRoot(expression.getNum())
+                        UnaryOperator.Square -> computeSquare(expression.getNum())
+                        UnaryOperator.Log -> computeLog(expression.getNum())
+                        UnaryOperator.Ln -> computeLn(expression.getNum())
+                    }
+                }
+                is BinaryExpression -> {
+                    result = when (expression.getOperator()) {
+                        BinaryOperator.Plus -> computePlus(
+                            expression.getLeftNum(),
+                            expression.getRightNum()
+                        )
+                        BinaryOperator.Minus -> computeMinus(
+                            expression.getLeftNum(),
+                            expression.getRightNum()
+                        )
+                        BinaryOperator.Multiply -> computeMultiply(
+                            expression.getLeftNum(),
+                            expression.getRightNum()
+                        )
+                        BinaryOperator.Divide -> computeDivide(
+                            expression.getLeftNum(),
+                            expression.getRightNum()
+                        )
+                        BinaryOperator.NPower -> computeNPower(
+                            expression.getLeftNum(),
+                            expression.getRightNum()
+                        )
+                        BinaryOperator.NSquareRoot -> computeNSquareRoot(
+                            expression.getLeftNum(),
+                            expression.getRightNum()
+                        )
+                    }
+                }
+                else -> {
+                    throw IllegalArgumentException("Expression given is not recognized.")
                 }
             }
-            is BinaryExpression -> {
-                result = when (expression.getOperator()) {
-                    BinaryOperator.Plus -> computePlus(
-                        expression.getLeftNum(),
-                        expression.getRightNum()
-                    )
-                    BinaryOperator.Minus -> computeMinus(
-                        expression.getLeftNum(),
-                        expression.getRightNum()
-                    )
-                    BinaryOperator.Multiply -> computeMultiply(
-                        expression.getLeftNum(),
-                        expression.getRightNum()
-                    )
-                    BinaryOperator.Divide -> computeDivide(
-                        expression.getLeftNum(),
-                        expression.getRightNum()
-                    )
-                    BinaryOperator.NPower -> computeNPower(
-                        expression.getLeftNum(),
-                        expression.getRightNum()
-                    )
-                    BinaryOperator.NSquareRoot -> computeNSquareRoot(
-                        expression.getLeftNum(),
-                        expression.getRightNum()
-                    )
-                }
-            }
-            else -> {
-                throw IllegalArgumentException("Expression given is not recognized.")
-            }
+        } catch (e: java.lang.Exception) {
+            result = null
         }
     }
 
-    fun getResult(): Num {
+    fun getResult(): Num? {
         return result
     }
 
     override fun toString(): String {
-        return "$expression = $result"
+        val res = result?.toString() ?: "NaN"
+        return "$expression = $res"
     }
 
     private fun computeSquareRoot(num: Num): Num {

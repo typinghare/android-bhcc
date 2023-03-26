@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Internet</string>
+    <string name="select_a_button_to_click">Select a button to Click!</string>
+    <string name="show_me_a_cat">Show me a cat</string>
+    <string name="show_me_a_dog">Show me a dog</string>
+    <string name="tell_me_a_joke">Tell me a joke</string>
+</resources>

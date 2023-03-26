@@ -3,6 +3,7 @@ package csc244.calculator.core
 import android.os.Parcel
 import android.os.Parcelable
 
+// object => JSON => object
 @Suppress("DEPRECATION")
 class Calculator : Parcelable {
     private val statementList: MutableList<Statement> = mutableListOf()
@@ -11,7 +12,9 @@ class Calculator : Parcelable {
 
     private var operator: Operator? = null
 
-    fun register(num: Num): Statement? {
+    fun register(num: Num?): Statement? {
+        if (num == null) return null
+
         if (registerNum == null) {
             registerNum = num
             return null
@@ -30,6 +33,8 @@ class Calculator : Parcelable {
     }
 
     fun setOperator(operator: Operator): Statement? {
+        if (registerNum == null) return null
+
         if (operator is UnaryOperator) {
             val expression = UnaryExpression(registerNum!!, operator)
             val statement = Statement(expression)
