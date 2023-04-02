@@ -10,9 +10,11 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/bgc" />
             <option value="$PROJECT_DIR$/calculator" />
             <option value="$PROJECT_DIR$/counter" />
             <option value="$PROJECT_DIR$/internet" />
+            <option value="$PROJECT_DIR$/note" />
           </set>
         </option>
       </GradleProjectSettings>

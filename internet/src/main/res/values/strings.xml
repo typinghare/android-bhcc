@@ -4,4 +4,8 @@
     <string name="show_me_a_cat">Show me a cat</string>
     <string name="show_me_a_dog">Show me a dog</string>
     <string name="tell_me_a_joke">Tell me a joke</string>
+    <string name="api_acknowledgments">API - https://rapidapi.com/KegenGuyll/api/dad-jokes</string>
+    <string name="back">Back</string>
+    <string name="dog_or_cat_picture">Dog or cat picture.</string>
+    <string name="acknowledgments_dog_api">API - https://dog.ceo/dog-api/</string>
 </resources>
