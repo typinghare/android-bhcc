@@ -1,0 +1,27 @@
+REQUEST BODY
+This is a protected method (a token required in the header)
+
+This method will return all registed user accounts on the database.
+method 		- The method to be invoked this should not be different than the value specified below
+401 error when an unathorized access is attempted.
+
+{
+  "method": "getAllAccounts"
+}
+
+RESPONCE BODY
+An array of account infromation. The account information will include email, first name, last name as and extra information stored in the user account
+[
+  {
+    "email": "TONY@STARKENTERPRISE.COM",
+    "first_name": "Tony",
+    "last_name": "Stark",
+    "extra": "//Your own custom information"
+  },
+  {
+    "email": "IRONMAN@STARKENTERPRISE.COM",
+    "first_name": "Iron",
+    "last_name": "Man",
+    "extra": "//Your own custom information"
+  }
+]

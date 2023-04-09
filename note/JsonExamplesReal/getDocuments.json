@@ -1,0 +1,35 @@
+This is a protected method (a token required in the header)
+This method returns a set of documents. By specifying a scope you may request only your documents, only documents shared with you or both documents shared with you and your documents.
+400 error when the scope speficed is < 0 or > 2
+401 error when an unathorized access is attempted.
+
+REQUEST BODY
+
+scope - An identifer that indicates which documents you would like retrieve.
+0 = Your documents
+1 = Documents shared with you
+2 = Your documents and documents shared with you
+
+{
+  "method": "getDocuments",
+  "scope": 0
+}
+
+RESPONCE BODY
+
+A set of documents that are part of the scope specified in the request
+
+[
+  {
+    "id": "d5b3af2a-be02-44cb-aa16-c26a88b89818",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...",
+    "creation_date": "1571944267378",
+    "title": "Lorem ipsum dolor"
+  },
+  {
+    "id": "71c966f0-6a59-4174-9a26-bf4bb7ad8a95",
+    "text": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur...",
+    "creation_date": "1571944267377",
+    "title": "Ut enim ad"
+  }
+]

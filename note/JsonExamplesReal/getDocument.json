@@ -1,0 +1,26 @@
+REQUEST BODY
+This is a protected method (a token required in the header)
+This method is meant to retieve a single document. The document must be shared with the user or created by the user to for the method to return the specified document.
+400 error when the ID of the document do not confrom to the proper UUID formating. Please see https://en.wikipedia.org/wiki/Universally_unique_identifier#Format
+401 error when an unathorized access is attempted.
+404 error when the ID of the document specified does match a document found in the database.
+
+
+method        - The method to be invoked this should not be different than the value specified below
+document_id   - The ID of the document you would like to retieve. This is a 128-bit number used to identify document in the database. For formating guidlines see https://en.wikipedia.org/wiki/Universally_unique_identifier#Format.
+{
+  "method": "getDocument",
+  "document_id": "71c966f0-6a59-4174-9a26-bf4bb7ad8a95"
+}
+
+RESPONCE BODY
+id          - The ID of the document you would like to retieve. This is a 128-bit number used to identify document in the database. For formating guidlines see https://en.wikipedia.org/wiki/Universally_unique_identifier#Format.
+text -  The actual text body of the document. This will be stored as a string on the database.
+creation_date - Time the document was created as returned by System.currentTimeMillis(). The time since January 1st 1970 in milliseconds.
+title - The title of the document.
+{
+  "id": "71c966f0-6a59-4174-9a26-bf4bb7ad8a95",
+  "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+  "creation_date": "1571944267377",
+  "title": "My Lorem Ipsum Passage"
+}

@@ -1,0 +1,1884 @@
+RESPONCE BODY
+
+NO CONTENT
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"QUJuORmzoTNcwEitSqsTZH41t5HSQ6EtojV3EbMnyZNFSm5VGICgURNcjFJTnv0iSf2CKeyraibrKlsd24smglzR1Sinnb27AikVDmbVGDiB0VvWlvWtzsChdYaSO3XS","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1572143555683}
+
+RESPONCE BODY
+
+NO CONTENT
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"kYxujRrGdBvOF3Qty9lFzNqYNUJTHAKGN2lQtAWzaJ3ao5BpGSTCWjHKFfhqDsoNJnReiU9JWic1LY9E3qNpWbfatST6CgKDZ1Ggrhilo8oiA9USqfGngojOkXCCQZ7x","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1572634102286}
+
+RESPONCE BODY
+
+NO CONTENT
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"igpvuN72CT3EBRssW9iYlH4gSiOPp5jnG0KEZK4pYMrQSG3TH4jzbaF3c0R9GQ5RPxS5v1qznrEg62vbSJ7udhUjfuBr3BvOSLITOclfYetYLj6EI05UsgnKd00edZg1","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1572634180425}
+
+RESPONCE BODY
+
+NO CONTENT
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"EYFIQ0RtXVCgdW91wroNVyEmpfBz4NHWaa16f3XJTPhSovbNHRnhij8XMv1ZnKXAOyKLKZMoXr4WGttHhms6VXiV3ooqsPI5tGMvv0KfYixB5hNXxzNG337xl6PEgnbe","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1572634282590}
+
+RESPONCE BODY
+
+NO CONTENT
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"KLslNCW22gxdExrXRdFoKmARRSPccSMW3MphkCWcYapbMcCGfScKT0d4KdeJVp7fIkvh1R7dVCc6N3q5L9sZbT27NKeXC2mNJkok0yhkuMQuPsVhoVhiKt0YyP7CjS4I","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1572634307522}
+
+RESPONCE BODY
+
+NO CONTENT
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"K3kOW1Y6uJvckkVR3i8RJraad30yh4uKeejRXzMRtOnNmKkBEaQAmvaN0RKATSgEf9NJdvLbzehtWMS0OzyJDI7mg7sdMQAHacL4nfAdj1qK99ETpHfCsXxDrfOaHXem","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1572634425345}
+
+RESPONCE BODY
+
+NO CONTENT
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"qj294Y7CrJV4up6pIA5jmsbmBJnyWfk3OjJzTKUu0i6zI5Rg3OJMRjxT0qnbjv0fmoLphvoMhcv7iAGsCLjgkTezVdTc4KKbxThFUESNQsJoQ2niBjpouXNIAmFNLlMo","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1572634480293}
+
+RESPONCE BODY
+
+NO CONTENT
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"AwxS3SRdezvT0HCyNUUQT4N6VEUaT5Rwb0p0pFnWh469CNLfSV5WUgQ7wRQ3enkuruYBZf3ZibMBCuYtNlvjiTx10eRs5rm1aA6a6KPEWL13QL3ubMb35NABWOisGGC6","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1572634520213}
+
+RESPONCE BODY
+
+NO CONTENT
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"Cl8P1qwOK3HijkGrO7G4tylyWX4cyFeFAB6axbkOZimCz0x93N0bNKytkvVHxE6JyxMPG67e2ywnjrUtcQhEIo3yAyFFWU44VZcOhP0YDVZ7HHm2oRd3qXxKNOjYlNbH","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1572634558395}
+
+RESPONCE BODY
+
+NO CONTENT
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"Lb5F39Wi69BXEojH66W7JIGLJqUv1a0tYN75lnCzZa7JkA9DXjnJpZrk23CJ9vvZ6bCd4dfcsrWqcgHG3gy3TgOJocaKKJeMvCoNLMTco5uD40SgKcsgP5MCuJdFNh5K","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1572634648916}
+
+RESPONCE BODY
+
+NO CONTENT
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"YRgEdS3R17mSGORpZggk9usL94nRYUPogn7ZUyOLR6IdN9Hy1BWxxqiHsWvF4tLrnLSptaQEiibQUuu4VXLbQOgzpYiyyN6QfQO68AaGNBqdQD7GNT4I0IpIH0BxgFyU","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1572635321020}
+
+RESPONCE BODY
+
+NO CONTENT
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"E7prWfDjfAKUFiqvtPUjMulgeD4DsybXy2H2RLAYzGmA2CiultYhemp04MWMs7lHjFSLUJNuBERhI5yLPwIO99f3XvaHcj3BdNdGvxrzNvRLQEDNuTq1YzhafMbQVrre","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1572635374733}
+
+RESPONCE BODY
+
+NO CONTENT
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"LWthFna4TWN946MfCxI3JDoD8jGWcgLJNB4iZN46XseAjCUtL69mpYfX84HAyMAIao5YUT27S3vfnwg7uT71ZGKU44uZ354HnBHaG3PbRJy7z41GkyW6HMTcxvhkU6bL","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1572635399290}
+
+RESPONCE BODY
+
+NO CONTENT
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"cMJGSekwJaNVzOcFvxY6vJyh7rS8AeGw8rid5ADySTEYAoLodJfTM0yj5d48utBfWJBUmhmR7YJ0m3pi0FgT53BtTfqDUo2sZ8Kfk2mZdXSZhjJVxlnho6gvJNAFZvBE","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1572635537558}
+
+RESPONCE BODY
+
+NO CONTENT
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"zWnnJT2FxTuly3WrqR39dCpmCrmXZUye0YfIWrMSnEpALRIYZhPcwDL2pRBF4ECfE02qp9n40DcDTKE1ErExmWDIszQQUUEjNJXDFcv1b7VvSDFgeDtcpvCpDSlG76qC","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1572635585788}
+
+RESPONCE BODY
+
+NO CONTENT
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"UgIV72areqU0gUklaD2GCrvA6UXGuxftnzGWs4huoRm8z9WqAzGcpjLwCiiPUvQjw7qPxkHD8nhlojU4PcwKbIbCglTuIQ6MI9FlArmVPwItZCxlnsAzfDeZM1xohfnO","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1572635696189}
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"HOMPAe1OxI2gaUfu4mHn4OtE2PoEXmWnUKjvudzVQDAfJ5DDXKWcmPBnk5r9n2bHjZPXqyIuGMQnnondLWWBK5DFStfYEZhts2CF4IJtDHsKDtO8yBCZAtMNVONiJpaV","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1572636461844}
+
+RESPONCE BODY
+
+NO CONTENT
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"uNaES6SjmEljy6iMybFWa0x9PfMkZUmHy6fHMbSz0v190irBU2MZExVYlG0XkI6NV0bxDBRRrnYZgd5czMhXBBGUM59Pf2EAtzhWjg3rRzg92fvteB1frlvFyvoDYQb7","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1572636462098}
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "harriswilliams64@gmail.com"
+}
+
+RESPONCE BODY
+
+{"token":"5LobTM7mZ78wP2OtzCaSg9cnjtGgGAbFwmR25ze22IF2iykJreCeaer7PHAhgQigjEbm9eiAYQRzWL89Wqrb5NXCoPlvT9F9ftjHlYrE7FxRPPYPmxJTL5s3Nwexz6wZ","owner":"HARRISWILLIAMS64@GMAIL.COM","ttl":1000,"creation_date":1572906821326}
+
+RESPONCE BODY
+
+NO CONTENT
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "harriswilliams64@gmail.com"
+}
+
+RESPONCE BODY
+
+{"token":"O6aO3VRkcWb0NkuoTXHyi4EPWyLHkA8EwcB6LKTvtBYc8Nzy2eLz4n8uQhaZ2l1y1bdXbN9eoCr2X1mMdit4fvdpQacmBtmcPpxY2KyV3w0cCSmKh6lBUYCYpA3x1VEN","owner":"HARRISWILLIAMS64@GMAIL.COM","ttl":1000,"creation_date":1572906821771}
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"HArq875uCdwD1OIjqwtZxEVY0gYfQ9V2cSgEWzLyyoDsfusyC9YMxBhk2bhSVYuQXBMAskTCniDf9RMI03uMM9lgCalb6l6czcAcYfONWjXRLRFLbC3Q8CO3KlscgxmF","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1572988838578}
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"VoJbIubbeKHQIZv8Uz9w6gKrHRTMQolvxYx5XFY0LUAH9wYVNmLVxqbuubjrH8VaBHFWOmovjOdguOhAHGuGg1DlV8C4kxbksX0G0qbfdzZ2JSFIuNHkSaDA4a6WKrtm","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1572988839089}
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"X9CAYFZ71n7Bz6Hgn8r9UtMvxk2FLhiZoZV6ssm1uZuRw4bPIjuhDG8K09o68kDKdEERryvrFlmWvbIo7cM6UjxjOc0Wg5oO2bhN43FXo6UMNzh8dfsGoXuqqW1IKyOe","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1572989042916}
+
+RESPONCE BODY
+
+NO CONTENT
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"fW8SsP7TbtWA49WXqjAhcNuP21cDjML6LFJDBmNyMKf8oVqSkNElAo9npmQweWIFH37xUeoUGrVyFKbScU8bfTEbQ2xjiCuOVKdOLXS3JBLHvUPEogiA7CVR9VlE98Fp","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1572989043544}
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"nIIvvBsyFFLb6LGZBiMtqoDZOLQubVg0TxYzaszt1zv346tGXRWiyrYAGHlFjUb8x7OJ6Vju14in0PAnE40QOz4gAktzz9z3F5DW2mjYN5yl32xyKSlushC6yiozZoLD","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1572989173679}
+
+RESPONCE BODY
+
+NO CONTENT
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"DL5WYUAGt8QEmc6AFRFkE23tODG1xPC8G5OQQwYe0Z4VPhHyJ8LfmpsUKJ8jjoBkpr92xWU1EBFJii7uM36zC3ssJjk1onezBzqF0SJZiLE9v1xchYrAC5YP5mxhBS3b","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1572989174875}
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"YdileFZqBSrs8M5S7zIkB1XG4uTTOTTdGlLxjzJywxWiPMm2YH9rGplFWlAe0v850pp6KOvIIWcwsbNONExMl60eBGPwphLBHystM5rFrAXYfDxRzCFJEhvqVWTVBpLi","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1572990795440}
+
+RESPONCE BODY
+
+NO CONTENT
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"XyGCrYnhQ1JCiJ63Vw4kmYkOCcO7XoNxclGgm0ygV0An2KcXjZoRUYesmG75SZWgOhie0b3ryjdkTE1rRd5QTPgHhWPkaTcTuAsQhb86ssLMIRLw1A5sWAtB5dgnFF85","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1572990796227}
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"u6a2UmU6TEVyiIymJSKXOBeVlxOvtEILxMRLQLOUcZ7cZPAErFwoPnIKAlON5d2nPf4UpKKO3JsDxpoptPL7fmSOuXJDDDc5z7lM5cer30QGFvAvLUsGOlkPdGG9Z9HM","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1573047755459}
+
+RESPONCE BODY
+
+NO CONTENT
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"zidlLkV2mohdKX4VVZYDKDUppxn2W0LpbOlrjyJoHJP4zbmYUd4DkA5KgOEe2FENrhMntQOVUIsY9tPRjHtUiQMQtSMrWltaKvWUSMSO04buvrIHwlClqXKI8jv2huJL","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1573047755933}
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"0sqHRN1HtCBMCiYJKqm0UDzl5cNxW5gSkbOSdRPxkBJdSiPtV6fznA7oqAMvkjcwTcDtO95gnS53byd3Yn79LmglJqoBgSEmsxq5JkWTYTYfb4eH16JSol327ktQe3zO","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1573047782394}
+
+RESPONCE BODY
+
+NO CONTENT
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"vYmQig5OxUUJnAdKp9d6XG3GTiuPHGTW6ePmWnHBuIhGYft3zvEKyfT8AQ0VwDqD1uZTQotOM00RN4wImmcmwOlwD6osKkGTVPrdovjXoLmkH3jXPFvFxAyhY7NmnaZ5","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1573047782968}
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"NOHJaZTCVnnQgxX7rfpdlPZiHMZX5E9eT2VmHIeyaMmIk4w5v5Y7ljuAZ3uyfsB9gxcbrl77SS0u9opF5pZQYnbSktNuFpTaUkJoPEm7AehundTim7oelVJWYdptW74L","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1573048334002}
+
+RESPONCE BODY
+
+NO CONTENT
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"eWB1XUjhADmlC3GREKESnTNVQnqP15EekFwuuwT4TGgOyWPYAhWagmnDh7zoOpbUqdpsuotKp73p014kKtT3vepgyzjri2lDsWdwg9nlMR4AakZ065QIwkHEwIVIdcPr","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1573048334401}
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"xPG1J77RyIPJIvXE1L53TQcughLIOl88EhiAoFVhgFfZlCaOoC3iXApjT2kkff2dDKzbCh8PpPOxnjw7fHTuBwzLsrkQXFgcEy3fpOh8bOHRelPKhDOpHAERnZMhYVGZ","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1573048377858}
+
+RESPONCE BODY
+
+NO CONTENT
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"tMXK4xiLU5gGk0rXKJtOndxupXN3l58tzXHRBtgFsTjf5sK7FI5PcYoFOAv2fkWc22lkZ8BNYulM9Q9MCqrjvnUvr8oMvgu8Tzjh93ObCyTIpMLVPk0a9krgINvaMPn2","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1573048378423}
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"f9H9uvej56I1gbpvIMOJf4mJCCWlPTmodsXsHDHy32kgVDmSqJfiCkXvMO5F20xw3ZWDZp3RqKkvF6Sbs8FBGhXspbruax2Dzp8Vr3d0D8ejRAnd1B03AnhJYyA4sBpa","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1573048441495}
+
+RESPONCE BODY
+
+NO CONTENT
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"SJh0iFNjRrU1dbFnGJDcreIjY7TcC6kIlFrzW4SF1h9OtZGPPUrzumFnVTzvZGzE87RXql5h5xgBS5PBIuoT8eLYjuw4blErA0UrVfbv3QLdwsVK1CBXLvdddARzdfzP","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1573048442152}
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"2KpoZ6oq4CE9CDz8fHuBf9qX1FEJmYOvcgdt5tymwNIKRs4rbwciUyPC5BCnnEKSf6xZJt6NxGDDjowXS5Av6opYxDrrjTeO71twdoXMrOskG1aQX8m6JKCG1EgNZoB9","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1573048494348}
+
+RESPONCE BODY
+
+NO CONTENT
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"9FVEyTmNdPIxbCecIzhrPw6KvZsOjYJVaD3p7T0DyecMwfj1TMzkcgP6Z9UZFatOaqZiY28hC9JdEn7YouoRjqsQlbxEYTA7qGp3UsglbGem2AHfpYGAvsuqEi3ILvPf","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1573048494811}
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"D9koU0trF6f2BZfPUXoYQMOnX8meRTYTU8vjdV0YPBMrwShoh9N2c6c05q9mSa5OJ3ifVSkbD9qtWpsNVOD6tPhvaZEoNbdQBXi5vNG3fMy9mTNWZUvKEb1Lf2lFOdbg","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1573055329250}
+
+RESPONCE BODY
+
+NO CONTENT
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"GOXul8W98f2rNGCtpuozcBFGBC6QXTkkq6OFuAcSetod4z7yAZhD1RrkltusrxBRs1YBKCWXapAWgrN1QG5ALb75VIvZcIIAghh6kliOO5mYmETQw3BDkSY8c0oycZaX","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1573055329636}
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"nJlT4c3J7yakM2SjKpWRtwekZXs5GNtIVs9YmephuzWWvjPjpBr2ejK7tbigF2fK3opHSuVQgeVCpvfoe6MN9T0zA5ZO0sbUFtIadryx2FyDDOM3lgewCS9kIt9YoUP1","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1573055363098}
+
+RESPONCE BODY
+
+NO CONTENT
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"LxIKu3NvKCBn9P4Mux0YW3R6fsNcPkMQcTOdbS9EsarDrgnIT6nTNhCdxej5H9rvqpWDcYXnpS4XyRO6k9G7wLpx0rtL5SyuIExVJLWzqSflubyZPj8dSMRrsDHwsuOY","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1573055363475}
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"mc4ifJpUo0sVtmTe8HTWYOTDKhjeS6hEkR0eGpkRxndP2QRK5cWbBa5tuTCSEToDnHTVMs1h1iwcCdmTCJtXG0wsJrJDeZ6Bg6c0d9Ns6QOnNarqdMqYp6UIUI4zajbX","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1573055487179}
+
+RESPONCE BODY
+
+NO CONTENT
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"9S3tq9arXRt9l6uAsjJ2pRmalOw7bVYTDDjyMfZV2Sk2IS6gdWICEWzgnzgARyJHxtNsD5myO72lG3QnSvEEvJT4m3PvBoPqON2bh3LskGoEbYEwnzHLP8bTMuxqsI0h","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1573055487642}
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"uyDrFT2rQTefc1ctosoMBdjyZyZTVjB18wGLj6ATvJC6yQcnyyAXsVJh5OmAoa8uVaRTZ2i5DNKImviUledsHVj59JG0yQlvqpb6eQuQnpsohJzgKR2leimMRtQL8eYr","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1573055539137}
+
+RESPONCE BODY
+
+NO CONTENT
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"SJCHr8natJiLPZqxLOkzJpUFZ7NOu0phEWfxxxY6s41bCvRzAAtqHBH7CJ9Lx4nO7mBon30gWqNthShm1dtOYY0lZa0RYRZH87Z8KFiFL1x8zVx3j9Rx3XnVrPnkgZYM","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1573055539595}
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"6OrFqpW9qEzNY90qxf9Fb0qd2aG3lTEZ8fno8YoskvlgZZGt5y20BtXOnBijMLbdSfkvF3zIjRr9noofTxulArZ0lwVVgGj94zp9Y7WE9OAYYT5h0YpB2M9IFcBsW8zp","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1573055584516}
+
+RESPONCE BODY
+
+NO CONTENT
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"3ZEhvV2bSYCcGuUjw3dFXhZnxhmsmlhm4dkQ0d2O3jg5qnRKt8xD3IRbYviEtG3hvsFGRWoprjj2vxWbjfbFrzDrcSnfMCFpjJCGJOHbHV91jcE5mbnbSfFeAi4PdPVs","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1573055584924}
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"ioWDzG8bqHF4qxwcM5oN4uI1CcaW8wPtVcxru5IbUIDDXHADdGHIXprh6GUWE6qCQrDks4D1toFF8v4YVTZOCABF8HEJEyM8jCyFcK9fydeJt5X6FvvR071pSa7qwmJ8","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1573055647254}
+
+RESPONCE BODY
+
+NO CONTENT
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"SQFNhWbz0CIdrG0miGGIljMX8NFuEgCh7QGIJMX927MDReEmok10k8UATu3T6meNLHWeblkbRSrljkXdalC2vM8OadmcBxRJvcKE4cpdaEF8ZnbVpn3ho7UvuLQxceyq","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1573055647633}
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"yP7CPq2i5tBpukFRXUVMjp6r81939lNvkOeGRdgEf8r6cPxzr5hbBQyYJN5oV5hpZ95KYK8b4gW5tsUjx3Q44IBgbAmS14gu9HU5ZtAoZGzXzUzCIur4V4fAIf2qCVc9","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1573055817851}
+
+RESPONCE BODY
+
+NO CONTENT
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"WKcIJ9Bz4qhCZRUoAVQKc5reMbbYETWXzVgBGtYWaDBnfApCq8YyvRtmQBljBeETurlwsYwAIGVmGVgtaPz6DeWb7sRpW3cybVoNDo4NbJ7Nepjom2TI9HyWQpZiNTtD","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1573055818273}
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"vcpQp5WrfRTB6yK6Q1WKpX8dcyjk3ihekPg2ZSc1a1MJOWGdFV1oepTzbvhv4ULxT1l0qiJ5U3JLphOEpfQhWz5pA0VWNDN3zE189GI820aJW78EhFTz9QoCuZE1eTMi","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1573055883260}
+
+RESPONCE BODY
+
+NO CONTENT
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"HD8XK8TuxzX1wBPgXPgyvoyfKA0iXH7IQEOGJnyeAZJJ5zmAnSOywKLalXbyZvac3Tthl3VM5Oh570YtWS5NyQF1VbyZgNm69o03MQeiJ5UH4Wl9qbGtsbmKmLO9x9Fs","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1573055884164}
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"QJ1T3Duo2iJReIfpiehM0nYdW0EBYzJLquP9WW777kznjSZHTCmwdpzEEpChHs9DuKN9vyKHjaTh3455APsx7qbYHCI2VV1D8TRSIme2EtMP6ZBvjyEjszbJsav0wnJH","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1573056211719}
+
+RESPONCE BODY
+
+NO CONTENT
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"ffIwGQZ6UxZM8aukOsxHaS1m948rscV5eD00414rgbh87ie7A0Cttl6VvCnmejDA1rr8gJrJaGbqoDzkHVNG6u2NcG7Y27PS6wqDlHPSg6WCDJpEHVPqzfabmo1ovH0W","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1573056212109}
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"5L32TvmPHmyMijzZeZ1oBgdu3xc5OKXpo9PNl5UaI6xQjfJIeIAQimJbRDFvvqYab0KnAWhukzkclOV4VCaIPyk46LFuyNUm1eBnv29JQEuF7T6TTzmnvkQz3cuWHNX3","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1573056244636}
+
+RESPONCE BODY
+
+NO CONTENT
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"G4jlzyZvMiFjfJuQ9cF243g7TOtDm2dt8S4d77MFiK3lJ2ygm8xN3mDOVxbTwZWa7j2N0SoHaKErBotLGBEXSdwMj1reBBMyfQNoUrg3afbyAlbqq80iN9gPKrMM4BF6","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1573056244971}
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"RQWBCrTmRP4E40tUHAT72lF3iiG03JXFrL8m8mu7C6xcdMUP7ikXeWU2IgamK0O7PsEj3K5jc4gbSfuPhvqM32qrnA1Btm1M6UASpnPpxNah7G90e1qguTpsY4sPMglZ","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1573056352727}
+
+RESPONCE BODY
+
+NO CONTENT
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"5KioOGDCZ8fwxGjyAEvgq66LipiNywgODKsLmr3rTleVyjLqLXrRtdfxEH47mUFgtz11NQeewMD4EevtKLZYXWfrAYUPuQ6lgbiuh6gxidTrYzBlacD6dj5sZ3wtQwFn","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1573056353096}
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"7z4AUSeNP2KMnUx2nGADAjmQQMEFzFCEzm9QJEZKLdYnVDUU6j6fb1lt56jZEsUy9Tk7xKFCZMuxK5MC6qibC9toJUk0d5N2fPPEhRM2QhFB03IweppRP2DjffJ1CiU2","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1573056470325}
+
+RESPONCE BODY
+
+NO CONTENT
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"IHwOiP6gLl4D7rHnzw2VIRnLL5krj2PiAKk2m3TK4YYqqcxZMMY0t4ZOmJJHIm1crJii3YHKBapfkMyaQQZTU3o8ki6qdna0XhmfuRiLFvi0Z74rpdisFPwvkJFONWS0","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1573056470651}
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"6qadQhwZ2xyq5VJwpedMxTapjxfvPLSVfGjfOpW0EoJXiF2uNrMgFGuJfZG9V7hzyS2LEv7FXTrdWclxLJZQchlqPBFk8esj6S5vdAZUixXdKC4STlyuZJwOlXn4v6fx","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1573056523393}
+
+RESPONCE BODY
+
+NO CONTENT
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"dK5mCR23DQYiokIkIr7Owf8r9bjoGbTQ8YLHp6Vs8zuMcXG9z7mU0piRroyxouDO48XN0PJggIzeVKOHXNUPA6oPLyyt5yzvJNBpgtShmKhceoKD6TrgW6QKtgVatciC","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1573056523718}
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"ePVm3JWfc4xXTJU2KFuv8dBGG08WeArxddrS4cLVOIxny97QoicrBAz0qlJ9SceavZWaVlj61GnlmZiwWvpif3VH0Asav0eEzoK1hW9mXTeRFUzA0gfuy9d2LycGS0Of","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1573056772312}
+
+RESPONCE BODY
+
+NO CONTENT
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"yFZUevhTiYsVRdansKLWv2voL7lER5ktQ2BbWYn8xLx9A8y9oC0vVR4j3EjL7lnB0qRzEzSyjzhLQLI7YXDpu7hswPmBk1XpDKC03xdL9SdYujyzkZ9J2QV3biEyF5MO","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1573056772686}
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"FoIq0yUR8PCqhPo7thYHzcvByI84ndF9NNg3iep1CHqi5mmSEwuOs0F3zGvlocp5LSZPCDoQRJjfDcQwcLBBIfpFR5pEsMECh7LTQlUpPBQm4HtmbAXHQAQcFemj6Btc","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1573056812131}
+
+RESPONCE BODY
+
+NO CONTENT
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"AAKqMuuXbORBx0nxL5inOVrflMOPyqtvTQpukGOnnGxA9AMbdzZCXstqjxCN9Y8werEn8wm3bBCxiUzgfgUUY3Ownb0FFSf6hzgEiPJxj9IbT3xJ1XuFh85gru831j8J","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1573056812556}
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"GHynpdBH38tQBJPkAcKp3Ga3L4lFLZcl6JBaXC0r49EuOn4uvcUuabWo7QOp0wDdHghvVxQy9XXmLkDQyWSAsO6QkGBSK7iG5semn17DeB9xXKHMp6PwUWUbHyarJFYt","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1573056852837}
+
+RESPONCE BODY
+
+NO CONTENT
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"O8JSTH4asFbBlqbDwZ1WLy7eHhLk1hoVDFvPML9pGZ6IvvUggfKau8HjIm9QNLKhWzWTqXHlWbOkREFJAJJEEJvRiJ3kID4NjtfXmG3pDNxi7myuImVZ3d2lWn247E1u","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1573056853352}
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"i1LX7gLwYh5nyCZM09k5Q9M9EOsvR2J0Zs38i91XT8F2y5PwBloYdgH6OJ14ZOtX8zNyMQpzCdV8nyukuTnohUbNsf7IcfodQoBANMXDX9VSny2Yr4jsbF6KKOI0QXhB","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1573056895880}
+
+RESPONCE BODY
+
+NO CONTENT
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"AoZokFuoBl1IP3HogOmK7WtdW5wYC6PFGPv7xBlIFkkxdxgMxLMqNDm5z4I3vuLKTQsSHITRXFpv79v5eqL69NpuMP9b8FTZ0kVyTvdKn8IqHQDBBQPj3cmquYWgxv91","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1573056896283}
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"xwxPralIs3KGGHT4PcL4LRQ7i1a00qoffBIynZWmRRwPBt0J7Ez5GRoWk2Gqki9o5W8ZRx6PbBmHqY7AzbkJ1iw9MQxoSB2uiGfjRcFB3NoVr7q4AatO7iDPdGvUAcy0","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1573057347043}
+
+RESPONCE BODY
+
+NO CONTENT
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"CsCdQorKnjEZHpozRcb0Gd85rg90aL81RWPki6gb7SFmim8VdadsAQHFJfQmXWxd1NsU45rZL6sDGYr3D6eKfo9Vs1AbhgbQ7QbbUAyHttHZb6ZyEp3ORVwL4I5qk23b","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1573057347501}
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"TkTeepeMti0b53KDemMoOOUiWJkOzbYsHl5CZXOBRFZDGF9LxMjR2OgXoC5ZTTOA49CIAP2J4hn7pWPpFHAcn8kSiImUecrWUQGQ3E5gzw2cJQAaMgeKd5Je2hBhIOx8","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1573057390722}
+
+RESPONCE BODY
+
+NO CONTENT
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"GzRxD0s7274M20jotVPacWBb05z30QCvdDK7jvpJlj1A64KQLKswaieiYoZiZj38GtckxCpYl5WfoaQT0p4e3ZuekJLc3TnrVuXcRExKlO7TqxVhtaMwcl3gdFhywqhP","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1573057391140}
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"lThldFGwjeMJKzTW2qXsFo2GtReKM8RwTf6xl7IVbAP9ZiSqReR7tYxsQ1oagBPd3TGwr8Rd43fHNOa2sijTrfrD41Hu4uZc1WLWVPSuhZthtlqqLVYV2cSvXkQiKan9","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1573057501498}
+
+RESPONCE BODY
+
+NO CONTENT
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"zl1RoajDLcboVmK5Erp8nnxPF581gIyFTUd8yJWmz3DCk7B0eYSGmoDT8tsgrJT4bwAtrtlkNs6jnJ4VYzPKCRiIwdZsPcYWaQWazK8HHBBz0etVSWsd8HBB6BIHg2L2","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1573057502121}
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"yTNPsuE9Z15PgQXkV2Hq5oQHaMx0aHSU9xpzkbXWQS2UBj1bfbkwgcL8zqTP0jwC29PFsNgY0sFX6QvAovfeZn1N90NO92O6whpyKbyyERsTiJootg4VsDBxTX4OFblv","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1573057672080}
+
+RESPONCE BODY
+
+NO CONTENT
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"Engu7yxYP4Qa41GuKlBgWYtZTEi7X1jIW75TQf3AQsC1u2B9vqsIl55zriB02iIZp8lPoJI3hiSpv9WracXgfbgJBK4Pn5szkNKL4Za1MlWHB4easHVZmRasnUJSdl8s","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1573057672448}
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"HdlBmPQtwR6hvnSz1yVDvYxOV2PAkLErj0dIuKAyUF0W96vxZ59UqKVLnBeFaTi1WNfGLqzaPnxsMSOEToVlFP6YfqCPnFn7uuyC1I3JylCrLwVhI3xcDta96DLV2BOw","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1573173772095}
+
+RESPONCE BODY
+
+NO CONTENT
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"8J8QYrXuH2FGVWqmEj7OUKLdRoVYPIfvsg4DRqWCRLmzKbJ0XVeZAANjwZd3cWf58f2OEQjEMOMJttc3maDIaf5xg071Yoh1SDYS7PJzRvP1W9iG9Wph60Wvcc8xY48F","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1573173772670}
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"YRRmKBiCLVz4Yet5bK1DFwvsB4ngJoGy0Ma323K8jWLAMFrSuvT5sQfOIW7AiOlA4hcyjqeuHoMX8xgQpA3XmCGCkNNpiznK0yhM6KUx2dNK8CA3vEEbXqd0NsmebojH","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1573173824492}
+
+RESPONCE BODY
+
+NO CONTENT
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"IThseI0m9RW21uLFLPEePJCPDYiMuFWJMNDr37eHA49at3J272nkNWSplI1YLDpib9I1xz77OuC2LdzaGVqH82moKIxsGroBWQdLCa5hCWuYdRoFjXu1Nx9futVEzUir","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1573173825248}
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"LzT51utvVHhJnwWWOFNTxzhksJxOO33tUx22VR1UY4zA6QBnpBiKr5UVdUf4DiwVbVxtY6c8gNhNFQtqVpZfeoWLV6bapUdvphqqy4AeG3Vz97pDxHdMQ4d6idCeYQ0n","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1573173894005}
+
+RESPONCE BODY
+
+NO CONTENT
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"mM0VG0Jc0a2Q6NdomQw86IGBXps8dTyQnST9tBd5sbCMRd7BIHJVvbvRJYSXbVT6o7lhblo4Bsq61fqiRa0XyJRTVCFpLWm1siHF6ADnjagzYQXJcjYPwUAStAlNAOnE","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1573173894339}
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"naOWXa2owVXolFk4CALc6l9KlmGyUNWCXWppp669oUaCTiuh1CxQR8cQI7wqkswzoGtZ0SMI42QhLKpFmgmLcVbySRJYQREYfNz9KAD91NVhgfJzVtnX07DaTqVb6ZFV","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1573176108774}
+
+RESPONCE BODY
+
+NO CONTENT
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"50wzd0TKilmSyKBFQzIRTcFd7cqXZaeLsJGfSBkNoemw7z0uccBA9oaxnfbEFYFk9gLX07zaNBkYJRvLATBkaoqWuw8364E8VKO8UIlrvqXsZ2mCokMbyILVjmk3wBnq","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1573176109098}
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"Lo1tLFRHIJ7S04bNst3yd1miTfZCPUM2WMkRFQxw30JVIZAMxJpvZ1KHrJVrryAeKQ1btRH36p9Sfg8GPNdCYl8TbsFkqwWvVqi74oZCXzM6RFp2OUqKknWoiH2LQ7V6","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1573176130585}
+
+RESPONCE BODY
+
+NO CONTENT
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"X4A5LDu5Ey341sfGyEMNAP70wrVn5jhFJA7icChpSccKT4MvS1vQDHRRfd1mvi5IBrotOBXDeLJQ4faKdnGLa1L5UsKiLBxJfdA7tu9lKlHWy0SkIDczXGINavCPgsIF","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1573176130999}
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"nWk38h85izBn8yGV4sSa0VCyvN2GkpBt8dRepXdVTIfgArDVuBKciURRjfrF4wrJG9joyxNTNzIS2XIkYIsKRuDdzN6eY7TxFMEqlR9AuplCS7VG5vC2n3BazGPwcBTl","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1573176227799}
+
+RESPONCE BODY
+
+NO CONTENT
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"mOyKt333mpkEUgBr8A2YJHteZ7pi32ekqMYhwBwNXZrPHK0PR1MG3ylJmH2OiDVfeacwpf890XAlMtZTMw1pu5F4G40REx0wkVmGsgjjNNiKigHMARCW74XATXDHeVld","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1573176228258}
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"c3BCdAKaVv3PwuEMhYF0WLxC0CKKUxEFai1zd4dOlLI4tQrHyFIysumEyqKOQKEGNyaqh8yjVqv5rdQ7tzLXds4Z0j2Z0jpf1k6pr5Dpd0Jf9Ieya5SrZWHBGp8KIy97","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1573591610839}
+
+RESPONCE BODY
+
+NO CONTENT
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"Gmh4WwiNT2neTare9AHDDu0aIbfizaBCR3TkBd2sFoXo3H04U6hJHxSwwCTzR4ZqCyewojNyx44MzzdFqzh2SbuNcrbOp0RcaTjWtK9pKAkCxjov3yn7KDCMi3QZZ7Nm","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1573591611311}
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"kqKy9yWBzoF9kaIRx4kj0plO94kV79MhjjQovFeeX4J7YFQoOXFbfFNLJc2bLet105siZ7BJLI1jtsqwXfTPunlWAkfNIhOCnRfKOKJ1Sq2g5ywRQmVsNykeOOSathet","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1573591968073}
+
+RESPONCE BODY
+
+NO CONTENT
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"A1D0ErFComl6JVYvBLUIN2ZDWE7Ml2btBedYW74ImozRjn5gjVzYofRmBzOuRtzZEOchZwfNCcNFlFnDHDhtnDWCxN7z3gHrqgRsM0obvXoEvowUdmoQ7SzaeevoLeWe","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1573591968685}
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"100vGFQXU0kKG3yZxh7A5i23eD664aiD2a8vX510ujMxI4JU1qQ1dRcjptbvgtPjGkG7j5cEDTBuGA3QOTH1IylIlRpqyLFSQCkPIFuE5F5QzgAKSpERXLGvrp69iK3k","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1573592256273}
+
+RESPONCE BODY
+
+NO CONTENT
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"hWL6qK5CNSqTp9w3ujSdvkYPQMVL1lCtnmN7LW56SjWwTXXo4HnFvQav1F97M2aqguATXUbU4xjwbWAgHYd5b4QmVPDzvIA3NOE3PvXTbLsYZZF4utXYuQceM6o8Vy9T","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1573592256845}
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"vTxg2nEZ9OL986PYwgpUobE8aBqnuLsflJkdRXdXNJCh2syT76iTcryMsGyw5ZYTglKWnDkgQL2ZdRpNmaYoHWf8ltdRinDWcm3KyR9XfFclJDduRAwJ6DT3dbXNaTtn","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1573592275509}
+
+RESPONCE BODY
+
+NO CONTENT
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"6JReL24AdUMkCWDMrWwEn8JSa5hGpRe4PnIgFSPsMGjhAg1UP5Ll1W4O585zuOpXwMhQyuLqYNtb7ZQ7QSznUku8dz1kmRAJgmTxCAa6ggfVNpThz2xbepg6Th7ZwQkn","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1573592276057}
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"pnP7RvVPF7t6z0lMoY5gh223FYTAz7hQ9SxX0l2vBPDbFEBHdKtPJ1w2pInyiHMmOmYySUJwCz74aBwMLOcw0fzB6eHFPRDvoCQiQxxsgGXO2t3AY3nuj8gQ7DWDEgSk","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1573592290487}
+
+RESPONCE BODY
+
+NO CONTENT
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"ctcTiyImLCVZbWyJ3IGtECTHUpwj91PZLK7NMIH3MGezKfF3lbX5hYgNsICPNI1ar9eZsSbloKveZ7e7ZAhsf045dzYAnW4q0dyaRf6wwv82NKwAxJu4jEcUIGRM9bor","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1573592291086}
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"VSTAyLTIkig1whOgyOxI2SIEkXqjpTek6jfvQwqbXivogIoLMEBxlB0XaFwRDyGctiLk4CBPaalLttDwJEljosZc3rT0nER2iCZlxUHqJvwJuENAiZhqSwkjNCApdWEH","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1573592402990}
+
+RESPONCE BODY
+
+NO CONTENT
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"jJ72jkNZumzlTQm9DRjVbIH7mjYd7VnIS3kUR2KV19N13RRFxSI3YUP3ajbCixeOfY3wQM6AnuLyaqGKeBOOzjn5gA8GzYvPcbBGVawlDOIl8dHH7exrywaUUToLWLt7","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1573592403496}
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"8jb28yhNl3GBZ4GqdYEnooU1slebcnnVVT8aXzbba6H1blejCxWTLNMtbNPlpKBuomdEEQ877vwGqBx8dPUkg5RSl0P3c1qykvROi2pYo9SLbX8LtGFt4vFRltXfo0A7","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1573592443586}
+
+RESPONCE BODY
+
+NO CONTENT
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"rHd6bMytzomzYsILkfyzOWOgYs4IiOHLrZrZSeR26LXyiMw6wd6sAswoRYiRChoZYarMoDH3tRiw34lCdVt6tydyjHNTQYiojxupUxFqThmD4KbRSR4V3DVHQmgToewc","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1573592444165}
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"kW4jo4YvzlrT5uqT9spWbhS6IeVMZJ4DcQ4CDVBGXblY7HGsEcxiebe36pfU2JCkTGSXMt5iMDznmQXPoNw57XgBOIToTQbpqJSSOoTkvDPzWgks9ORMc3120ONDPN3j","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1573666592142}
+
+RESPONCE BODY
+
+NO CONTENT
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"JfXvpciC1wfCxGUa0eLGUVbveSriwIiyzzJF7jaeU0MATwYX6Xq29csAAvgpIUw0kr8moYBFQb3sNW9lDWeD0cgxs8XDfz3G1PFpvEhfspNzrlCMmokusbP2QXvY7WNK","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1573666592512}
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"uMLoCI2OPGcNclgf7AtpmL19Uaz6mWyj3tRk0jcH9Xysm8dAoPFxqKEIt7lEVlYbFoDHJUigaF1ufxRzMFIXwkb1diOcpwOH8CKJcmQodtM8IJkI7PXTWskglNIEf7pb","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1573666650420}
+
+RESPONCE BODY
+
+NO CONTENT
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"wlhmFyReDm1yarnra2sBOrKuJ6HM9bZuAViqhuIjUGQzPa3aiEswYAoAmAPvsj3im64At8LRSAbL7Kcjh42180WsLF9AYX6qzrnj4AJsuzsYhPJNna0UtwA8rHqzFrt7","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1573666650938}
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"eiBG1yKgM8QAmbSZM8DKUDYyb165oXq6SxmfKmjfUrEi5C8A6ptXG4rhFS1HAcdOqd3nwE715S5LagbI6svUfeNLWqJWnI0PsZjsLdROuTZk3CEYdU3kREemkd51qP9k","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1573691386614}
+
+RESPONCE BODY
+
+NO CONTENT
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"QioA0nBvin2nL4PEH8XvJhbiKXIXRvelHspyuIH9Z9ydndbjwF6oOW5ZySBjst5dvsKQl4KobjOokzAj6EvSYdWPM21V3aVp6XoMHDLdyWsNgPEC0RqiLxsDEligqUzx","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1573691386887}
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"Ey1Lx3whjDl9DYPL9M3AJ2zZAlFXYqo3uuq7udyjgiSA9ludBSU6ifHJrnSm7BPPa8C4OPlwARXBdJpI3yudLiG5QrLIXI1JjqI0RMQV0Q5hKfjdLsnfAkGH1s2Ackui","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1573691406903}
+
+RESPONCE BODY
+
+NO CONTENT
+
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "time_span": 1,
+  "method": "authenticate",
+  "time_unit": "SECONDS",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"token":"1xH3VmojfD7RcwW0w7sVuuDrVZ1sxjBiZkJbE8hxKFWrHssd2n2ys6W4hhKLKdJpliV8hHXUjQL7d4a4bmD6Hk8Vc5Zes6o2erlFSIz0mbVeMEH6W4aHr3kCMSqEjIXk","owner":"BOT@GRADERTHAN.COM","ttl":1000,"creation_date":1573691407222}
+

@@ -1,0 +1,18 @@
+REQUEST BODY
+
+{
+  "method": "setAccount",
+  "account": {
+    "first_name": "ZCtAiTFLsHbK",
+    "last_name": "XuovsKpTiAvh",
+    "temp_password": "Z0Md5R",
+    "email": "BOT@GRADERTHAN.COM",
+    "extra": "FyoJWftbhShA",
+    "account_status": 1
+  }
+}
+
+RESPONCE BODY
+
+NO CONTENT
+

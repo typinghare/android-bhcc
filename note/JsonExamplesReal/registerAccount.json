@@ -1,0 +1,13 @@
+REQUEST BODY
+
+{
+  "password": "Password123",
+  "temp_password": "YbSN1q",
+  "method": "registerAccount",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+NO CONTENT
+

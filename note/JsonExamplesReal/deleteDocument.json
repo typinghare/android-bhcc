@@ -1,0 +1,11 @@
+REQUEST BODY
+
+{
+  "method": "deleteDocument",
+  "document_id": "71c966f0-6a59-4174-9a26-bf4bb7ad8a95"
+}
+
+RESPONCE BODY
+
+NO CONTENT
+

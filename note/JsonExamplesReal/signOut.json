@@ -1,0 +1,6 @@
+REQUEST BODY
+
+{
+  "method": "signOut"
+}
+

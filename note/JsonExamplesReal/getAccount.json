@@ -1,0 +1,11 @@
+REQUEST BODY
+
+{
+  "method": "getAccount",
+  "email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+
+{"email":"BOT@GRADERTHAN.COM","first_name":"Tony","last_name":"Stark","extra":"//Your own custom information"}
+

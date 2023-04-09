@@ -1,0 +1,33 @@
+
+
+REQUEST BODY
+This is a non-protected method (no token required)
+This method is meant for a user to authenticate themselves with an email assocatied with a preexisting user account. Upon authentication the user will recieve an authentication token that will last the time langth speficed in the request.
+401 error when the user name and or password do not match or when the email specified does not exist.
+400 error when the time_span < 0 or time_unit is not properly formatted
+
+method 		- The method to be invoked this should not be different than the value specified below
+password 	- The password of the user that is signing in
+time_span 	- How long the returned token will last in the time unit specified
+time_unit	- The unit of time the time_span this may be and of the following [DAYS, HOURS, MICROSECONDS, MILLISECONDS, MINUTES, NANOSECONDS, SECONDS]
+
+{
+ 	  "password": "Password123",
+  	"time_span": 1,
+  	"method": "authenticate",
+  	"time_unit": "SECONDS",
+  	"email": "bot@graderthan.com"
+}
+
+RESPONCE BODY
+token 		- The string representation of the token to be use for protected method
+password 	- The password of the user that is signing in
+time_span 	- How long the returned token will last in the time unit specified
+time_unit	- The unit of time the time_span this may be and of the following [DAYS, HOURS, MICROSECONDS, MILLISECONDS, MINUTES, NANOSECONDS, SECONDS]
+
+{
+	"token":"JjLHrlMas0gBtsmmxlny2ilsD34tgr9JNn7twr6cLTiroEQm7Q9PWlcFFz2IJ4xSXd1vPq3vQrHNOqAq0kiIm9sI0zrNshMVkeRBhkDuDFKnSn5flAMjJSuFOHsWaYhM",
+	"owner":"BOT@GRADERTHAN.COM",
+	"ttl":1000,
+	"creation_date":1571944266359
+}

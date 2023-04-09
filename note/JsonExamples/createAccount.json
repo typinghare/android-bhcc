@@ -1,0 +1,10 @@
+REQUEST BODY
+{
+  "method": "createAccount",
+  "extra": "//Your own custom information",
+  "last_name": "Stark",
+  "first_name": "Tony",
+  "email": "bot@graderthan.com"
+}
+RESPONCE BODY
+{"email":"BOT@GRADERTHAN.COM","first_name":"Tony","last_name":"Stark","extra":"//Your own custom information"}

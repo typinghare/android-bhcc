@@ -1,0 +1,756 @@
+REQUEST BODY
+
+{
+  "method": "getDocumentAccessors",
+  "scope": 1,
+  "document_id": "6b6a9738-6dcf-4038-a873-136318040c06"
+}
+
+RESPONCE BODY
+
+["BOT2@GRADERTHAN.COM"]
+
+REQUEST BODY
+
+{
+  "method": "getDocumentAccessors",
+  "scope": 1,
+  "document_id": "d05d7aa3-96eb-4fc4-a406-454e5a32d0e4"
+}
+
+RESPONCE BODY
+
+["BOT2@GRADERTHAN.COM"]
+
+REQUEST BODY
+
+{
+  "method": "getDocumentAccessors",
+  "scope": 1,
+  "document_id": "f0c16e19-bbd8-45fb-866d-56a65424e2ce"
+}
+
+RESPONCE BODY
+
+["BOT2@GRADERTHAN.COM"]
+
+REQUEST BODY
+
+{
+  "method": "getDocumentAccessors",
+  "scope": 1,
+  "document_id": "73711d8e-6467-4f7c-9dcf-9714c944228d"
+}
+
+RESPONCE BODY
+
+["BOT2@GRADERTHAN.COM"]
+
+REQUEST BODY
+
+{
+  "method": "getDocumentAccessors",
+  "scope": 1,
+  "document_id": "349a6794-fac0-4466-9587-088951838785"
+}
+
+RESPONCE BODY
+
+["BOT2@GRADERTHAN.COM"]
+
+REQUEST BODY
+
+{
+  "method": "getDocumentAccessors",
+  "scope": 1,
+  "document_id": "6ff0e3b8-c06b-4b29-875d-cbf153731511"
+}
+
+RESPONCE BODY
+
+["BOT2@GRADERTHAN.COM"]
+
+REQUEST BODY
+
+{
+  "method": "getDocumentAccessors",
+  "scope": 1,
+  "document_id": "634c9cc6-75a7-4fff-91e5-c49eb3b5459d"
+}
+
+RESPONCE BODY
+
+["BOT2@GRADERTHAN.COM"]
+
+REQUEST BODY
+
+{
+  "method": "getDocumentAccessors",
+  "scope": 1,
+  "document_id": "da9271ef-9d55-484f-a822-90e3c41e3730"
+}
+
+RESPONCE BODY
+
+["BOT2@GRADERTHAN.COM"]
+
+REQUEST BODY
+
+{
+  "method": "getDocumentAccessors",
+  "scope": 1,
+  "document_id": "f13a43ac-50de-4925-9143-19857e33f0f9"
+}
+
+RESPONCE BODY
+
+["BOT2@GRADERTHAN.COM"]
+
+REQUEST BODY
+
+{
+  "method": "getDocumentAccessors",
+  "scope": 1,
+  "document_id": "da407e1a-52bf-40b9-8ac7-981478f8b568"
+}
+
+RESPONCE BODY
+
+["BOT2@GRADERTHAN.COM"]
+
+REQUEST BODY
+
+{
+  "method": "getDocumentAccessors",
+  "scope": 1,
+  "document_id": "40856668-5b4a-4263-b469-6a473e73a846"
+}
+
+RESPONCE BODY
+
+["BOT2@GRADERTHAN.COM"]
+
+REQUEST BODY
+
+{
+  "method": "getDocumentAccessors",
+  "scope": 1,
+  "document_id": "fc6f95b3-1805-4b0b-b3a2-9038c60fba16"
+}
+
+RESPONCE BODY
+
+["BOT2@GRADERTHAN.COM"]
+
+REQUEST BODY
+
+{
+  "method": "getDocumentAccessors",
+  "scope": 1,
+  "document_id": "32822aa2-9caf-4cfc-bc06-b8cebff19c3d"
+}
+
+RESPONCE BODY
+
+["BOT2@GRADERTHAN.COM"]
+
+REQUEST BODY
+
+{
+  "method": "getDocumentAccessors",
+  "scope": 1,
+  "document_id": "a249ae98-1b21-42f3-a8ea-e2ddce35477f"
+}
+
+RESPONCE BODY
+
+["BOT2@GRADERTHAN.COM"]
+
+REQUEST BODY
+
+{
+  "method": "getDocumentAccessors",
+  "scope": 1,
+  "document_id": "bf0b5e83-fbe8-4995-9ac4-a12abcf267a1"
+}
+
+RESPONCE BODY
+
+["BOT2@GRADERTHAN.COM"]
+
+REQUEST BODY
+
+{
+  "method": "getDocumentAccessors",
+  "scope": 1,
+  "document_id": "342d3b3b-2ce8-4bee-91bc-20e6b5e6f904"
+}
+
+RESPONCE BODY
+
+["BOT2@GRADERTHAN.COM"]
+
+REQUEST BODY
+
+{
+  "method": "getDocumentAccessors",
+  "scope": 1,
+  "document_id": "acdc806e-d2a9-408c-9ec6-ce076fe31c37"
+}
+
+RESPONCE BODY
+
+["BOT2@GRADERTHAN.COM"]
+
+REQUEST BODY
+
+{
+  "method": "getDocumentAccessors",
+  "scope": 1,
+  "document_id": "d8c999d3-893b-415a-bc5b-b406514c8f59"
+}
+
+RESPONCE BODY
+
+["BOT2@GRADERTHAN.COM"]
+
+REQUEST BODY
+
+{
+  "method": "getDocumentAccessors",
+  "scope": 1,
+  "document_id": "4d3bbc90-8610-409d-9ed4-c734e01868d4"
+}
+
+RESPONCE BODY
+
+["BOT2@GRADERTHAN.COM"]
+
+REQUEST BODY
+
+{
+  "method": "getDocumentAccessors",
+  "scope": 1,
+  "document_id": "27639319-cd89-40dd-9ec1-76f751ff848a"
+}
+
+RESPONCE BODY
+
+["BOT2@GRADERTHAN.COM"]
+
+REQUEST BODY
+
+{
+  "method": "getDocumentAccessors",
+  "scope": 1,
+  "document_id": "8a0d631b-cd67-40d2-9dd1-b1ecd7961f1f"
+}
+
+RESPONCE BODY
+
+["BOT2@GRADERTHAN.COM"]
+
+REQUEST BODY
+
+{
+  "method": "getDocumentAccessors",
+  "scope": 1,
+  "document_id": "fe9b5903-d743-4f64-9227-b280bff39bf4"
+}
+
+RESPONCE BODY
+
+["BOT2@GRADERTHAN.COM"]
+
+REQUEST BODY
+
+{
+  "method": "getDocumentAccessors",
+  "scope": 1,
+  "document_id": "98c7968d-35fd-477e-84de-be08eb4b7a30"
+}
+
+RESPONCE BODY
+
+["BOT2@GRADERTHAN.COM"]
+
+REQUEST BODY
+
+{
+  "method": "getDocumentAccessors",
+  "scope": 1,
+  "document_id": "fdde1e6e-b4a7-49a4-b97b-0edac6e4eff8"
+}
+
+RESPONCE BODY
+
+["BOT2@GRADERTHAN.COM"]
+
+REQUEST BODY
+
+{
+  "method": "getDocumentAccessors",
+  "scope": 1,
+  "document_id": "5b6d18df-906d-4dcd-8c88-4b10d7776236"
+}
+
+RESPONCE BODY
+
+["BOT2@GRADERTHAN.COM"]
+
+REQUEST BODY
+
+{
+  "method": "getDocumentAccessors",
+  "scope": 1,
+  "document_id": "f7063f82-b6d9-417b-975d-6766d0bb9460"
+}
+
+RESPONCE BODY
+
+["BOT2@GRADERTHAN.COM"]
+
+REQUEST BODY
+
+{
+  "method": "getDocumentAccessors",
+  "scope": 1,
+  "document_id": "bcab1d78-ad0d-4b43-a67b-3a510ff33797"
+}
+
+RESPONCE BODY
+
+["BOT2@GRADERTHAN.COM"]
+
+REQUEST BODY
+
+{
+  "method": "getDocumentAccessors",
+  "scope": 1,
+  "document_id": "42d92bc0-9459-455b-a98d-ffb096e20eee"
+}
+
+RESPONCE BODY
+
+["BOT2@GRADERTHAN.COM"]
+
+REQUEST BODY
+
+{
+  "method": "getDocumentAccessors",
+  "scope": 1,
+  "document_id": "68edaa0d-19c1-4717-8fc0-32a748b40d2d"
+}
+
+RESPONCE BODY
+
+["BOT2@GRADERTHAN.COM"]
+
+REQUEST BODY
+
+{
+  "method": "getDocumentAccessors",
+  "scope": 1,
+  "document_id": "c3f91639-e1e4-4e60-a5c8-a78dc0eb7f07"
+}
+
+RESPONCE BODY
+
+["BOT2@GRADERTHAN.COM"]
+
+REQUEST BODY
+
+{
+  "method": "getDocumentAccessors",
+  "scope": 1,
+  "document_id": "ed392e96-b07e-4d54-a3ff-5690a5bce262"
+}
+
+RESPONCE BODY
+
+["BOT2@GRADERTHAN.COM"]
+
+REQUEST BODY
+
+{
+  "method": "getDocumentAccessors",
+  "scope": 1,
+  "document_id": "67d80fc8-5fbb-4a88-bcf1-2f1c2e687a21"
+}
+
+RESPONCE BODY
+
+["BOT2@GRADERTHAN.COM"]
+
+REQUEST BODY
+
+{
+  "method": "getDocumentAccessors",
+  "scope": 1,
+  "document_id": "bf35fcc5-0fbd-40cc-b6c1-177efeb6d8c4"
+}
+
+RESPONCE BODY
+
+["BOT2@GRADERTHAN.COM"]
+
+REQUEST BODY
+
+{
+  "method": "getDocumentAccessors",
+  "scope": 1,
+  "document_id": "2c6d538a-a54a-4b4c-b9a6-2743e237301d"
+}
+
+RESPONCE BODY
+
+["BOT2@GRADERTHAN.COM"]
+
+REQUEST BODY
+
+{
+  "method": "getDocumentAccessors",
+  "scope": 1,
+  "document_id": "4418b8f9-8189-47e0-a9a5-dfe8bf66a1ca"
+}
+
+RESPONCE BODY
+
+["BOT2@GRADERTHAN.COM"]
+
+REQUEST BODY
+
+{
+  "method": "getDocumentAccessors",
+  "scope": 1,
+  "document_id": "ad5ac4e1-0b11-44b0-bbca-fcbf61f6b745"
+}
+
+RESPONCE BODY
+
+["BOT2@GRADERTHAN.COM"]
+
+REQUEST BODY
+
+{
+  "method": "getDocumentAccessors",
+  "scope": 1,
+  "document_id": "cd7fd000-7b4c-45a1-a76d-438874ec9b76"
+}
+
+RESPONCE BODY
+
+["BOT2@GRADERTHAN.COM"]
+
+REQUEST BODY
+
+{
+  "method": "getDocumentAccessors",
+  "scope": 1,
+  "document_id": "87ce0f13-86b2-40da-9383-6cc1054c0040"
+}
+
+RESPONCE BODY
+
+["BOT2@GRADERTHAN.COM"]
+
+REQUEST BODY
+
+{
+  "method": "getDocumentAccessors",
+  "scope": 1,
+  "document_id": "fb860a39-e2d3-4127-b784-dcedc375f381"
+}
+
+RESPONCE BODY
+
+["BOT2@GRADERTHAN.COM"]
+
+REQUEST BODY
+
+{
+  "method": "getDocumentAccessors",
+  "scope": 1,
+  "document_id": "5286a73e-91f5-4c8f-b8c7-9f839e0529d2"
+}
+
+RESPONCE BODY
+
+["BOT2@GRADERTHAN.COM"]
+
+REQUEST BODY
+
+{
+  "method": "getDocumentAccessors",
+  "scope": 1,
+  "document_id": "ec9bda64-3099-45ad-92bf-75c948410ef4"
+}
+
+RESPONCE BODY
+
+["BOT2@GRADERTHAN.COM"]
+
+REQUEST BODY
+
+{
+  "method": "getDocumentAccessors",
+  "scope": 1,
+  "document_id": "bccd0058-d696-48d8-9763-4bd3afd3523d"
+}
+
+RESPONCE BODY
+
+["BOT2@GRADERTHAN.COM"]
+
+REQUEST BODY
+
+{
+  "method": "getDocumentAccessors",
+  "scope": 1,
+  "document_id": "60bc8788-ac5f-45d5-8382-4f46b5412cc2"
+}
+
+RESPONCE BODY
+
+["BOT2@GRADERTHAN.COM"]
+
+REQUEST BODY
+
+{
+  "method": "getDocumentAccessors",
+  "scope": 1,
+  "document_id": "c61ca8cb-2874-4f94-8424-3a9bd83082e6"
+}
+
+RESPONCE BODY
+
+["BOT2@GRADERTHAN.COM"]
+
+REQUEST BODY
+
+{
+  "method": "getDocumentAccessors",
+  "scope": 1,
+  "document_id": "0c563df4-1df2-45df-951a-16b61dae070d"
+}
+
+RESPONCE BODY
+
+["BOT2@GRADERTHAN.COM"]
+
+REQUEST BODY
+
+{
+  "method": "getDocumentAccessors",
+  "scope": 1,
+  "document_id": "c26c7a9c-9911-479b-b010-9926bb3ef8cf"
+}
+
+RESPONCE BODY
+
+["BOT2@GRADERTHAN.COM"]
+
+REQUEST BODY
+
+{
+  "method": "getDocumentAccessors",
+  "scope": 1,
+  "document_id": "3fff833a-fb95-477e-b7d5-1cab633cd26f"
+}
+
+RESPONCE BODY
+
+["BOT2@GRADERTHAN.COM"]
+
+REQUEST BODY
+
+{
+  "method": "getDocumentAccessors",
+  "scope": 1,
+  "document_id": "f62d94ca-2ee8-4d8f-95ae-bc071569b360"
+}
+
+RESPONCE BODY
+
+["BOT2@GRADERTHAN.COM"]
+
+REQUEST BODY
+
+{
+  "method": "getDocumentAccessors",
+  "scope": 1,
+  "document_id": "81bb19d3-1c31-4d75-9e21-76f03e4cd040"
+}
+
+RESPONCE BODY
+
+["BOT2@GRADERTHAN.COM"]
+
+REQUEST BODY
+
+{
+  "method": "getDocumentAccessors",
+  "scope": 1,
+  "document_id": "83d3a06d-d16a-4f61-8761-4be378fcd768"
+}
+
+RESPONCE BODY
+
+["BOT2@GRADERTHAN.COM"]
+
+REQUEST BODY
+
+{
+  "method": "getDocumentAccessors",
+  "scope": 1,
+  "document_id": "719ea29f-f8b4-4eca-b94b-bec38ba1fb77"
+}
+
+RESPONCE BODY
+
+["BOT2@GRADERTHAN.COM"]
+
+REQUEST BODY
+
+{
+  "method": "getDocumentAccessors",
+  "scope": 1,
+  "document_id": "3db9d1d1-c143-4135-937d-236509e01dbb"
+}
+
+RESPONCE BODY
+
+["BOT2@GRADERTHAN.COM"]
+
+REQUEST BODY
+
+{
+  "method": "getDocumentAccessors",
+  "scope": 1,
+  "document_id": "0562357f-8d63-414a-9f7c-23019c2b44fd"
+}
+
+RESPONCE BODY
+
+["BOT2@GRADERTHAN.COM"]
+
+REQUEST BODY
+
+{
+  "method": "getDocumentAccessors",
+  "scope": 1,
+  "document_id": "b3989705-e44a-4ede-8920-cb6d66a9e3b8"
+}
+
+RESPONCE BODY
+
+["BOT2@GRADERTHAN.COM"]
+
+REQUEST BODY
+
+{
+  "method": "getDocumentAccessors",
+  "scope": 1,
+  "document_id": "5195e62a-acea-423b-a245-b53ff2d09a6d"
+}
+
+RESPONCE BODY
+
+["BOT2@GRADERTHAN.COM"]
+
+REQUEST BODY
+
+{
+  "method": "getDocumentAccessors",
+  "scope": 1,
+  "document_id": "200628ad-7580-421b-94fd-4835b4da940c"
+}
+
+RESPONCE BODY
+
+["BOT2@GRADERTHAN.COM"]
+
+REQUEST BODY
+
+{
+  "method": "getDocumentAccessors",
+  "scope": 1,
+  "document_id": "85f88097-06a2-4885-aa37-38fc23b03e17"
+}
+
+RESPONCE BODY
+
+["BOT2@GRADERTHAN.COM"]
+
+REQUEST BODY
+
+{
+  "method": "getDocumentAccessors",
+  "scope": 1,
+  "document_id": "7ed9c85a-2ca0-44ef-9cf6-d8b05e7593d0"
+}
+
+RESPONCE BODY
+
+["BOT2@GRADERTHAN.COM"]
+
+REQUEST BODY
+
+{
+  "method": "getDocumentAccessors",
+  "scope": 1,
+  "document_id": "267efdca-a267-41a1-accb-e43ae4878ec1"
+}
+
+RESPONCE BODY
+
+["BOT2@GRADERTHAN.COM"]
+
+REQUEST BODY
+
+{
+  "method": "getDocumentAccessors",
+  "scope": 1,
+  "document_id": "25fbe028-3a44-42e5-8e13-d7ce2e081252"
+}
+
+RESPONCE BODY
+
+["BOT2@GRADERTHAN.COM"]
+
+REQUEST BODY
+
+{
+  "method": "getDocumentAccessors",
+  "scope": 1,
+  "document_id": "8b1d70e9-e1ea-47d4-9203-a6792165c938"
+}
+
+RESPONCE BODY
+
+["BOT2@GRADERTHAN.COM"]
+
+REQUEST BODY
+
+{
+  "method": "getDocumentAccessors",
+  "scope": 1,
+  "document_id": "f45444fb-7987-418b-a1d8-12abace83178"
+}
+
+RESPONCE BODY
+
+["BOT2@GRADERTHAN.COM"]
+
+REQUEST BODY
+
+{
+  "method": "getDocumentAccessors",
+  "scope": 1,
+  "document_id": "cee08f68-eb92-4e1c-b8d4-bab069305289"
+}
+
+RESPONCE BODY
+
+["BOT2@GRADERTHAN.COM"]
+
