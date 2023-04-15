@@ -1,19 +1,19 @@
 package csc244.note
 
 import csc244.note.common.web.Listener
-import csc244.note.dto.UserDto
+import csc244.note.dto.UserSignInDto
 import org.junit.Test
 
 class WebTest {
     @Test
     fun createListener() {
-        val listener = Listener(UserDto::class) { userDto ->
-            println(userDto.name)
+        val listener = Listener(UserSignInDto::class) { userDto ->
+            println(userDto.email)
         }
 
-        val userDto = UserDto()
-        userDto.name = "James Chan"
+        val userLoginDto = UserSignInDto()
+        userLoginDto.email = "James Chan"
 
-        listener.accept(userDto)
+        listener.accept(userLoginDto)
     }
 }

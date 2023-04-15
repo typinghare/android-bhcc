@@ -1,5 +1,8 @@
-package csc244.note.dto
+package csc244.note.dto;
 
-class UserDto {
-    var name: String? = null
+public class UserDto {
+    var email: String? = null
+    var firstName: String? = null
+    var lastName: String? = null
+    var extra: String? = null
 }

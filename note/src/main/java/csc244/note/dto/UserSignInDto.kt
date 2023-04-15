@@ -1,6 +1,6 @@
 package csc244.note.dto
 
-class UserLoginDto {
+class UserSignInDto {
     var email: String? = null
     var password: String? = null
     var timeSpan: Int = 1

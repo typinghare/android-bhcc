@@ -7,10 +7,13 @@ import kotlin.reflect.KClass
  * @author James Chan
  */
 class Listener<T : Any>(
-    private val dtoClass: KClass<T>,
+    private val dtoClass: KClass<T>?,
     private val callback: (T) -> Unit
 ) : Consumer<T> {
-    fun getDtoClass(): KClass<T> {
+    constructor(callback: () -> Unit) : this(null, { callback() }) {
+    }
+
+    fun getDtoClass(): KClass<T>? {
         return dtoClass
     }
 
