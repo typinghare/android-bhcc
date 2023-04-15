@@ -1,6 +1,6 @@
 package csc244.note.common.util
 
-import java.lang.reflect.Constructor
+import kotlin.reflect.KClass
 import kotlin.reflect.full.memberProperties
 import kotlin.reflect.KMutableProperty
 import kotlin.reflect.KVisibility
@@ -14,16 +14,14 @@ class DataTransferObjects {
         /**
          * Creates a DTO instance.
          */
-        private fun <T> createDto(dtoClass: Class<T>): T {
-            val constructor: Constructor<T> = dtoClass.getConstructor()
-
-            return constructor.newInstance()
+        private fun <T : Any> createDto(dtoClass: KClass<T>): T {
+            return dtoClass.java.getConstructor().newInstance()
         }
 
         /**
          * Creates a DTO instance with properties set.
          */
-        fun <T> createDto(dtoClass: Class<T>, map: Map<String, *>): T {
+        fun <T : Any> createDto(dtoClass: KClass<T>, map: Map<String, *>): T {
             val dto = createDto(dtoClass)
             mapIn(dto as Any, map)
 
