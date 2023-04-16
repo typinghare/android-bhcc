@@ -7,6 +7,7 @@ import com.android.volley.RequestQueue
 import com.android.volley.Response
 import com.android.volley.Response.ErrorListener
 import com.android.volley.toolbox.JsonObjectRequest
+import csc244.note.common.User
 import csc244.note.common.util.DataTransferObjects
 import org.json.JSONObject
 import kotlin.reflect.KClass
@@ -65,7 +66,7 @@ class Request<T : Any>(
                 @Throws(AuthFailureError::class)
                 override fun getHeaders(): Map<String, String> {
                     val headers: MutableMap<String, String> = HashMap()
-                    headers["autho_token"] = ""
+                    headers["autho_token"] = User.getToken()
 
                     return headers
                 }

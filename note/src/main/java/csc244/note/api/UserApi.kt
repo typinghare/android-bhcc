@@ -5,6 +5,7 @@ import com.android.volley.Response.ErrorListener
 import com.android.volley.toolbox.JsonArrayRequest
 import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.JsonRequest
+import csc244.note.common.User
 import csc244.note.common.web.Listener
 import csc244.note.common.web.Request
 import csc244.note.dto.ForgetPasswordDto
@@ -108,7 +109,7 @@ object UserApi {
         jsonObject.put("method", API_METHOD_GET_ALL_ACCOUNT)
 
         return object : JsonArrayRequest(
-            Method.GET, Api.URL, null, { response ->
+            Method.POST, Api.URL, null, { response ->
                 val userList = mutableListOf<UserDto>()
                 for (i in 0 until response.length()) {
                     val account = response.getJSONObject(i)
@@ -128,7 +129,7 @@ object UserApi {
             @Throws(AuthFailureError::class)
             override fun getHeaders(): Map<String, String> {
                 val headers: MutableMap<String, String> = HashMap()
-                headers["autho_token"] = ""
+                headers["autho_token"] = User.getToken()
 
                 return headers
             }

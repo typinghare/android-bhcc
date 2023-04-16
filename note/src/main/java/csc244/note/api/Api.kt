@@ -20,7 +20,6 @@ object Api {
         requestObject: Map<String, *>?,
         listener: Listener<T>,
         errorListener: ErrorListener,
-        header: Map<String, String>? = null
     ): Request<T> {
         val request = Request(Method.POST, URL, listener)
 
