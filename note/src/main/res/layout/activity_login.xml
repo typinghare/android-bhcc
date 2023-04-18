@@ -16,6 +16,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingStart="8sp"
+            android:paddingEnd="8sp"
+            android:text=""
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -90,9 +102,9 @@
                     android:layout_height="wrap_content"
                     android:autofillHints=""
                     android:ems="10"
+                    android:inputType="textEmailAddress"
                     android:minWidth="48dp"
                     android:minHeight="48dp"
-                    android:inputType="textEmailAddress"
                     android:text=""
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -124,10 +136,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center_vertical"
+                    android:labelFor="@id/login__input_password"
                     android:paddingStart="16sp"
                     android:paddingEnd="0sp"
                     android:text="@string/password_colon"
-                    android:labelFor="@id/login__input_password"
                     android:textSize="24sp"
                     app:layout_constraintWidth_percent="0.35" />
 
@@ -149,9 +161,9 @@
                     android:layout_height="wrap_content"
                     android:autofillHints=""
                     android:ems="10"
+                    android:inputType="textPassword"
                     android:minWidth="48dp"
                     android:minHeight="48dp"
-                    android:inputType="textPassword"
                     android:text=""
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -171,6 +183,7 @@
             app:layout_constraintTop_toBottomOf="@id/c22">
 
             <Button
+                android:id="@+id/login__button_sign_in"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingTop="16sp"
@@ -195,6 +208,7 @@
             app:layout_constraintTop_toBottomOf="@id/c23">
 
             <Button
+                android:id="@+id/login__button_forgot_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingTop="16sp"
@@ -219,6 +233,7 @@
             app:layout_constraintTop_toBottomOf="@id/c24">
 
             <Button
+                android:id="@+id/login__button_new_user"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingTop="16sp"
