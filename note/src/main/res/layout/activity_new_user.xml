@@ -184,7 +184,7 @@
             <TextView
                 android:id="@+id/label_new_password"
                 android:layout_width="0dp"
-                android:layout_height="96dp"
+                android:layout_height="48dp"
                 android:gravity="center_vertical"
                 android:labelFor="@id/input_new_password"
                 android:text="@string/new_password_colon"
@@ -198,7 +198,7 @@
             <EditText
                 android:id="@+id/input_new_password"
                 android:layout_width="0dp"
-                android:layout_height="96dp"
+                android:layout_height="48dp"
                 android:autofillHints="New Password"
                 android:gravity="center_vertical"
                 android:inputType="textPassword"
@@ -225,6 +225,7 @@
         app:layout_constraintTop_toBottomOf="@id/c3">
 
         <Button
+            android:id="@+id/button_new_user"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingStart="48sp"

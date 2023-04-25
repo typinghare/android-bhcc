@@ -1,9 +1,9 @@
 package csc244.note.common.util
 
 import kotlin.reflect.KClass
-import kotlin.reflect.full.memberProperties
 import kotlin.reflect.KMutableProperty
 import kotlin.reflect.KVisibility
+import kotlin.reflect.full.memberProperties
 
 /**
  * A helper class for data transfer objects (DTOs).

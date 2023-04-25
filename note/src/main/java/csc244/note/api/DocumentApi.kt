@@ -74,7 +74,7 @@ object DocumentApi {
             @Throws(AuthFailureError::class)
             override fun getHeaders(): Map<String, String> {
                 val headers: MutableMap<String, String> = HashMap()
-                headers["autho_token"] = User.getToken()
+                headers["autho_token"] = User.getToken().toString()
 
                 return headers
             }

@@ -1,10 +1,9 @@
 package csc244.note.api
 
+import android.util.Log
 import com.android.volley.AuthFailureError
 import com.android.volley.Response.ErrorListener
 import com.android.volley.toolbox.JsonArrayRequest
-import com.android.volley.toolbox.JsonObjectRequest
-import com.android.volley.toolbox.JsonRequest
 import csc244.note.common.User
 import csc244.note.common.web.Listener
 import csc244.note.common.web.Request
@@ -56,13 +55,14 @@ object UserApi {
         callback: (userSignInResponseDto: UserSignInResponseDto) -> Unit,
         errorListener: ErrorListener
     ): Request<UserSignInResponseDto> {
-        val map = mutableMapOf<String, Any>()
-        map["email"] = userLoginDto.email!!
-        map["password"] = userLoginDto.password!!
-
         return Api.post(
             API_METHOD_SIGN_IN,
-            map,
+            mutableMapOf<String, Any>().apply {
+                put("email", userLoginDto.email!!)
+                put("password", userLoginDto.password!!)
+                put("time_span", "604800")
+                put("time_unit", "SECONDS")
+            },
             Listener(UserSignInResponseDto::class, callback),
             errorListener
         )
@@ -129,7 +129,7 @@ object UserApi {
             @Throws(AuthFailureError::class)
             override fun getHeaders(): Map<String, String> {
                 val headers: MutableMap<String, String> = HashMap()
-                headers["autho_token"] = User.getToken()
+                headers["autho_token"] = User.getToken().toString()
 
                 return headers
             }
@@ -153,7 +153,9 @@ object UserApi {
         map["email"] = userDto.email!!
         map["first_name"] = userDto.firstName!!
         map["last_name"] = userDto.lastName!!
-        map["extra"] = userDto.extra!!
+        map["extra"] = userDto.extra
+
+        Log.d("newUser", "Email: " + userDto.email!!)
 
         return Api.post(
             API_METHOD_CREATE_ACCOUNT,
@@ -207,14 +209,13 @@ object UserApi {
         callback: () -> Unit,
         errorListener: ErrorListener
     ): Request<Any> {
-        val map = mutableMapOf<String, Any>()
-        map["email"] = registerAccountDto.email!!
-        map["temp_password"] = registerAccountDto.tempPassword!!
-        map["password"] = registerAccountDto.password!!
-
         return Api.post(
             API_METHOD_REGISTER_ACCOUNT,
-            map,
+            HashMap<String, Any>().apply {
+                put("email", registerAccountDto.email!!)
+                put("temp_password", registerAccountDto.tempPassword!!)
+                put("password", registerAccountDto.password!!)
+            },
             Listener(callback),
             errorListener
         )

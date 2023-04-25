@@ -1,11 +1,15 @@
 package csc244.note.activity
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
+import com.android.volley.RequestQueue
 import com.android.volley.Response.ErrorListener
+import com.android.volley.VolleyError
+import com.android.volley.toolbox.Volley
 import csc244.note.R
 import csc244.note.service.UserService
 
@@ -14,24 +18,39 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
+        val textMessage: TextView = findViewById(R.id.login__text_message)
         val inputEmail: EditText = findViewById(R.id.login__input_email)
         val inputPassword: EditText = findViewById(R.id.login__input_password)
+
+        "Please sign in.".also { textMessage.text = it }
 
         val buttonSignIn: Button = findViewById(R.id.login__button_sign_in)
         val buttonForgotPassword: Button = findViewById(R.id.login__button_forgot_password)
         val buttonNewUser: Button = findViewById(R.id.login__button_new_user)
 
+        val requestQueue: RequestQueue = Volley.newRequestQueue(this)
         buttonSignIn.setOnClickListener {
             val email: String = inputEmail.text.toString()
             val password: String = inputPassword.text.toString()
-            val errorListener = ErrorListener {
-
+            val errorListener = ErrorListener { error ->
+                if (error is VolleyError) {
+                    val statusCode: Int? = error.networkResponse?.statusCode
+                    if (statusCode == 401) {
+                        """
+                            The email does not exist or the password does not
+                            match the email. Please try again!
+                        """.trimIndent().replace("\n", "").also { textMessage.text = it }
+                    }
+                }
             }
 
-            UserService(applicationContext).signIn(email, password, errorListener) {
-                val intent = Intent(this, DocumentActivity::class.java)
-                startActivity(intent)
+            val request = UserService(applicationContext).signIn(email, password, errorListener) {
+                // Jump to the Document Activity.
+                startActivity(Intent(this, DocumentActivity::class.java))
             }
+
+            "Signing in, please wait...".also { textMessage.text = it }
+            request.connect(requestQueue)
         }
 
         buttonForgotPassword.setOnClickListener {

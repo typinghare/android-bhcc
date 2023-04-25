@@ -2,7 +2,6 @@ package csc244.note.common.web
 
 import android.util.Log
 import com.android.volley.AuthFailureError
-import com.android.volley.Header
 import com.android.volley.RequestQueue
 import com.android.volley.Response
 import com.android.volley.Response.ErrorListener
@@ -55,9 +54,11 @@ class Request<T : Any>(
                 map[realKey] = response[key]
             }
 
-            val dtoClass: KClass<T>? = listener.getDtoClass();
+            val dtoClass: KClass<T>? = listener.getDtoClass()
             if (dtoClass != null) {
                 listener.accept(DataTransferObjects.createDto(dtoClass, map))
+            } else {
+                listener.accept()
             }
         }
 
@@ -65,10 +66,12 @@ class Request<T : Any>(
             object : JsonObjectRequest(method, url, jsonObject, requestListener, errorListener) {
                 @Throws(AuthFailureError::class)
                 override fun getHeaders(): Map<String, String> {
-                    val headers: MutableMap<String, String> = HashMap()
-                    headers["autho_token"] = User.getToken()
+                    val token = User.getToken().toString()
+                    Log.d("UsingToken", token)
 
-                    return headers
+                    return HashMap<String, String>().apply {
+                        put("autho_token", token)
+                    }
                 }
             }
 

@@ -16,9 +16,17 @@
     <string name="new_user">New User</string>
     <string name="set_password">Set Password</string>
     <string name="temporary_password_colon">Temporary Password:</string>
-    <string name="new_password_colon">New Password:</string>
+    <string name="new_password_colon">Password:</string>
     <string name="please_input_your_email">Please Input your email.</string>
     <string name="first_name_colon">First Name:</string>
     <string name="last_name_colon">Last Name:</string>
     <string name="welcome_to_create_new_account">Welcome to create new account!</string>
+    <string name="verification_code_prompt">Please enter your temporary password that was sent to your email.</string>
+    <string name="finish_registration">Finish Registration</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="title">Title:</string>
+    <string name="what_is_your_email">What is your Email?</string>
+    <string name="reset">Reset</string>
+    <string name="temp_pass">Temp pass:</string>
+    <string name="password">Password:</string>
 </resources>

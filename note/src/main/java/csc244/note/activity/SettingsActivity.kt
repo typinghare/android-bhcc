@@ -1,7 +1,7 @@
 package csc244.note.activity
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import csc244.note.R
 
 class SettingsActivity : AppCompatActivity() {

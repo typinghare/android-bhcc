@@ -10,6 +10,8 @@
         android:id="@+id/c1"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:paddingStart="16sp"
+        android:paddingEnd="16sp"
         app:layout_constraintBottom_toTopOf="@id/c2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_percent="0.3"
@@ -17,8 +19,10 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
+            android:id="@+id/login__text_message"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:gravity="center"
             android:paddingStart="8sp"
             android:paddingEnd="8sp"
             android:text=""
