@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidBHCC">
         <activity
+            android:name=".activity.ShareDocumentActivity"
+            android:exported="false" />
+        <activity
             android:name=".activity.ResetPasswordActivity"
             android:exported="false" />
         <activity

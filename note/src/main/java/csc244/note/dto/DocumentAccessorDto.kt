@@ -1,6 +1,6 @@
 package csc244.note.dto
 
 class DocumentAccessorDto {
-    val documentId: String? = null
-    val accessorList: List<String>? = null
+    var documentId: String? = null
+    var accessorList: List<String>? = null
 }

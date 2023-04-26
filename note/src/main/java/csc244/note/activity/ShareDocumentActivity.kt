@@ -14,41 +14,41 @@ import com.android.volley.VolleyError
 import com.android.volley.toolbox.Volley
 import csc244.note.R
 import csc244.note.common.web.Request
-import csc244.note.dto.RegisterAccountDto
-import csc244.note.service.UserService
+import csc244.note.service.DocumentService
 
-class ResetPasswordActivity : AppCompatActivity() {
+class ShareDocumentActivity : AppCompatActivity() {
+    companion object {
+        const val EXTRA_KEY_DOCUMENT_ID = "EXTRA_KEY_DOCUMENT_ID"
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_reset_password)
+        setContentView(R.layout.activity_share_document)
 
-        val email: String? = intent.getStringExtra(InputEmailActivity.EXTRA_KEY_EMAIL)
-
+        val documentId: String? = intent.getStringExtra(EXTRA_KEY_DOCUMENT_ID)
         val inputEmail: EditText = findViewById(R.id.input_email)
-        val inputVerificationCode: EditText = findViewById(R.id.input_verification_code)
-        val inputPassword: EditText = findViewById(R.id.input_password)
-        val buttonSetPassword: Button = findViewById(R.id.button_set_password)
-
-        inputEmail.setText(email)
+        val buttonShareDocument: Button = findViewById(R.id.button_share_document)
 
         val requestQueue: RequestQueue = Volley.newRequestQueue(this)
-        buttonSetPassword.setOnClickListener {
-            val temporaryPassword: String = inputVerificationCode.text.toString()
-            val password: String = inputPassword.text.toString()
+        buttonShareDocument.setOnClickListener {
+            if (documentId == null) {
+                Log.d("ShareDocument", "The document id is null.")
+                return@setOnClickListener
+            }
 
+            val email: String = inputEmail.text.toString()
             val errorListener = Response.ErrorListener { error ->
+                Log.d("NewUserError", error.message.toString())
                 if (error is VolleyError) {
-                    Log.d("InputEmail", error.networkResponse?.statusCode.toString())
+                    Log.d("NewUserError", error.networkResponse?.statusCode.toString())
                 }
             }
 
             val request: Request<Any> =
-                UserService(applicationContext).registerAccount(RegisterAccountDto().apply {
-                    this.email = email
-                    this.tempPassword = temporaryPassword
-                    this.password = password
-                }, errorListener) {
-                    startActivity(Intent(this, DocumentActivity::class.java))
+                DocumentService().updateAccessors("", listOf(email), errorListener) {
+                    startActivity(Intent(this, DocumentActivity::class.java).apply {
+                        putExtra(DocumentActivity.EXTRA_KEY_DOCUMENT_ID, documentId)
+                    })
                 }
 
             request.connect(requestQueue)

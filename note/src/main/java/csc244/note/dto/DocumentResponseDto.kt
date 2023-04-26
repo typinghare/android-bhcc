@@ -4,5 +4,5 @@ class DocumentResponseDto {
     var id: String? = null
     var title: String? = null
     var text: String? = null
-    var creationDate: String? = null
+    var creationDate: Long? = null
 }

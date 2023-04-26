@@ -22,6 +22,11 @@ class LoginActivity : AppCompatActivity() {
         val inputEmail: EditText = findViewById(R.id.login__input_email)
         val inputPassword: EditText = findViewById(R.id.login__input_password)
 
+        val extraEmail: String? = intent.getStringExtra(TemporaryPasswordActivity.EXTRA_KEY_EMAIL)
+        if (extraEmail != null) {
+            inputEmail.setText(extraEmail)
+        }
+
         "Please sign in.".also { textMessage.text = it }
 
         val buttonSignIn: Button = findViewById(R.id.login__button_sign_in)

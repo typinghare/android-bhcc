@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menu_save_document"
+        android:icon="@drawable/save_icon"
+        android:title="@string/save"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/menu_share_document"
+        android:icon="@drawable/share_icon"
+        android:title="@string/share_document"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/menu_load_document"
+        android:icon="@drawable/document_icon"
+        android:title="@string/load_document"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/menu_new_document"
+        android:icon="@drawable/new_icon"
+        android:title="@string/new_document"
+        app:showAsAction="always" />
+
+</menu>

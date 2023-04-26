@@ -29,4 +29,11 @@
     <string name="reset">Reset</string>
     <string name="temp_pass">Temp pass:</string>
     <string name="password">Password:</string>
+    <string name="save">Save</string>
+    <string name="share_document">Share Document</string>
+    <string name="load_document">Load Document</string>
+    <string name="documents">Documents</string>
+    <string name="show_shared_documents">Show Shared Documents</string>
+    <string name="back">Back</string>
+    <string name="new_document">New Document</string>
 </resources>

@@ -20,7 +20,7 @@ object DocumentApi {
     private const val API_METHOD_SET_DOCUMENT_ACCESSOR = "setDocumentAccessors"
     private const val API_METHOD_GET_DOCUMENT_ACCESSOR = "setDocumentAccessors"
 
-    enum class DocumentScope(val intVal: Int) { SELF(0), SHARED(1), SELF_SHARED(2) }
+    public enum class DocumentScope(val intVal: Int) { SELF(0), SHARED(1), SELF_SHARED(2) }
 
     /**
      * Retrieves a document.
@@ -63,7 +63,7 @@ object DocumentApi {
                     documentResponseDto.id = document.getString("id")
                     documentResponseDto.title = document.getString("title")
                     documentResponseDto.text = document.getString("text")
-                    documentResponseDto.creationDate = document.getString("creationDate")
+                    documentResponseDto.creationDate = document.getLong("creation_date")
 
                     documentList.add(documentResponseDto)
                 }
@@ -119,7 +119,7 @@ object DocumentApi {
                 put("id", documentDto.id!!)
                 put("title", documentDto.title!!)
                 put("text", documentDto.text!!)
-                put("creationDate", documentDto.creationDate!!)
+                put("creation_date", documentDto.creationDate!!)
             })
         }
 
