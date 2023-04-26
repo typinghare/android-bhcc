@@ -56,8 +56,10 @@ class DocumentManagementActivity : AppCompatActivity() {
             }
         }
 
+        val scope: DocumentApi.DocumentScope =
+            if (showSharedDocuments) DocumentApi.DocumentScope.SELF_SHARED else DocumentApi.DocumentScope.SELF
         val request: JsonArrayRequest =
-            DocumentService().getAllDocument(DocumentApi.DocumentScope.SELF, errorListener) {
+            DocumentService().getAllDocument(scope, errorListener) {
                 Log.d("DocumentManagement", "Show documents.")
                 listViewDocument.adapter = DocumentAdapter(this, it)
                 listViewDocument.setOnItemClickListener { _, _, position, _ ->

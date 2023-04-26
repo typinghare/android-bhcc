@@ -10,6 +10,7 @@ import csc244.note.common.web.Request
 import csc244.note.dto.DocumentAccessorDto
 import csc244.note.dto.DocumentDto
 import csc244.note.dto.DocumentResponseDto
+import org.json.JSONArray
 import org.json.JSONObject
 
 object DocumentApi {
@@ -18,9 +19,9 @@ object DocumentApi {
     private const val API_METHOD_DELETE_DOCUMENT = "deleteDocument"
     private const val API_METHOD_SET_DOCUMENT = "setDocument"
     private const val API_METHOD_SET_DOCUMENT_ACCESSOR = "setDocumentAccessors"
-    private const val API_METHOD_GET_DOCUMENT_ACCESSOR = "setDocumentAccessors"
+    private const val API_METHOD_GET_DOCUMENT_ACCESSOR = "getDocumentAccessors"
 
-    public enum class DocumentScope(val intVal: Int) { SELF(0), SHARED(1), SELF_SHARED(2) }
+    enum class DocumentScope(val intVal: Int) { SELF(0), SHARED(1), SELF_SHARED(2) }
 
     /**
      * Retrieves a document.
@@ -139,11 +140,15 @@ object DocumentApi {
         callback: () -> Unit,
         errorListener: ErrorListener
     ): Request<Any> {
+        val accessorList: List<String>? = documentAccessorDto.accessors
+        val accessors = JSONArray()
+        accessorList?.forEach { item -> accessors.put(item) }
+
         return Api.post(
             API_METHOD_SET_DOCUMENT_ACCESSOR,
             mutableMapOf<String, Any>().apply {
                 put("document_id", documentAccessorDto.documentId!!)
-                put("accessors", documentAccessorDto.accessorList!!)
+                put("accessors", accessors)
             },
             Listener(callback),
             errorListener

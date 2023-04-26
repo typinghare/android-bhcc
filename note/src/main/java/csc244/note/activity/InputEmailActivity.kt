@@ -27,6 +27,11 @@ class InputEmailActivity : AppCompatActivity() {
         val inputEmail: EditText = findViewById(R.id.input_email)
         val buttonReset: Button = findViewById(R.id.button_reset)
 
+        val extraEmail: String? = intent.getStringExtra(EXTRA_KEY_EMAIL)
+        if (extraEmail != null) {
+            inputEmail.setText(extraEmail)
+        }
+
         val requestQueue: RequestQueue = Volley.newRequestQueue(this)
         buttonReset.setOnClickListener {
             val email = inputEmail.text.toString()

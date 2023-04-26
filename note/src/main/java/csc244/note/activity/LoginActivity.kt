@@ -45,13 +45,20 @@ class LoginActivity : AppCompatActivity() {
                             The email does not exist or the password does not
                             match the email. Please try again!
                         """.trimIndent().replace("\n", "").also { textMessage.text = it }
+                    } else if (statusCode == 400) {
+                        """
+                           This account has not been registered. 
+                           Please complete the registration process before authenticating. 
+                        """.trimIndent().replace("\n", "").also { textMessage.text = it }
                     }
                 }
             }
 
             val request = UserService(applicationContext).signIn(email, password, errorListener) {
                 // Jump to the Document Activity.
-                startActivity(Intent(this, DocumentActivity::class.java))
+                startActivity(Intent(this, DocumentActivity::class.java).apply {
+                    putExtra(InputEmailActivity.EXTRA_KEY_EMAIL, email)
+                })
             }
 
             "Signing in, please wait...".also { textMessage.text = it }

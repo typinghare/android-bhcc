@@ -1,5 +1,6 @@
 package csc244.note.service
 
+import android.util.Log
 import com.android.volley.Response
 import com.android.volley.toolbox.JsonArrayRequest
 import csc244.note.api.DocumentApi
@@ -25,9 +26,12 @@ class DocumentService {
         errorListener: Response.ErrorListener,
         successCallback: () -> Unit
     ): Request<Any> {
+        Log.d("documentID", documentId)
+        Log.d("accessors", accessors.toString())
+
         return DocumentApi.setDocumentAccessor(DocumentAccessorDto().apply {
             this.documentId = documentId
-            this.accessorList = accessors
+            this.accessors = accessors
         }, { successCallback() }, errorListener)
     }
 
@@ -51,5 +55,15 @@ class DocumentService {
             successCallback,
             errorListener
         )
+    }
+
+    fun deleteDocument(
+        documentId: String,
+        errorListener: Response.ErrorListener,
+        successCallback: () -> Unit
+    ): Request<Any> {
+        return DocumentApi.deleteDocument(DocumentDto().apply {
+            this.documentId = documentId
+        }, successCallback, errorListener)
     }
 }

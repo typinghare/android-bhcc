@@ -10,21 +10,44 @@
         app:showAsAction="always" />
 
     <item
-        android:id="@+id/menu_share_document"
-        android:icon="@drawable/share_icon"
-        android:title="@string/share_document"
-        app:showAsAction="always" />
-
-    <item
         android:id="@+id/menu_load_document"
         android:icon="@drawable/document_icon"
         android:title="@string/load_document"
         app:showAsAction="always" />
 
     <item
+        android:id="@+id/menu_share_document"
+        android:icon="@drawable/share_icon"
+        android:title="@string/share_document"
+        app:showAsAction="always" />
+
+    <item
         android:id="@+id/menu_new_document"
         android:icon="@drawable/new_icon"
         android:title="@string/new_document"
-        app:showAsAction="always" />
+        app:showAsAction="ifRoom" />
 
+    <item
+        android:id="@+id/menu_delete_document"
+        android:icon="@drawable/bin_icon"
+        android:title="@string/delete_document"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/menu_set_private"
+        android:icon="@drawable/private_icon"
+        android:title="@string/set_private"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/menu_reset_password"
+        android:icon="@drawable/private_icon"
+        android:title="@string/reset_password"
+        app:showAsAction="collapseActionView" />
+
+    <item
+        android:id="@+id/menu_sign_out"
+        android:icon="@drawable/private_icon"
+        android:title="@string/sign_out"
+        app:showAsAction="collapseActionView" />
 </menu>

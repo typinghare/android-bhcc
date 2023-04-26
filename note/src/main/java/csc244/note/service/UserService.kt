@@ -71,9 +71,10 @@ class UserService(private val context: Context) {
         }, errorListener)
     }
 
-    fun resetPasswordNext(
-
-    ) {
-
-    }
+   fun signOut(
+       errorListener: ErrorListener,
+       successCallback: () -> Unit
+   ):Request<Any> {
+       return UserApi.signOut(successCallback, errorListener)
+   }
 }

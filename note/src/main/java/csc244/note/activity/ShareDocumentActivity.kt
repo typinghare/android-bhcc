@@ -38,14 +38,14 @@ class ShareDocumentActivity : AppCompatActivity() {
 
             val email: String = inputEmail.text.toString()
             val errorListener = Response.ErrorListener { error ->
-                Log.d("NewUserError", error.message.toString())
+                Log.d("ShareDocument", error.message.toString())
                 if (error is VolleyError) {
-                    Log.d("NewUserError", error.networkResponse?.statusCode.toString())
+                    Log.d("ShareDocument", error.networkResponse?.statusCode.toString())
                 }
             }
 
             val request: Request<Any> =
-                DocumentService().updateAccessors("", listOf(email), errorListener) {
+                DocumentService().updateAccessors(documentId, listOf(email), errorListener) {
                     startActivity(Intent(this, DocumentActivity::class.java).apply {
                         putExtra(DocumentActivity.EXTRA_KEY_DOCUMENT_ID, documentId)
                     })

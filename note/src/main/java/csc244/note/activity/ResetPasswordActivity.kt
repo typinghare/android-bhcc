@@ -48,7 +48,9 @@ class ResetPasswordActivity : AppCompatActivity() {
                     this.tempPassword = temporaryPassword
                     this.password = password
                 }, errorListener) {
-                    startActivity(Intent(this, DocumentActivity::class.java))
+                    startActivity(Intent(this, DocumentActivity::class.java).apply {
+                        putExtra(InputEmailActivity.EXTRA_KEY_EMAIL, email)
+                    })
                 }
 
             request.connect(requestQueue)

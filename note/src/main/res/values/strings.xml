@@ -36,4 +36,7 @@
     <string name="show_shared_documents">Show Shared Documents</string>
     <string name="back">Back</string>
     <string name="new_document">New Document</string>
+    <string name="set_private">Set Private</string>
+    <string name="delete_document">Delete Document</string>
+    <string name="sign_out">Sign out</string>
 </resources>
