@@ -3,6 +3,8 @@ package csc244.note.activity
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.view.Menu
+import android.view.MenuItem
 import android.widget.Button
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
@@ -59,5 +61,24 @@ class NewUserActivity : AppCompatActivity() {
 
             request.connect(requestQueue)
         }
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.back_to_document_menu, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.menu_back_to_document -> {
+                startActivity(Intent(this, LoginActivity::class.java))
+            }
+
+            else -> {
+                return super.onOptionsItemSelected(item)
+            }
+        }
+
+        return true
     }
 }
