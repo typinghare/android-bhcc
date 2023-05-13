@@ -14,12 +14,12 @@ class Timer(
     private val timeoutCallback: Supplier<HourMinuteSecond?>
 ) {
     companion object {
-        private const val UPDATE_INTERVAL: Int = 50;
+        private const val UPDATE_INTERVAL: Int = 50
     }
 
-    private var intervalTimer: Timer? = null;
-    private var timeoutTimer: Timer? = null;
-    private var updatedTimestamp: Long? = null;
+    private var intervalTimer: Timer? = null
+    private var timeoutTimer: Timer? = null
+    private var updatedTimestamp: Long? = null
 
     /**
      * Gets timer.
@@ -31,7 +31,7 @@ class Timer(
     /**
      * Sets a timer.
      */
-    fun setTime(time: HourMinuteSecond) {
+    private fun setTime(time: HourMinuteSecond) {
         this.time = time.clone()
     }
 

@@ -1,25 +1,25 @@
-package us.jameschan.boardgameclock.game.games.go.timecontrol.byoyomi
+package us.jameschan.boardgameclock.game.games.go.timecontrol.yingshi
 
 import us.jameschan.boardgameclock.game.Game
 import us.jameschan.boardgameclock.game.HourMinuteSecond
 import us.jameschan.boardgameclock.game.TimerController
 
-class ByoyomiTimerController(
+class YingshiTimerController(
     override val game: Game,
     main: HourMinuteSecond,
-    private val timePerPeriod: HourMinuteSecond,
-    periods: Int
+    private val penalty: HourMinuteSecond,
+    maxPenalty: Int
 ) : TimerController(game, main) {
-    private var periodsRemaining = periods
+    private var penaltyRemaining: Int = maxPenalty
 
     override fun getTimeoutCallback(): () -> HourMinuteSecond? {
         return lambda@{
-            if (periodsRemaining == 0) {
+            if (penaltyRemaining == 0) {
                 return@lambda null
             }
 
-            periodsRemaining--
-            return@lambda timePerPeriod.clone()
+            penaltyRemaining--
+            return@lambda penalty.clone()
         }
     }
 }

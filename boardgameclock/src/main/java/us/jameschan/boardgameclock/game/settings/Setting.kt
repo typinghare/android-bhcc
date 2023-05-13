@@ -1,5 +1,8 @@
 package us.jameschan.boardgameclock.game.settings
 
+/**
+ * A setting item.
+ */
 class Setting(
     private val label: String,
     private val optionList: List<String>,

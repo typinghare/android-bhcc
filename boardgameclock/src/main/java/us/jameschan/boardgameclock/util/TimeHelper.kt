@@ -6,11 +6,11 @@ import java.util.TimerTask
 /**
  * Equivalent `setInterval` function.
  */
-fun setInterval(ms: Number, handler: () -> Unit): Timer {
+fun setInterval(ms: Number, handler: (Timer) -> Unit): Timer {
     return Timer().apply {
         scheduleAtFixedRate(object : TimerTask() {
             override fun run() {
-                handler()
+                handler(this@apply)
             }
         }, 0, ms.toLong())
     }

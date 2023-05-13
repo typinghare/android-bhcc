@@ -1,7 +1,7 @@
-package us.jameschan.boardgameclock.game;
+package us.jameschan.boardgameclock.game
 
 class Player(
-    private val timeControl: TimeControl
+    timeControl: TimeControl
 ) {
     private val timerController: TimerController = timeControl.getTimerController()
 

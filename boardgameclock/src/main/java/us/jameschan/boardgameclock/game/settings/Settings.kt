@@ -1,5 +1,8 @@
 package us.jameschan.boardgameclock.game.settings
 
+/**
+ * A settings container.
+ */
 abstract class Settings {
     private val settingList: MutableList<Setting> = mutableListOf()
 

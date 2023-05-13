@@ -1,8 +1,10 @@
 package us.jameschan.boardgameclock.game
 
-import java.util.function.Supplier
-
+/**
+ * A timer controller decides how timer works.
+ */
 open class TimerController(
+    protected open val game: Game,
     private val initialTime: HourMinuteSecond
 ) {
     private var timer: Timer? = null
@@ -15,8 +17,8 @@ open class TimerController(
         return initialTime
     }
 
-    open fun getTimeoutCallback(): Supplier<HourMinuteSecond?> {
-        return Supplier { -> null }
+    open fun getTimeoutCallback(): () -> HourMinuteSecond? {
+        return { null }
     }
 
     fun resume() {
