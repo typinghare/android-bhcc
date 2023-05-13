@@ -1,5 +1,7 @@
-package us.jameschan.boardgameclock.logic
+package us.jameschan.boardgameclock.game
 
+import us.jameschan.boardgameclock.util.setInterval
+import us.jameschan.boardgameclock.util.setTimeout
 import java.util.Date
 import java.util.Timer
 import java.util.function.Supplier
@@ -37,6 +39,8 @@ class Timer(
      * Resumes this timer.
      */
     fun resume() {
+        println("Timer resume: $time")
+
         pause()
 
         intervalTimer = setInterval(UPDATE_INTERVAL) {

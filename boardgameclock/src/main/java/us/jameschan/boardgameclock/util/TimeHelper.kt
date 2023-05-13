@@ -1,4 +1,4 @@
-package us.jameschan.boardgameclock.logic
+package us.jameschan.boardgameclock.util
 
 import java.util.Timer
 import java.util.TimerTask

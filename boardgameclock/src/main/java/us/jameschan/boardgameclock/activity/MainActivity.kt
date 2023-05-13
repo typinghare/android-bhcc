@@ -1,4 +1,4 @@
-package us.jameschan.boardgameclock
+package us.jameschan.boardgameclock.activity
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
