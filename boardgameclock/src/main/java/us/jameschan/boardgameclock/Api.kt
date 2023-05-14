@@ -1,27 +1,45 @@
-package us.jameschan.boardgameclock;
+package us.jameschan.boardgameclock
 
 import com.android.volley.Response.ErrorListener
 import com.android.volley.toolbox.JsonObjectRequest
+import org.json.JSONObject
 import us.jameschan.boardgameclock.dto.UserDto
 import us.jameschan.boardgameclock.dto.UserSettingsDto
 
 object Api {
+    // Domain.
+    private const val DOMAIN = "http://192.168.0.7:8080"
+
+    // URLs.
     private const val URL_SIGN_IN = "/users/"
     private const val URL_SIGN_UP = "/users/"
     private const val URL_GET_SETTINGS = "/users/{userId}/settings"
+
+    private fun url(url: String, queryString: String? = null): String {
+        return "${DOMAIN}${url}${if (queryString != null) "?${queryString}" else ""}"
+    }
 
     /**
      * User signs in.
      */
     fun signIn(
+        username: String,
+        password: String,
         callback: (UserDto) -> Unit,
         errorListener: ErrorListener
     ): JsonObjectRequest {
-        return object : JsonObjectRequest(Method.PUT, URL_SIGN_IN, null, { response ->
+        val body = JSONObject().apply {
+            put("username", username)
+            put("password", password)
+        }
+
+        return object : JsonObjectRequest(Method.PUT, url(URL_SIGN_IN), body, { response ->
+            val data = response.getJSONObject("data")
+
             val userDto = UserDto(
-                response.getLong("userId"),
-                response.getString("username"),
-                response.getString("token")
+                data.getLong("userId"),
+                data.getString("username"),
+                data.getString("token")
             )
 
             callback(userDto)
@@ -32,14 +50,22 @@ object Api {
      * User signs up.
      */
     fun signUp(
+        username: String,
+        password: String,
         callback: (UserDto) -> Unit,
         errorListener: ErrorListener
     ): JsonObjectRequest {
-        return object : JsonObjectRequest(Method.POST, URL_SIGN_UP, null, { response ->
+        val body = JSONObject().apply {
+            put("username", username)
+            put("password", password)
+        }
+
+        return object : JsonObjectRequest(Method.POST, url(URL_SIGN_UP), body, { response ->
+            val data = response.getJSONObject("data")
             val userDto = UserDto(
-                response.getLong("userId"),
-                response.getString("username"),
-                response.getString("token")
+                data.getLong("userId"),
+                data.getString("username"),
+                data.getString("token")
             )
 
             callback(userDto)
@@ -54,14 +80,15 @@ object Api {
         callback: (UserSettingsDto) -> Unit,
         errorListener: ErrorListener
     ): JsonObjectRequest {
-        val url = URL_GET_SETTINGS.replace("{userId}", userId.toString())
+        val url = url(URL_GET_SETTINGS.replace("{userId}", userId.toString()))
 
         return object : JsonObjectRequest(Method.GET, url, null, { response ->
+            val data = response.getJSONObject("data")
             val userSettingsDto = UserSettingsDto(
-                response.getLong("userId"),
-                response.getString("language"),
-                response.getBoolean("clickingSoundEffect"),
-                response.getBoolean("warningSoundEffect")
+                data.getLong("userId"),
+                data.getString("language"),
+                data.getBoolean("clickingSoundEffect"),
+                data.getBoolean("warningSoundEffect")
             )
 
             callback(userSettingsDto)
