@@ -1,4 +1,4 @@
-package us.jameschan.boardgameclock.activity
+package us.jameschan.boardgameclock.activity.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater

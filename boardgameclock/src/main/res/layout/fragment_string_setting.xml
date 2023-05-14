@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context=".activity.StringSettingFragment">
+    tools:context=".activity.fragment.StringSettingFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -22,7 +22,7 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <TextView
-                android:id="@+id/label_username"
+                android:id="@+id/text_setting_name"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical|start"
@@ -30,13 +30,13 @@
                 android:textSize="20sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@id/input_username"
+                app:layout_constraintEnd_toStartOf="@id/input_setting_value"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintWidth_percent="0.7" />
 
             <EditText
-                android:id="@+id/input_username"
+                android:id="@+id/input_setting_value"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:autofillHints=""
@@ -44,7 +44,7 @@
                 android:minHeight="48dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@id/label_username"
+                app:layout_constraintStart_toEndOf="@id/text_setting_name"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintWidth_percent="0.3"
                 tools:ignore="LabelFor,SpeakableTextPresentCheck" />
