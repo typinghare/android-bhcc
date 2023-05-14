@@ -6,10 +6,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
-import com.google.gson.Gson
 import us.jameschan.boardgameclock.R
 import us.jameschan.boardgameclock.activity.adapter.SettingsListAdapter
-import us.jameschan.boardgameclock.game.settings.Setting
+import us.jameschan.boardgameclock.settings.Setting
+import us.jameschan.boardgameclock.util.JsonHelper
 
 class SettingsListFragment : Fragment() {
     companion object {
@@ -19,7 +19,7 @@ class SettingsListFragment : Fragment() {
         fun newInstance(settings: List<Setting>) =
             SettingsListFragment().apply {
                 arguments = Bundle().apply {
-                    putString(ARG_SETTINGS, Gson().toJson(settings))
+                    putString(ARG_SETTINGS, JsonHelper.toJson(settings))
                 }
             }
     }
@@ -30,10 +30,9 @@ class SettingsListFragment : Fragment() {
         super.onCreate(savedInstanceState)
 
         arguments?.let {
-            val settingArray: Array<Setting> =
-                Gson().fromJson(it.getString(ARG_SETTINGS), Array<Setting>::class.java)
-            settingArray.forEach { setting -> settingList.add(setting) }
+            settingList.addAll(JsonHelper.fromJsonToSettingList(it.getString(ARG_SETTINGS)!!))
         }
+
     }
 
     override fun onCreateView(

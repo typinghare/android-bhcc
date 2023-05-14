@@ -4,7 +4,7 @@ import us.jameschan.boardgameclock.game.Game
 import us.jameschan.boardgameclock.game.HourMinuteSecond
 import us.jameschan.boardgameclock.game.TimeControl
 import us.jameschan.boardgameclock.game.TimerController
-import us.jameschan.boardgameclock.game.settings.Setting
+import us.jameschan.boardgameclock.settings.Setting
 
 class YingshiTimeControl(
     override val game: Game

@@ -1,4 +1,4 @@
-package us.jameschan.boardgameclock.game.settings
+package us.jameschan.boardgameclock.settings
 
 /**
  * A setting item.
@@ -10,7 +10,26 @@ class Setting(
 ) {
     companion object {
         enum class Type {
-            OPTIONS, STRING, BOOL
+            OPTIONS, STRING, BOOL;
+
+            companion object {
+                fun parse(name: String): Type {
+                    return when (name.lowercase()) {
+                        "options" -> OPTIONS
+                        "string" -> STRING
+                        "bool" -> BOOL
+                        else -> STRING
+                    }
+                }
+            }
+
+            override fun toString(): String {
+                return when(this) {
+                    OPTIONS -> "options"
+                    STRING -> "string"
+                    BOOL -> "bool"
+                }
+            }
         }
     }
 

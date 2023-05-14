@@ -1,4 +1,4 @@
-package us.jameschan.boardgameclock.activity
+package us.jameschan.boardgameclock.activity.fragment
 
 import android.content.Intent
 import android.os.Bundle
@@ -8,6 +8,8 @@ import android.view.ViewGroup
 import android.widget.ImageButton
 import androidx.fragment.app.Fragment
 import us.jameschan.boardgameclock.R
+import us.jameschan.boardgameclock.activity.MainActivity
+import us.jameschan.boardgameclock.activity.SignInActivity
 
 class NavigationFragment : Fragment() {
     companion object {

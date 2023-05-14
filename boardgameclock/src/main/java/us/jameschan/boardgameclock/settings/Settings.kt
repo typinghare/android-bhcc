@@ -1,4 +1,4 @@
-package us.jameschan.boardgameclock.game.settings
+package us.jameschan.boardgameclock.settings
 
 /**
  * A settings container.

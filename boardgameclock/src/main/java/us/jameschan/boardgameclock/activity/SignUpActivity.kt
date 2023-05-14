@@ -12,6 +12,7 @@ import us.jameschan.boardgameclock.Api
 import us.jameschan.boardgameclock.Lang
 import us.jameschan.boardgameclock.LocalUser
 import us.jameschan.boardgameclock.R
+import us.jameschan.boardgameclock.activity.fragment.NavigationFragment
 
 class SignUpActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,11 +20,10 @@ class SignUpActivity : AppCompatActivity() {
         setContentView(R.layout.activity_sign_up)
 
         // Load navigation.
-        val fragmentManager = supportFragmentManager
-        val fragmentTransaction = fragmentManager.beginTransaction()
-        val navigationFragment = NavigationFragment.newInstance()
-        fragmentTransaction.add(R.id.fragment_container, navigationFragment)
-        fragmentTransaction.commit()
+        supportFragmentManager
+            .beginTransaction()
+            .add(R.id.fragment_navigation, NavigationFragment.newInstance())
+            .commit()
 
         val labelWelcome: TextView = findViewById(R.id.text_welcome)
         Lang.translate("Welcome to sign up!").apply { labelWelcome.text = this }

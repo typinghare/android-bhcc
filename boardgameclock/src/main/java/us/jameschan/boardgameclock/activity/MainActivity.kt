@@ -6,6 +6,7 @@ import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import us.jameschan.boardgameclock.Lang
 import us.jameschan.boardgameclock.R
+import us.jameschan.boardgameclock.activity.fragment.NavigationFragment
 
 /**
  * @link https://docs.google.com/presentation/d/1qtMkujyhOvK0CV6DHkWr6habZky-3g_HYRwaFhNLSM0
@@ -16,11 +17,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         // Load navigation.
-        val fragmentManager = supportFragmentManager
-        val fragmentTransaction = fragmentManager.beginTransaction()
-        val navigationFragment = NavigationFragment.newInstance()
-        fragmentTransaction.add(R.id.fragment_container, navigationFragment)
-        fragmentTransaction.commit()
+        supportFragmentManager
+            .beginTransaction()
+            .add(R.id.fragment_navigation, NavigationFragment.newInstance())
+            .commit()
 
         val buttonNewGame: Button = findViewById(R.id.button_new_game)
         Lang.translate("New Game").apply { buttonNewGame.text = this }

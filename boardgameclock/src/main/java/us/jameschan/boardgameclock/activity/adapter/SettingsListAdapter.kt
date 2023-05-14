@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import us.jameschan.boardgameclock.R
-import us.jameschan.boardgameclock.game.settings.Setting
+import us.jameschan.boardgameclock.settings.Setting
 
 class SettingsListAdapter(
     private val settings: List<Setting>
@@ -22,6 +22,13 @@ class SettingsListAdapter(
         val setting = settings[position]
         holder.textSettingName.text = setting.getLabel()
         holder.inputSettingValue.text = setting.getDefaultValue()
+
+        val explanation = setting.getExplanation()
+        if (explanation != "") {
+            holder.textExplanation.text = explanation
+        } else {
+            holder.textExplanation.visibility = View.INVISIBLE
+        }
     }
 
     override fun getItemCount(): Int {
@@ -31,5 +38,6 @@ class SettingsListAdapter(
     inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val textSettingName: TextView = view.findViewById(R.id.text_setting_name)
         val inputSettingValue: TextView = view.findViewById(R.id.input_setting_value)
+        val textExplanation: TextView = view.findViewById(R.id.text_explanation)
     }
 }

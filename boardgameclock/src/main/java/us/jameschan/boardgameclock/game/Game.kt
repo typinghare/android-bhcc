@@ -1,6 +1,6 @@
 package us.jameschan.boardgameclock.game
 
-import us.jameschan.boardgameclock.game.settings.Settings
+import us.jameschan.boardgameclock.settings.Settings
 
 /**
  * A game has several time controls, which can be registered by `addTimeControl` method. This should
