@@ -51,6 +51,7 @@ class SignInActivity : AppCompatActivity() {
             // Sign in.
             val request = Api.signIn(username, password, { userDto ->
                 LocalUser.userId = userDto.userId
+                LocalUser.token = userDto.token
 
                 // Load Settings.
                 val request = Api.getUserSettings(userDto.userId, { userSettingsDto ->

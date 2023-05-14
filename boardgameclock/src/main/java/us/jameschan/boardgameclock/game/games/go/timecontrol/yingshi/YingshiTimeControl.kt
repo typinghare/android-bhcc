@@ -21,8 +21,8 @@ class YingshiTimeControl(
     override fun initialize() {
         super.initialize()
 
-        addSetting(Setting(SETTING_LABEL_PENALTY, listOf("20 min", "30 min"), "30 min"))
-        addSetting(Setting(SETTING_LABEL_MAX_PENALTY, listOf("2", "3"), "2"))
+        addSetting(Setting(SETTING_LABEL_PENALTY, "30 min"))
+        addSetting(Setting(SETTING_LABEL_MAX_PENALTY, "2"))
     }
 
     override fun getTimerController(): TimerController {

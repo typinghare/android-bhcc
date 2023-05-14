@@ -20,4 +20,8 @@
     <string name="welcome_to_sign_up">Welcome to Sign Up!</string>
     <string name="please_input_username_and_password">Please input username and password.</string>
     <string name="create_new_account">Create New Account</string>
+    <string name="new_game">New Game</string>
+    <string name="settings">Settings</string>
+    <string name="setting_name">SettingName</string>
+    <string name="this_is_the_explanation_of_this_setting">This is the explanation of this setting.</string>
 </resources>

@@ -19,7 +19,7 @@ open class TimeControl(
     }
 
     override fun initialize() {
-        addSetting(Setting(SETTINGS_LABEL_MAIN, listOf("10 min", "30 min"), "10 min"))
+        addSetting(Setting(SETTINGS_LABEL_MAIN, "10 min"))
     }
 
     fun getName(): String {

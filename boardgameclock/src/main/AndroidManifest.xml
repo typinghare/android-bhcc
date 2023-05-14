@@ -7,9 +7,21 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
-        android:usesCleartextTraffic="true"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AndroidBHCC">
+        android:theme="@style/Theme.AndroidBHCC"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".activity.SettingsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.AboutActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.GameSettingsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.NewGameActivity"
+            android:exported="false" />
         <activity
             android:name=".activity.MainActivity"
             android:exported="true"

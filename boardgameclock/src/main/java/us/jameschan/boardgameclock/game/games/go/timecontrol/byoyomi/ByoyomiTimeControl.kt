@@ -19,14 +19,8 @@ class ByoyomiTimeControl(override val game: Game) : TimeControl(game, "Byoyomi",
     override fun initialize() {
         super.initialize()
 
-        addSetting(
-            Setting(
-                SETTING_LABEL_TIME_PER_PERIOD,
-                listOf("20 sec", "30 sec"),
-                "30 sec"
-            )
-        )
-        addSetting(Setting(SETTING_LABEL_PERIODS, listOf("1", "3", "5"), "3"))
+        addSetting(Setting(SETTING_LABEL_TIME_PER_PERIOD, "30 sec"))
+        addSetting(Setting(SETTING_LABEL_PERIODS, "3"))
     }
 
     override fun getTimerController(): TimerController {
