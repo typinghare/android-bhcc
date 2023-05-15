@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import us.jameschan.boardgameclock.Lang
+import us.jameschan.boardgameclock.LocalUser
 import us.jameschan.boardgameclock.R
 import us.jameschan.boardgameclock.activity.fragment.NavigationFragment
 
@@ -34,7 +35,11 @@ class MainActivity : AppCompatActivity() {
         }
 
         buttonSettings.setOnClickListener {
-            startActivity(Intent(this, SettingsActivity::class.java))
+            if (LocalUser.isSignedIn()) {
+                startActivity(Intent(this, SettingsActivity::class.java))
+            } else {
+                startActivity(Intent(this, SignInActivity::class.java))
+            }
         }
 
         buttonAbout.setOnClickListener {

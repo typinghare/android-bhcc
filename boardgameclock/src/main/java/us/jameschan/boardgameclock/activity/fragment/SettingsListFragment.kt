@@ -14,11 +14,22 @@ import us.jameschan.boardgameclock.util.JsonHelper
 class SettingsListFragment : Fragment() {
     companion object {
         private const val ARG_SETTINGS = "ARG_SETTINGS"
+        private const val ARG_IS_USER_SETTINGS = "ARG_IS_USER_SETTINGS"
 
         @JvmStatic
         fun newInstance(settings: List<Setting>) =
             SettingsListFragment().apply {
                 arguments = Bundle().apply {
+                    putBoolean(ARG_IS_USER_SETTINGS, false)
+                    putString(ARG_SETTINGS, JsonHelper.toJson(settings))
+                }
+            }
+
+        @JvmStatic
+        fun newUserSettingsInstance(settings: List<Setting>) =
+            SettingsListFragment().apply {
+                arguments = Bundle().apply {
+                    putBoolean(ARG_IS_USER_SETTINGS, true)
                     putString(ARG_SETTINGS, JsonHelper.toJson(settings))
                 }
             }
@@ -43,7 +54,7 @@ class SettingsListFragment : Fragment() {
 
         // Set the adapter.
         if (view is RecyclerView) {
-            view.adapter = SettingsListAdapter(settingList)
+            view.adapter = SettingsListAdapter(requireContext(), settingList, true)
         }
         return view
     }

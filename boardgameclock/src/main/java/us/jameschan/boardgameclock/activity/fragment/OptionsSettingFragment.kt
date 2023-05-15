@@ -4,10 +4,10 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.EditText
+import android.widget.AdapterView
+import android.widget.ArrayAdapter
+import android.widget.Spinner
 import androidx.fragment.app.Fragment
-import com.android.volley.toolbox.Volley
-import us.jameschan.boardgameclock.Application
 import us.jameschan.boardgameclock.R
 import us.jameschan.boardgameclock.settings.SettingManager
 
@@ -16,7 +16,7 @@ private const val ARG_SETTING_NAME = "ARG_SETTING_NAME"
 private const val ARG_NAME = "ARG_NAME"
 private const val ARG_EXPLANATION = "ARG_EXPLANATION"
 
-class StringSettingFragment : Fragment() {
+class OptionsSettingFragment : Fragment() {
     companion object {
         @JvmStatic
         fun newInstance(
@@ -28,21 +28,6 @@ class StringSettingFragment : Fragment() {
             StringSettingFragment().apply {
                 arguments = Bundle().apply {
                     putBoolean(ARG_IS_USER_SETTINGS, isUserSettings)
-                    putString(ARG_SETTING_NAME, settingName)
-                    putString(ARG_NAME, name)
-                    putString(ARG_EXPLANATION, explanation)
-                }
-            }
-
-        @JvmStatic
-        fun newInstance(
-            settingName: String,
-            name: String,
-            explanation: String
-        ) =
-            StringSettingFragment().apply {
-                arguments = Bundle().apply {
-                    putBoolean(ARG_IS_USER_SETTINGS, false)
                     putString(ARG_SETTING_NAME, settingName)
                     putString(ARG_NAME, name)
                     putString(ARG_EXPLANATION, explanation)
@@ -69,16 +54,29 @@ class StringSettingFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_string_setting, container, false)
+        val view = inflater.inflate(R.layout.fragment_options_setting, container, false)
+        val spinnerSettingValue: Spinner = view.findViewById(R.id.spinner_setting_value)
 
-        val inputSettingValue: EditText = view.findViewById(R.id.input_setting_value)
-        inputSettingValue.setOnFocusChangeListener { _, hasFocus ->
-            SettingManager.getSetting(settingName!!)?.setValue(inputSettingValue.text.toString())
+        val options: List<String> = SettingManager.getSetting(settingName!!)!!.getOptionList()
+        val adapter = ArrayAdapter(requireActivity(), android.R.layout.simple_spinner_item, options)
+        spinnerSettingValue.adapter = adapter
 
-            if (!hasFocus && isUserSettings) {
-                // Updates user settings.
-                val requestQueue = Volley.newRequestQueue(requireActivity())
-                Application.persistSettings(requestQueue)
+        spinnerSettingValue.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(
+                parent: AdapterView<*>?,
+                view: View?,
+                position: Int,
+                id: Long
+            ) {
+                val value = parent?.getItemAtPosition(position) as String
+                SettingManager.getSetting(settingName!!)!!.setValue(value)
+
+                if (isUserSettings) {
+
+                }
+            }
+
+            override fun onNothingSelected(parent: AdapterView<*>?) {
             }
         }
 

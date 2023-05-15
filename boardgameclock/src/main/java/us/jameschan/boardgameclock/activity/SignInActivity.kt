@@ -55,6 +55,7 @@ class SignInActivity : AppCompatActivity() {
 
                 // Load Settings.
                 val request = Api.getUserSettings(userDto.userId, { userSettingsDto ->
+                    Log.d("UserSettingsDto", userSettingsDto.toString())
                     LocalUser.settings(userSettingsDto)
 
                     // Start Main Activity

@@ -7,7 +7,7 @@
     android:paddingStart="8dp"
     android:layout_marginTop="8dp"
     android:paddingEnd="8dp"
-    tools:context=".activity.fragment.BoolSettingFragment">
+    tools:context=".activity.fragment.OptionsSettingFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -38,14 +38,14 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintWidth_percent="0.7" />
 
-            <androidx.appcompat.widget.SwitchCompat
-                android:id="@+id/switch_setting_value"
+            <Spinner
+                android:id="@+id/spinner_setting_value"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="TouchTargetSizeCheck" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout

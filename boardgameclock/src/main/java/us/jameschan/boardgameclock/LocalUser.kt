@@ -7,13 +7,15 @@ object LocalUser {
     var token: String? = null
 
     var language: String = "english"
-
-    //    var language: String = "chinese"
     var clickingSoundEffect: Boolean = true
     var warningSoundEffect: Boolean = true
 
     fun settings(userSettingsDto: UserSettingsDto) {
-        language = userSettingsDto.language
+        language = userSettingsDto.language.lowercase()
+        clickingSoundEffect = userSettingsDto.clickingSoundEffect
+        warningSoundEffect = userSettingsDto.warningSoundEffect
+
+        Application.refreshSettings()
     }
 
     fun isSignedIn(): Boolean {

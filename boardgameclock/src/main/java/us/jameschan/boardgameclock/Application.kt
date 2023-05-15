@@ -20,23 +20,34 @@ object Application : Settings() {
         )
     }
 
-    private fun refreshSettings() {
+    fun refreshSettings() {
         clearAllSettings()
 
-        val languageSetting = Setting("Language", "English", Setting.Companion.Type.OPTIONS).apply {
-            addOption("简体中文")
-            addOption("日本語")
-            setOnValueChange {
-                val lang = when (it) {
-                    "English" -> "english"
-                    "简体中文" -> "chinese"
-                    "日本語" -> "japanese"
-                    else -> ""
+        val languageSetting =
+            Setting("Language", LocalUser.language, Setting.Companion.Type.OPTIONS).apply {
+                addOption("english")
+                addOption("chinese")
+                addOption("japanese")
+                setOnValueChange {
+                    val lang = when (it) {
+                        "English" -> "english"
+                        "简体中文" -> "chinese"
+                        "日本語" -> "japanese"
+                        else -> ""
+                    }
+
+                    LocalUser.language = lang
                 }
 
-                LocalUser.language = lang
+                setOnGetValue {
+                    when (it) {
+                        "english" -> "English"
+                        "chinese" -> "简体中文"
+                        "japanese" -> "日本語"
+                        else -> ""
+                    }
+                }
             }
-        }
         addSetting(languageSetting)
         SettingManager.setSetting(
             "us.jameschan.boardgameclock.Application.language",
@@ -45,7 +56,11 @@ object Application : Settings() {
 
         val clickingSoundEffectText = Lang.translate("Clicking Sound Effect")
         val clickingSoundEffectSetting =
-            Setting(clickingSoundEffectText, "true", Setting.Companion.Type.BOOL).apply {
+            Setting(
+                clickingSoundEffectText,
+                LocalUser.clickingSoundEffect.toString(),
+                Setting.Companion.Type.BOOL
+            ).apply {
                 val explanation =
                     "The clock will emit a beep sound whenever players tap the screen."
                 setExplanation(Lang.translate(explanation))
@@ -62,7 +77,11 @@ object Application : Settings() {
 
         val warningSoundEffectText = Lang.translate("Warning Sound Effect")
         val warningSoundEffectSetting =
-            Setting(warningSoundEffectText, "true", Setting.Companion.Type.BOOL).apply {
+            Setting(
+                warningSoundEffectText,
+                LocalUser.warningSoundEffect.toString(),
+                Setting.Companion.Type.BOOL
+            ).apply {
                 val explanation = "The clock will emit a beep sound as a warning to players " +
                         "when there are only five minutes remaining."
                 setExplanation(Lang.translate(explanation))

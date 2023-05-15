@@ -21,7 +21,7 @@ class SettingsActivity : AppCompatActivity() {
         // Load settings.
         val settingsList = Application.getSettings()
         supportFragmentManager.beginTransaction()
-            .replace(R.id.settings_list_fragment, SettingsListFragment.newInstance(settingsList))
+            .replace(R.id.settings_list_fragment, SettingsListFragment.newUserSettingsInstance(settingsList))
             .commit()
     }
 }

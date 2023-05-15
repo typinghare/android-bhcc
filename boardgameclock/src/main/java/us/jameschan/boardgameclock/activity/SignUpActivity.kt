@@ -7,6 +7,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import com.android.volley.DefaultRetryPolicy
 import com.android.volley.toolbox.Volley
 import us.jameschan.boardgameclock.Api
 import us.jameschan.boardgameclock.Lang
@@ -14,7 +15,12 @@ import us.jameschan.boardgameclock.LocalUser
 import us.jameschan.boardgameclock.R
 import us.jameschan.boardgameclock.activity.fragment.NavigationFragment
 
+/**
+ * @link https://stackoverflow.com/questions/23146945/how-to-prevent-volley-request-from-retrying
+ */
 class SignUpActivity : AppCompatActivity() {
+    private var clicked: Boolean = false
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_up)
@@ -38,6 +44,10 @@ class SignUpActivity : AppCompatActivity() {
         Lang.translate("Sign Up").apply { buttonSignUp.text = this }
 
         buttonSignUp.setOnClickListener {
+            if (clicked) return@setOnClickListener
+
+            clicked = true
+
             val inputUsername: EditText = findViewById(R.id.input_username)
             val inputPassword: EditText = findViewById(R.id.input_password)
 
@@ -49,6 +59,7 @@ class SignUpActivity : AppCompatActivity() {
                 LocalUser.userId = userDto.userId
                 LocalUser.token = userDto.token
 
+                Log.d("SignUp:UserDto", userDto.toString())
                 // Load Settings.
                 val request = Api.getUserSettings(userDto.userId, { userSettingsDto ->
                     LocalUser.settings(userSettingsDto)
@@ -56,7 +67,7 @@ class SignUpActivity : AppCompatActivity() {
                     // Start Main Activity
                     startActivity(Intent(this@SignUpActivity, MainActivity::class.java))
                 }, {
-                    Log.d("SignIn:LoadSettings", it.message.toString())
+                    Log.d("SignUp:LoadSettings", it.message.toString())
                 })
 
                 Lang.translate("Loading settings...").apply {
@@ -65,13 +76,15 @@ class SignUpActivity : AppCompatActivity() {
 
                 Volley.newRequestQueue(this@SignUpActivity).add(request)
             }, {
-                Log.d("SignIn:SignIn", it.message.toString())
+                Log.d("SignUp:SignUp", it.message.toString())
             })
 
-            Lang.translate("Signing up...").apply {
-                labelWelcome.text = this
-            }
+            Lang.translate("Signing up...").apply { labelWelcome.text = this }
 
+            request.retryPolicy = DefaultRetryPolicy(
+                10000, 0,
+                DefaultRetryPolicy.DEFAULT_BACKOFF_MULT
+            )
             Volley.newRequestQueue(this).add(request)
         }
     }

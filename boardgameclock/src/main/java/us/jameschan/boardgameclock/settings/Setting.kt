@@ -5,7 +5,7 @@ package us.jameschan.boardgameclock.settings
  */
 class Setting(
     private val label: String,
-    private val defaultValue: String,
+    defaultValue: String,
     private val type: Type = Type.STRING
 ) {
     companion object {
@@ -24,7 +24,7 @@ class Setting(
             }
 
             override fun toString(): String {
-                return when(this) {
+                return when (this) {
                     OPTIONS -> "options"
                     STRING -> "string"
                     BOOL -> "bool"
@@ -37,29 +37,23 @@ class Setting(
     private var value: String = defaultValue
     private var onValueChange: (String) -> Unit = {}
     private var explanation: String = ""
-
-    init {
-        optionList.add(defaultValue)
-    }
+    private var onGetValue: (String) -> String = { it }
 
     fun getLabel(): String {
         return label
     }
 
     fun getOptionList(): List<String> {
-        return optionList
+        return optionList.map(onGetValue)
     }
 
     fun setValue(value: String) {
         this.value = value
+        onValueChange(value)
     }
 
     fun getValue(): String {
-        return value
-    }
-
-    fun getDefaultValue(): String {
-        return defaultValue
+        return onGetValue(value)
     }
 
     fun getType(): Type {
@@ -76,6 +70,10 @@ class Setting(
 
     fun setExplanation(explanation: String) {
         this.explanation = explanation
+    }
+
+    fun setOnGetValue(onGetValue: (String) -> String) {
+        this.onGetValue = onGetValue
     }
 
     fun getExplanation(): String {
