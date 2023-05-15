@@ -14,6 +14,7 @@ object Api {
     private const val URL_SIGN_IN = "/users/"
     private const val URL_SIGN_UP = "/users/"
     private const val URL_GET_SETTINGS = "/users/{userId}/settings"
+    private const val URL_UPDATE_SETTINGS = "/users/{userId}/settings"
 
     private fun url(url: String, queryString: String? = null): String {
         return "${DOMAIN}${url}${if (queryString != null) "?${queryString}" else ""}"
@@ -92,6 +93,36 @@ object Api {
             )
 
             callback(userSettingsDto)
+        }, errorListener) {}
+    }
+
+    /**
+     * Update user settings.
+     */
+    fun updateUserSettings(
+        userId: Long,
+        userSettingsDto: UserSettingsDto,
+        callback: (UserSettingsDto) -> Unit,
+        errorListener: ErrorListener
+    ): JsonObjectRequest {
+        val url = url(URL_UPDATE_SETTINGS.replace("{userId}", userId.toString()))
+        val jsonObject = JSONObject().apply {
+            put("userId", userSettingsDto.userId.toString())
+            put("language", userSettingsDto.language)
+            put("clickingSoundEffect", userSettingsDto.clickingSoundEffect.toString())
+            put("warningSoundEffect", userSettingsDto.warningSoundEffect.toString())
+        }
+
+        return object : JsonObjectRequest(Method.PUT, url, jsonObject, { response ->
+            val data = response.getJSONObject("data")
+            val newUserSettingsDto = UserSettingsDto(
+                data.getLong("userId"),
+                data.getString("language"),
+                data.getBoolean("clickingSoundEffect"),
+                data.getBoolean("warningSoundEffect")
+            )
+
+            callback(newUserSettingsDto)
         }, errorListener) {}
     }
 }

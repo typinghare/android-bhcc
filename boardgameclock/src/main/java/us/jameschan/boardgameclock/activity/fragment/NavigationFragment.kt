@@ -2,11 +2,13 @@ package us.jameschan.boardgameclock.activity.fragment
 
 import android.content.Intent
 import android.os.Bundle
+import android.provider.Settings
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageButton
 import androidx.fragment.app.Fragment
+import us.jameschan.boardgameclock.LocalUser
 import us.jameschan.boardgameclock.R
 import us.jameschan.boardgameclock.activity.MainActivity
 import us.jameschan.boardgameclock.activity.SignInActivity
@@ -34,7 +36,11 @@ class NavigationFragment : Fragment() {
         }
 
         buttonUser.setOnClickListener {
-            startActivity(Intent(requireActivity(), SignInActivity::class.java))
+            if (LocalUser.userId == null) {
+                startActivity(Intent(requireActivity(), SignInActivity::class.java))
+            } else {
+                startActivity(Intent(requireActivity(), Settings::class.java))
+            }
         }
 
         return view

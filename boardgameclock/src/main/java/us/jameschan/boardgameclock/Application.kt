@@ -1,5 +1,8 @@
 package us.jameschan.boardgameclock
 
+import android.util.Log
+import com.android.volley.RequestQueue
+import us.jameschan.boardgameclock.dto.UserSettingsDto
 import us.jameschan.boardgameclock.settings.Setting
 import us.jameschan.boardgameclock.settings.SettingManager
 import us.jameschan.boardgameclock.settings.Settings
@@ -73,5 +76,27 @@ object Application : Settings() {
             "us.jameschan.boardgameclock.Application.warningSoundEffect",
             warningSoundEffectSetting
         )
+    }
+
+    /**
+     * Persists settings.
+     */
+    fun persistSettings(requestQueue: RequestQueue) {
+        if (LocalUser.userId == null) {
+            return
+        }
+
+        val userSettingsDto = UserSettingsDto(
+            LocalUser.userId!!,
+            LocalUser.language,
+            LocalUser.clickingSoundEffect,
+            LocalUser.warningSoundEffect
+        )
+
+        requestQueue.add(Api.updateUserSettings(LocalUser.userId!!, userSettingsDto, {
+            LocalUser.settings(it)
+        }, {
+            Log.d("PersistSettings", it.message.toString())
+        }))
     }
 }

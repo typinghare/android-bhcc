@@ -21,7 +21,7 @@ object JsonHelper {
         val settingList: MutableList<Setting> = mutableListOf()
         val stringList: Array<String> = gson.fromJson(jsonString, Array<String>::class.java)
         stringList.forEach {
-            val setting = SettingManager.getSetting(it.toString())
+            val setting = SettingManager.getSetting(it)
             if (setting != null) settingList.add(setting)
         }
 
