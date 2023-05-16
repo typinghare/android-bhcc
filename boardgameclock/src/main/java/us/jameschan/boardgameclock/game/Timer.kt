@@ -81,7 +81,9 @@ class Timer(
      * Consumes time.
      */
     private fun consume(timeToConsume: Int) {
-        setTime(HourMinuteSecond(time.getMs() - timeToConsume))
+        val ms: Int = time.getMs() - timeToConsume
+
+        setTime(HourMinuteSecond(if (ms < 0) 0 else ms))
     }
 
     /**

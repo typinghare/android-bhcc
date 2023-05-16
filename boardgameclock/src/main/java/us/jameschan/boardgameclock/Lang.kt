@@ -19,6 +19,7 @@ object Lang {
             put("Loading settings...", "正在加载设置...")
             put("Sign In", "登录")
             put("Sign Up", "注册")
+            put("Sign Out", "登出")
             put("Create New Account", "创建账号")
             put("New Game", "新游戏")
             put("Settings", "设置")

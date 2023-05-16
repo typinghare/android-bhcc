@@ -3,6 +3,10 @@ package us.jameschan.boardgameclock
 import us.jameschan.boardgameclock.dto.UserSettingsDto
 
 object LocalUser {
+    var defaultSettingsDto = UserSettingsDto(
+        0, "english", clickingSoundEffect = true, warningSoundEffect = true
+    )
+
     var userId: Long? = null
     var token: String? = null
 

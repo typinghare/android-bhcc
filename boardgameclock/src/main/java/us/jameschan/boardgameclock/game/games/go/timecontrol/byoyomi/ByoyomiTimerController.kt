@@ -12,16 +12,21 @@ class ByoyomiTimerController(
     private val timePerPeriod: HourMinuteSecond,
     periods: Int
 ) : TimerController(game, main, role) {
-    private var periodsRemaining = periods
+    private var periodsRemaining: Int = periods
 
     override fun getTimeoutCallback(): () -> HourMinuteSecond? {
         return lambda@{
-            if (periodsRemaining == 0) {
+            if (periodsRemaining == 1) {
+                game.clockStop(role)
                 return@lambda null
             }
 
             periodsRemaining--
             return@lambda timePerPeriod.clone()
         }
+    }
+
+    override fun getExtraNumber(): Int {
+        return periodsRemaining
     }
 }

@@ -26,6 +26,8 @@ class GameSettingsActivity : AppCompatActivity() {
 
     private var game: Game? = null
 
+    private var currentTimeControl: String? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_game_settings)
@@ -52,8 +54,7 @@ class GameSettingsActivity : AppCompatActivity() {
             game!!.setTimeControl(timeControl)
         }
 
-        val currentTimeControlName =
-            timeControl ?: game!!.getTimeControlList()[0].getName()
+        currentTimeControl = timeControl ?: game!!.getTimeControlList()[0].getName()
 
 
         // Fill in the spinner
@@ -71,11 +72,11 @@ class GameSettingsActivity : AppCompatActivity() {
                 id: Long
             ) {
                 val value = parent?.getItemAtPosition(position) as String
-                Log.d("currentTimeControlName", currentTimeControlName)
-                Log.d("value", value)
 
-                if (value != currentTimeControlName) {
+                if (value != currentTimeControl) {
                     game!!.setTimeControl(value)
+                    currentTimeControl = value
+
                     initSettings()
                 }
             }

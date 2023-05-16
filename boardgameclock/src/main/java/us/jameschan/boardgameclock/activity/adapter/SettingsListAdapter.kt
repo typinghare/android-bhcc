@@ -86,8 +86,11 @@ class SettingsListAdapter(
             inputSettingValue.setOnFocusChangeListener { _, hasFocus ->
                 if (hasFocus) return@setOnFocusChangeListener
 
+                val value = inputSettingValue.text.toString()
+
                 Log.d("SettingsChange", "String")
-                setting.setValue(inputSettingValue.text.toString())
+                Log.d("SettingsChange:String", value)
+                setting.setValue(value)
 
                 if (isUserSettings) {
                     // Updates user settings.

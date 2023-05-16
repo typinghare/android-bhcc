@@ -10,18 +10,23 @@ class YingshiTimerController(
     val role: Role,
     main: HourMinuteSecond,
     private val penalty: HourMinuteSecond,
-    maxPenalty: Int
+    private val maxPenalty: Int
 ) : TimerController(game, main, role) {
-    private var penaltyRemaining: Int = maxPenalty
+    private var penaltyTimes: Int = 0
 
     override fun getTimeoutCallback(): () -> HourMinuteSecond? {
         return lambda@{
-            if (penaltyRemaining == 0) {
+            if (penaltyTimes == maxPenalty) {
+                game.clockStop(role)
                 return@lambda null
             }
 
-            penaltyRemaining--
+            penaltyTimes++
             return@lambda penalty.clone()
         }
+    }
+
+    override fun getExtraNumber(): Int {
+        return penaltyTimes
     }
 }

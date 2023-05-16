@@ -7,7 +7,7 @@ import us.jameschan.boardgameclock.settings.Settings
  * be written in the override `initialize` method.
  * @see TimeControl
  */
-open class Game : Settings(), Initializer {
+open class Game : Settings(), Initializer, AutoCloseable {
     /**
      * Time control list.
      */
@@ -123,5 +123,8 @@ open class Game : Settings(), Initializer {
      */
     protected fun addTimeControl(timeControl: TimeControl) {
         timeControlList.add(timeControl)
+    }
+
+    override fun close() {
     }
 }

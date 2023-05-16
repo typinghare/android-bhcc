@@ -25,7 +25,7 @@ class ByoyomiTimeControl(
         val mainSetting = Setting(SETTINGS_LABEL_MAIN, "10 min").apply {
             setExplanation("The main time. When the main time run outs, the periods are utilized.")
         }
-        val timePerPeriodSetting = Setting(SETTING_LABEL_TIME_PER_PERIOD, "30 sec").apply {
+        val timePerPeriodSetting = Setting(SETTING_LABEL_TIME_PER_PERIOD, "5 sec").apply {
             setExplanation(
                 "The time limit for each period. " +
                         "When the time for a period expires, " +

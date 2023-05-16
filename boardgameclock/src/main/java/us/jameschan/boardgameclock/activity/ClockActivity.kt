@@ -1,13 +1,17 @@
 package us.jameschan.boardgameclock.activity
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.widget.TextView
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.toArgb
 import us.jameschan.boardgameclock.GameManager
 import us.jameschan.boardgameclock.R
+import us.jameschan.boardgameclock.game.Game
 import us.jameschan.boardgameclock.game.HourMinuteSecond
 import us.jameschan.boardgameclock.game.Role
 import us.jameschan.boardgameclock.util.setInterval
@@ -16,6 +20,7 @@ class ClockActivity : AppCompatActivity() {
     companion object {
         val TEXT_COLOR_RUNNING = Color.Black.toArgb()
         val TEXT_COLOR_PAUSED = Color.Gray.toArgb()
+        val TEXT_COLOR_STOP = Color.Red.toArgb()
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -41,6 +46,11 @@ class ClockActivity : AppCompatActivity() {
             val isPlayerAClockRunning: Boolean = playerATimerController.isTimerRunning()
             val isPlayerBClockRunning: Boolean = playerBTimerController.isTimerRunning()
 
+            val playerAExtraNumber: Int? = playerATimerController.getExtraNumber()
+            val playerBExtraNumber: Int? = playerBTimerController.getExtraNumber()
+
+            val gameStopped: Boolean = game.isClockStop()
+
             runOnUiThread {
                 textClockA.text = playerATime.toFormattedString()
                 textClockB.text = playerBTime.toFormattedString()
@@ -56,6 +66,32 @@ class ClockActivity : AppCompatActivity() {
                 } else {
                     textClockB.setTextColor(TEXT_COLOR_PAUSED)
                 }
+
+                if (playerAExtraNumber == null) {
+                    textExtraNumberA.visibility = View.INVISIBLE
+                } else {
+                    textExtraNumberA.visibility = View.VISIBLE
+                    textExtraNumberA.text = playerAExtraNumber.toString()
+                }
+
+                if (playerBExtraNumber == null) {
+                    textExtraNumberB.visibility = View.INVISIBLE
+                } else {
+                    textExtraNumberB.visibility = View.VISIBLE
+                    textExtraNumberB.text = playerBExtraNumber.toString()
+                }
+
+                if (gameStopped) {
+                    it.cancel()
+                    val stopRole: Role = game.clockStopRole()
+                    if (stopRole == Role.A) {
+                        textClockA.setTextColor(TEXT_COLOR_STOP)
+                        textClockB.setTextColor(TEXT_COLOR_PAUSED)
+                    } else {
+                        textClockB.setTextColor(TEXT_COLOR_STOP)
+                        textClockA.setTextColor(TEXT_COLOR_PAUSED)
+                    }
+                }
             }
         }
 
@@ -68,5 +104,34 @@ class ClockActivity : AppCompatActivity() {
             Log.d("Clock:onClick", "B")
             game.playerClickEvent(Role.B)
         }
+
+        textClockA.setOnLongClickListener {
+            longClick(game)
+
+            true
+        }
+
+        textClockB.setOnLongClickListener {
+            longClick(game)
+
+            true
+        }
+    }
+
+    private fun longClick(game: Game) {
+        val alertDialogBuilder = AlertDialog.Builder(this)
+        alertDialogBuilder.setTitle("Exit Game")
+        alertDialogBuilder.setMessage("Do you want to exit this game?")
+
+        alertDialogBuilder.setPositiveButton("Yes") { _, _ ->
+            game.close()
+            startActivity(Intent(this, MainActivity::class.java))
+        }
+
+        alertDialogBuilder.setNegativeButton("No") { _, _ ->
+        }
+
+        val alertDialog = alertDialogBuilder.create()
+        alertDialog.show()
     }
 }

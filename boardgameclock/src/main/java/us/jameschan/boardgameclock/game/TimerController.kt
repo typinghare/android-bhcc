@@ -40,4 +40,8 @@ open class TimerController(
     fun isTimerRunning(): Boolean {
         return timer!!.isRunning()
     }
+
+    open fun getExtraNumber(): Int? {
+        return null
+    }
 }
