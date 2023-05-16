@@ -11,6 +11,9 @@
         android:theme="@style/Theme.AndroidBHCC"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".activity.ClockActivity"
+            android:exported="false" />
+        <activity
             android:name=".activity.SettingsActivity"
             android:exported="false" />
         <activity

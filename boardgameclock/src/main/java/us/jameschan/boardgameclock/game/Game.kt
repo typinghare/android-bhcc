@@ -19,6 +19,8 @@ open class Game : Settings(), Initializer {
 
     private var currentPlayerRole: Role? = null
 
+    private var clockStopRole: Role? = null
+
     /**
      * Initialize this game.
      */
@@ -50,6 +52,18 @@ open class Game : Settings(), Initializer {
         }
     }
 
+    fun clockStop(role: Role) {
+        clockStopRole = role
+    }
+
+    fun isClockStop(): Boolean {
+        return clockStopRole != null
+    }
+
+    fun clockStopRole(): Role {
+        return clockStopRole!!
+    }
+
     /**
      * Gets a player.
      */
@@ -66,6 +80,11 @@ open class Game : Settings(), Initializer {
      */
     fun start() {
         gameStarted = true
+
+        for (player in playerMap.values) {
+            player.initTimerController()
+            player.getTimerController().initializeTimer()
+        }
     }
 
     /**

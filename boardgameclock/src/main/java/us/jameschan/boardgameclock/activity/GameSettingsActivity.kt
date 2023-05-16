@@ -1,10 +1,12 @@
 package us.jameschan.boardgameclock.activity
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import android.widget.Button
 import android.widget.Spinner
 import androidx.appcompat.app.AppCompatActivity
 import us.jameschan.boardgameclock.GameManager
@@ -50,11 +52,16 @@ class GameSettingsActivity : AppCompatActivity() {
             game!!.setTimeControl(timeControl)
         }
 
+        val currentTimeControlName =
+            timeControl ?: game!!.getTimeControlList()[0].getName()
+
+
         // Fill in the spinner
         val spinnerTimeControl: Spinner = findViewById(R.id.spinner_time_control)
         val options: List<String> = game!!.getTimeControlList().map { it.getName() }
         spinnerTimeControl.adapter =
             ArrayAdapter(this, android.R.layout.simple_spinner_item, options)
+        spinnerTimeControl.setSelection(0)
 
         spinnerTimeControl.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(
@@ -64,20 +71,30 @@ class GameSettingsActivity : AppCompatActivity() {
                 id: Long
             ) {
                 val value = parent?.getItemAtPosition(position) as String
+                Log.d("currentTimeControlName", currentTimeControlName)
+                Log.d("value", value)
 
-//                startActivity(
-//                    Intent(
-//                        this@GameSettingsActivity,
-//                        GameSettingsActivity::class.java
-//                    ).apply {
-//
-//                    })
+                if (value != currentTimeControlName) {
+                    game!!.setTimeControl(value)
+                    initSettings()
+                }
             }
 
             override fun onNothingSelected(parent: AdapterView<*>?) {
             }
         }
 
+        initSettings()
+
+        val buttonStart: Button = findViewById(R.id.button_start)
+        buttonStart.setOnClickListener {
+            // Start game.
+            game!!.start()
+            startActivity(Intent(this, ClockActivity::class.java))
+        }
+    }
+
+    fun initSettings() {
         // Load black settings.
         val blackSettingsList = game!!.getPlayer(Role.A).getTimeControl().getSettingList()
         Log.d("BlackSettings", blackSettingsList.size.toString())
@@ -87,7 +104,7 @@ class GameSettingsActivity : AppCompatActivity() {
             .replace(R.id.list_fragment_black, blackSettingListFragment)
             .commit()
 
-        // Loading white settings
+        // Load white settings.
         val whiteSettingsList = game!!.getPlayer(Role.B).getTimeControl().getSettingList()
         val whiteSettingListFragment = SettingsListFragment.newInstance(whiteSettingsList)
         supportFragmentManager
@@ -95,7 +112,7 @@ class GameSettingsActivity : AppCompatActivity() {
             .replace(R.id.list_fragment_white, whiteSettingListFragment)
             .commit()
 
-        // Loading advanced settings.
+        // Load advanced settings.
         val advancedSettingsList = game!!.getSettingList()
         val advancedSettingListFragment = SettingsListFragment.newInstance(advancedSettingsList)
         supportFragmentManager

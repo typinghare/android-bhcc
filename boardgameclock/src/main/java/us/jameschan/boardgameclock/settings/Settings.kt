@@ -19,8 +19,9 @@ abstract class Settings {
 
     fun getSettingValueByLabel(label: String) = getSettingByLabel(label)?.getValue()
 
-    fun getValueOfSettingsByLabel(label: String, defaultValue: String) =
-        getSettingByLabel(label)?.getValue() ?: defaultValue
+    fun getValueOfSettingsByLabel(label: String, defaultValue: String): String {
+        return getSettingByLabel(label)?.getValue() ?: defaultValue
+    }
 
     fun clearAllSettings() {
         settingList.clear()

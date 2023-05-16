@@ -8,4 +8,5 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="boardgameclock_SettingBgColor">#DFDFDF</color>
+    <color name="boardgameclock_middle_strip_background_color">#333333</color>
 </resources>

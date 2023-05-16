@@ -23,7 +23,7 @@ class ByoyomiTimeControl(
 
     override fun initialize() {
         val mainSetting = Setting(SETTINGS_LABEL_MAIN, "10 min").apply {
-            setExplanation("The main time. When the main time expires, the periods are utilized.")
+            setExplanation("The main time. When the main time run outs, the periods are utilized.")
         }
         val timePerPeriodSetting = Setting(SETTING_LABEL_TIME_PER_PERIOD, "30 sec").apply {
             setExplanation(
@@ -62,6 +62,7 @@ class ByoyomiTimeControl(
 
         return ByoyomiTimerController(
             game,
+            role!!,
             HourMinuteSecond.parse(main),
             HourMinuteSecond.parse(timePerPeriod),
             periods.toInt()

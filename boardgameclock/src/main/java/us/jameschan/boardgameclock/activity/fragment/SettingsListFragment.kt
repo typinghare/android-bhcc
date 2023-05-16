@@ -1,6 +1,7 @@
 package us.jameschan.boardgameclock.activity.fragment
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,7 +11,6 @@ import us.jameschan.boardgameclock.R
 import us.jameschan.boardgameclock.activity.adapter.SettingsListAdapter
 import us.jameschan.boardgameclock.settings.Setting
 import us.jameschan.boardgameclock.util.JsonHelper
-import android.util.Log
 
 class SettingsListFragment : Fragment() {
     companion object {
@@ -38,10 +38,13 @@ class SettingsListFragment : Fragment() {
 
     private var settingList: MutableList<Setting> = mutableListOf()
 
+    private var isUserSettings: Boolean = false
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         arguments?.let {
+            isUserSettings = it.getBoolean(ARG_IS_USER_SETTINGS)
             settingList.addAll(JsonHelper.fromJsonToSettingList(it.getString(ARG_SETTINGS)!!))
         }
     }
@@ -55,7 +58,7 @@ class SettingsListFragment : Fragment() {
         // Set the adapter.
         Log.d("Setting:Size", settingList.size.toString())
         if (view is RecyclerView) {
-            view.adapter = SettingsListAdapter(requireContext(), settingList, true)
+            view.adapter = SettingsListAdapter(requireContext(), settingList, isUserSettings)
         }
         return view
     }

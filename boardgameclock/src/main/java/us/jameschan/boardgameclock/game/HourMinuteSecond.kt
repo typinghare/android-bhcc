@@ -1,9 +1,9 @@
 package us.jameschan.boardgameclock.game
 
+import android.util.Log
 import java.util.concurrent.TimeUnit
 import kotlin.math.floor
 
-@Suppress("JoinDeclarationAndAssignment")
 class HourMinuteSecond(
     private val ms: Int
 ) : Cloneable {
@@ -32,26 +32,16 @@ class HourMinuteSecond(
         }
     }
 
-    private val hour: Int
-    private val minute: Int
-    private val second: Int
-
-    init {
-        second = floor(ms.toDouble() / MILLISECONDS_IN_SECOND).toInt()
-        minute = floor(second.toDouble() / SECONDS_IN_MINUTE).toInt()
-        hour = floor(minute.toDouble() / MINUTES_IN_HOUR).toInt()
+    private fun getHour(): Int {
+        return floor(ms.toDouble() / SECONDS_IN_MINUTE / MILLISECONDS_IN_SECOND / MINUTES_IN_HOUR).toInt()
     }
 
-    fun getHour(): Int {
-        return hour
+    private fun getMinute(): Int {
+        return (floor(ms.toDouble() / SECONDS_IN_MINUTE / MILLISECONDS_IN_SECOND) % MINUTES_IN_HOUR).toInt()
     }
 
-    fun getMinute(): Int {
-        return minute
-    }
-
-    fun getSecond(): Int {
-        return second
+    private fun getSecond(): Int {
+        return (floor(ms.toDouble() / MILLISECONDS_IN_SECOND) % SECONDS_IN_MINUTE).toInt()
     }
 
     fun getMs(): Int {
@@ -64,5 +54,22 @@ class HourMinuteSecond(
 
     override fun toString(): String {
         return "Time($ms ms)"
+    }
+
+    fun toFormattedString(): String {
+        val second = paddingZero(getSecond())
+        val minute = paddingZero(getMinute())
+        val hour = paddingZero(getHour())
+
+//        Log.d("toFormattedString:ms", ms.toString())
+//        Log.d("toFormattedString:second", second.toString())
+//        Log.d("toFormattedString:minute", minute.toString())
+//        Log.d("toFormattedString:hour", hour.toString())
+
+        return "$hour:$minute:$second"
+    }
+
+    private fun paddingZero(num: Int): String {
+        return if (num >= 10) num.toString() else "0$num"
     }
 }

@@ -6,6 +6,7 @@ import us.jameschan.boardgameclock.game.Role
 import us.jameschan.boardgameclock.game.TimeControl
 import us.jameschan.boardgameclock.game.TimerController
 import us.jameschan.boardgameclock.settings.Setting
+import us.jameschan.boardgameclock.settings.SettingManager
 
 class YingshiTimeControl(
     override val game: Game,
@@ -23,8 +24,24 @@ class YingshiTimeControl(
     override fun initialize() {
         super.initialize()
 
-        addSetting(Setting(SETTING_LABEL_PENALTY, "30 min"))
-        addSetting(Setting(SETTING_LABEL_MAX_PENALTY, "2"))
+        val penaltySetting = Setting(SETTING_LABEL_PENALTY, "30 min").apply {
+            setExplanation("When the main time runs out, the penalty time is used.")
+        }
+        val maxPenaltySetting = Setting(SETTING_LABEL_MAX_PENALTY, "2").apply {
+            setExplanation("The maximum number of penalty times. Clock stops will all penalty times are used.")
+        }
+
+        SettingManager.setSetting(
+            this.javaClass.name + "." + SETTING_LABEL_PENALTY + "." + role.toString(),
+            penaltySetting
+        )
+        SettingManager.setSetting(
+            this.javaClass.name + "." + SETTING_LABEL_MAX_PENALTY + "." + role.toString(),
+            maxPenaltySetting
+        )
+
+        addSetting(penaltySetting)
+        addSetting(maxPenaltySetting)
     }
 
     override fun getTimerController(): TimerController {
@@ -34,6 +51,7 @@ class YingshiTimeControl(
 
         return YingshiTimerController(
             game,
+            role!!,
             HourMinuteSecond.parse(main),
             HourMinuteSecond.parse(penalty),
             maxPenalty.toInt()

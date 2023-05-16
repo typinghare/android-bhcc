@@ -3,15 +3,18 @@ package us.jameschan.boardgameclock.game
 class Player(
     private val timeControl: TimeControl
 ) {
-    private val timerController: TimerController = timeControl.getTimerController()
+    private var timerController: TimerController? = null
 
     init {
         timeControl.initialize()
-        timerController.initializeTimer()
+    }
+
+    fun initTimerController() {
+        timerController = timeControl.getTimerController()
     }
 
     fun getTimerController(): TimerController {
-        return timerController
+        return timerController!!
     }
 
     fun getTimeControl(): TimeControl {

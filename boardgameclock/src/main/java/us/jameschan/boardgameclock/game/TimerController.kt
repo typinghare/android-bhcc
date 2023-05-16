@@ -5,7 +5,8 @@ package us.jameschan.boardgameclock.game
  */
 open class TimerController(
     protected open val game: Game,
-    private val initialTime: HourMinuteSecond
+    private val initialTime: HourMinuteSecond,
+    private val role: Role
 ) {
     private var timer: Timer? = null
 
@@ -18,7 +19,10 @@ open class TimerController(
     }
 
     open fun getTimeoutCallback(): () -> HourMinuteSecond? {
-        return { null }
+        return lambda@{
+            game.clockStop(role)
+            return@lambda null
+        }
     }
 
     fun resume() {
@@ -27,5 +31,13 @@ open class TimerController(
 
     fun pause() {
         timer!!.pause()
+    }
+
+    fun getTime(): HourMinuteSecond {
+        return timer!!.getTime()
+    }
+
+    fun isTimerRunning(): Boolean {
+        return timer!!.isRunning()
     }
 }

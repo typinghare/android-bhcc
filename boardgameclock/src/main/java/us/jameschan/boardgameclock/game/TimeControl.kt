@@ -50,6 +50,6 @@ open class TimeControl(
         val main: String = getValueOfSettingsByLabel(SETTINGS_LABEL_MAIN, "1 min")
         val mainTime = HourMinuteSecond.parse(main)
 
-        return TimerController(game, mainTime)
+        return TimerController(game, mainTime, role!!)
     }
 }

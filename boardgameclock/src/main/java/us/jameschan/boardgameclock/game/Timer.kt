@@ -35,6 +35,10 @@ class Timer(
         this.time = time.clone()
     }
 
+    fun isRunning(): Boolean {
+        return intervalTimer != null
+    }
+
     /**
      * Resumes this timer.
      */
