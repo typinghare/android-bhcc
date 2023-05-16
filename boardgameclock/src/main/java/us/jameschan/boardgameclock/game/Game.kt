@@ -23,7 +23,7 @@ open class Game : Settings(), Initializer {
      * Initialize this game.
      */
     override fun initialize() {
-        addTimeControl(TimeControl(this, "Default", "Default Time control."))
+        addTimeControl(DefaultTimeControl(this, null))
     }
 
     /**
@@ -33,10 +33,21 @@ open class Game : Settings(), Initializer {
         val timeControl = timeControlList[timeControlIndex]
         val timeControlClass = timeControl.javaClass
 
+        val targetConstructor = timeControlClass.getConstructor(Game::class.java, Role::class.java)
+
         playerMap[Role.A] =
-            Player(timeControlClass.getConstructor(Game::class.java).newInstance(this))
+            Player(targetConstructor.newInstance(this, Role.A))
         playerMap[Role.B] =
-            Player(timeControlClass.getConstructor(Game::class.java).newInstance(this))
+            Player(targetConstructor.newInstance(this, Role.B))
+    }
+
+    fun setTimeControl(timeControlName: String) {
+        for (i in timeControlList.indices) {
+            if (timeControlList[i].getName() == timeControlName) {
+                setTimeControl(i)
+                break
+            }
+        }
     }
 
     /**

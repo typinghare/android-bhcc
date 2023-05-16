@@ -10,6 +10,7 @@ import us.jameschan.boardgameclock.R
 import us.jameschan.boardgameclock.activity.adapter.SettingsListAdapter
 import us.jameschan.boardgameclock.settings.Setting
 import us.jameschan.boardgameclock.util.JsonHelper
+import android.util.Log
 
 class SettingsListFragment : Fragment() {
     companion object {
@@ -43,7 +44,6 @@ class SettingsListFragment : Fragment() {
         arguments?.let {
             settingList.addAll(JsonHelper.fromJsonToSettingList(it.getString(ARG_SETTINGS)!!))
         }
-
     }
 
     override fun onCreateView(
@@ -53,6 +53,7 @@ class SettingsListFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_settings_list, container, false)
 
         // Set the adapter.
+        Log.d("Setting:Size", settingList.size.toString())
         if (view is RecyclerView) {
             view.adapter = SettingsListAdapter(requireContext(), settingList, true)
         }

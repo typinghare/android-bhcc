@@ -70,10 +70,6 @@ class OptionsSettingFragment : Fragment() {
             ) {
                 val value = parent?.getItemAtPosition(position) as String
                 SettingManager.getSetting(settingName!!)!!.setValue(value)
-
-                if (isUserSettings) {
-
-                }
             }
 
             override fun onNothingSelected(parent: AdapterView<*>?) {

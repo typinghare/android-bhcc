@@ -1,6 +1,8 @@
 package us.jameschan.boardgameclock.game
 
+import us.jameschan.boardgameclock.game.games.go.timecontrol.byoyomi.ByoyomiTimeControl
 import us.jameschan.boardgameclock.settings.Setting
+import us.jameschan.boardgameclock.settings.SettingManager
 import us.jameschan.boardgameclock.settings.Settings
 
 /**
@@ -11,6 +13,7 @@ import us.jameschan.boardgameclock.settings.Settings
  */
 open class TimeControl(
     protected open val game: Game,
+    private val role: Role?,
     private val name: String,
     private val description: String,
 ) : Settings(), Initializer {
@@ -19,7 +22,20 @@ open class TimeControl(
     }
 
     override fun initialize() {
-        addSetting(Setting(SETTINGS_LABEL_MAIN, "10 min"))
+        val mainSetting = Setting(SETTINGS_LABEL_MAIN, "30 sec").apply {
+            setExplanation(
+                "The time limit for each period. " +
+                        "When the time for a period expires, " +
+                        "the number of remaining periods is reduced by one."
+            )
+        }
+
+        addSetting(mainSetting)
+
+        SettingManager.setSetting(
+            this.javaClass.name + "." + SETTINGS_LABEL_MAIN + "." + role.toString(),
+            mainSetting
+        )
     }
 
     fun getName(): String {

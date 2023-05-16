@@ -5,8 +5,9 @@ import us.jameschan.boardgameclock.game.Game
 object GameManager {
     private var game: Game? = null
 
-    fun createGame(): Game? {
-        game = Game()
+    fun createGame(game: Game): Game {
+        this.game = game
+        game.initialize()
 
         return game
     }

@@ -17,10 +17,10 @@
             android:name=".activity.AboutActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.GameSettingsActivity"
+            android:name=".activity.NewGameActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.NewGameActivity"
+            android:name=".activity.GameSettingsActivity"
             android:exported="false" />
         <activity
             android:name=".activity.MainActivity"

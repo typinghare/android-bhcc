@@ -25,4 +25,10 @@
     <string name="setting_name">SettingName</string>
     <string name="this_is_the_explanation_of_this_setting">This is the explanation of this setting.</string>
     <string name="about">About</string>
+    <string name="start">Start</string>
+    <string name="black_settings">Black Settings</string>
+    <string name="white_settings">White Settings</string>
+    <string name="advanced_settings">Advanced Settings</string>
+    <string name="choose_a_game">Choose a Game</string>
+    <string name="chess">Chess</string>
 </resources>

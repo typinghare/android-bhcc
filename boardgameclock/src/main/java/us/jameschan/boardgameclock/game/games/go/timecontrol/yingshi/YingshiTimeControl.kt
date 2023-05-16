@@ -2,13 +2,15 @@ package us.jameschan.boardgameclock.game.games.go.timecontrol.yingshi
 
 import us.jameschan.boardgameclock.game.Game
 import us.jameschan.boardgameclock.game.HourMinuteSecond
+import us.jameschan.boardgameclock.game.Role
 import us.jameschan.boardgameclock.game.TimeControl
 import us.jameschan.boardgameclock.game.TimerController
 import us.jameschan.boardgameclock.settings.Setting
 
 class YingshiTimeControl(
-    override val game: Game
-) : TimeControl(game, "Yingshi", DESCRIPTION) {
+    override val game: Game,
+    private val role: Role?
+) : TimeControl(game, role, "Yingshi", DESCRIPTION) {
     companion object {
         const val SETTING_LABEL_PENALTY = "Penalty"
         const val SETTING_LABEL_MAX_PENALTY = "MaxPenalty"
